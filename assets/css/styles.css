@@ -113,7 +113,6 @@ p, span, a, li, button {
     height: auto;
 }
 
-/* Estilos generales para todos los botones */
 .btn {
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
@@ -123,11 +122,12 @@ p, span, a, li, button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
-/* Botones en el hero */
+
 .hero-buttons .btn.primary,
-.auth-buttons .btn.signup {
+.auth-buttons .btn.signup, .btn.about {
   background-color: #0a6e99;
   color: white;
 }
@@ -139,9 +139,9 @@ p, span, a, li, button {
   color: #333;
 }
 
-/* Opcional: Efectos hover */
+
 .btn.primary:hover,
-.auth-buttons .btn.signup:hover {
+.auth-buttons .btn.signup:hover, .btn.about:hover {
   background-color: #084f6a;
 }
 
@@ -149,3 +149,82 @@ p, span, a, li, button {
 .auth-buttons .btn.login:hover {
   background-color: #f0f0f0;
 }
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem; 
+}
+
+.about-content h1 {
+    font-weight: 800;
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-top: 0.25rem;
+}
+
+.about-content p {
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: -0.4px;
+    margin: auto;
+    max-width: 600px;
+}
+
+.btn.about {
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.section {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  gap: 3rem; 
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+.separator {
+  width: 1px; 
+  background-color: #00477D; 
+  min-height: 100%; 
+  align-self: stretch; 
+}
+
+.column {
+  text-align: left;
+  max-width: 450px;
+  margin-bottom: 2rem;
+}
+
+.column h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #00477D;
+}
+
+.column ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column ul li {
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.column img {
+  width: 319px;
+  height: 286px;
+  margin-top: 1rem;
+  vertical-align: middle;
+}
+
