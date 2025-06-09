@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+
+    <title>Playa/Album</title>
+</head>
+<body>
+    <header>
+        <div id="navbar"></div>
+
+    <script>
+        fetch('/pages/components/navbar.html')
+         .then(response => response.text())
+        .then(data => {
+         document.getElementById('navbar').innerHTML = data;
+         });
+     </script>
+    </header>
+      <header>
+        <div id="sidebar"></div>
+
+   <script>
+  fetch('/pages/components/sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('sidebar').innerHTML = data;
+
+      // Espera a que el contenido se cargue y luego marca el ítem activo
+      const currentPath = window.location.pathname;
+      const sidebarItems = document.querySelectorAll('.sidebar-item');
+
+      sidebarItems.forEach(item => {
+        const itemPath = item.getAttribute('href');
+        if (currentPath === itemPath) {
+          item.classList.add('active');
+        }
+      });
+    });
+</script>
+    </header>
+
+    <section class="hero">
+    <div class="hero-content">
+        <div class="hero-pages-title">
+        <h1 class="title_categories">Álbumes</h1>
+     </div>
+    </section>
+
+
+
+</html>
