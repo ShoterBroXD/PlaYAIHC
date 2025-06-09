@@ -1,0 +1,347 @@
+<!DOCTYPE html >
+<html lang="es" class="reproductor">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>PlaYA!</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Top Navbar -->
+    <header >
+        <nav class="navbar">
+            <div class="img-logo-in">
+                <img src="/assets/img/images/logo-playa.png" alt="Logo de PlaYA!">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Biblioteca</a></li>
+                <li><a href="#">Comunidades</a></li>
+            </ul>
+            <form class="search-form" role="search" aria-label="Buscar en la plataforma">
+                <input type="search" placeholder="Buscar..." aria-label="Buscar" />
+                <button type="submit" aria-label="Buscar">
+                    <svg class="submit-icon" width="15" height="15" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                d="M19 19.5L13 13.5M15 8.5C15 12.366 11.866 15.5 8 15.5C4.13401 15.5 1 12.366 1 8.5C1 4.63401 4.13401 1.5 8 1.5C11.866 1.5 15 4.63401 15 8.5Z"
+                                stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </form>
+            <ul class="nav-links">  
+                <li><a class="hover:text-gray-900" href="#">Premium</a></li>
+                <li><a class="hover:text-gray-900" href="#"">Subir</a></li>
+                <li><a class="hover:text-gray-900" href="#">Notificaciones</a></li>
+            </ul>
+            <div class="others">
+                <button class="profile ">
+                    <img alt="User  avatar" class="rounded-full" height="25" src="/assets/img/images/user-img.png" />
+                    <svg class="arrow-down" width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 1.5L7.5 7.5L13.5 1.5" stroke="#545F71" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>                        
+                    </button>
+                    <button class="navbar-config">
+                        <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11 10C11 9.44772 10.5523 9 10 9C9.44772 9 9 9.44772 9 10C9 10.5523 9.44772 11 10 11C10.5523 11 11 10.5523 11 10ZM13 10C13 11.6569 11.6569 13 10 13C8.34315 13 7 11.6569 7 10C7 8.34315 8.34315 7 10 7C11.6569 7 13 8.34315 13 10Z"
+                                fill="#292929" />
+                            <path
+                                d="M16.9282 6.00005C16.7586 5.70639 16.5714 5.42936 16.3724 5.16625L15.5004 5.66967C13.5005 6.82434 11 5.38118 10.9999 3.07187L10.9998 2.06384C10.3395 1.98008 9.66756 1.97919 8.999 2.06318L8.99961 3.07206C8.99936 5.30894 6.65402 6.73291 4.68927 5.77038L4.50034 5.66971L3.62609 5.16523C3.21916 5.70224 2.88381 6.28458 2.62625 6.89831L3.50002 7.40195C5.49988 8.5567 5.49949 11.4437 3.49954 12.5984L2.62759 13.1018C2.75596 13.4057 2.90223 13.7064 3.07177 14C3.24134 14.2937 3.42858 14.5707 3.62759 14.8338L4.49954 14.3304C6.49954 13.1757 9.00002 14.6188 9.00002 16.9282L8.99966 17.9354C9.65975 18.0192 10.3313 18.0204 10.9996 17.9366L11.0003 16.928C11.0005 14.6188 13.4997 13.1759 15.4996 14.3304L16.3725 14.8345C16.7794 14.2977 17.1139 13.7155 17.3715 13.1019L16.4999 12.5982C14.4999 11.4434 14.5004 8.55642 16.5004 7.40172L17.3724 6.8983C17.244 6.59439 17.0977 6.29374 16.9282 6.00005ZM18.6602 5.00005C18.9937 5.57757 19.2633 6.17536 19.4709 6.78503L19.5558 7.04726C19.694 7.49325 19.5056 7.97587 19.1014 8.20945L17.5004 9.13377C16.8337 9.51867 16.8336 10.481 17.5003 10.8659L19.0993 11.7898C19.5032 12.0231 19.6922 12.5042 19.5548 12.9499C19.1184 14.3644 18.3681 15.6862 17.3341 16.8008C17.0168 17.1426 16.5058 17.2198 16.1018 16.9867L14.5001 16.0621C13.8335 15.6772 12.9998 16.1585 12.9998 16.9283L12.9997 18.7777C12.9995 19.2441 12.6772 19.6481 12.2225 19.7519C10.7403 20.0902 9.22045 20.079 7.77719 19.7497C7.3225 19.6458 7.00037 19.2416 7.00029 18.7751L6.9997 16.9284C6.9997 16.1586 6.1662 15.6776 5.49954 16.0625L3.89857 16.9868C3.49416 17.2201 2.98203 17.1419 2.66489 16.7992C2.16679 16.261 1.72081 15.6601 1.33972 15C0.958542 14.3398 0.660796 13.6527 0.443698 12.952L0.406491 12.784C0.355582 12.3898 0.544864 11.995 0.898575 11.7906L2.49954 10.8663C3.1662 10.4814 3.16637 9.51909 2.4997 9.13419L0.900681 8.21031C0.496746 7.97708 0.30783 7.49595 0.445158 7.05023C0.881597 5.63567 1.63183 4.31385 2.66587 3.19934L2.79278 3.08322C3.10878 2.84251 3.54459 2.80935 3.89813 3.01337L5.49982 3.93797L5.62691 3.9999C6.2677 4.26111 7.0001 3.7933 7.00014 3.07175L7.00026 1.22236L7.01403 1.0509C7.082 0.659495 7.37946 0.339022 7.77745 0.248171C9.25957 -0.0900599 10.7791 -0.0796771 12.2223 0.249577L12.386 0.30275C12.7002 0.434086 12.9266 0.717584 12.985 1.05302L12.9997 1.22496L13.0003 3.07169C13.0003 3.84149 13.8338 4.32252 14.5004 3.93762L16.1014 3.0133L16.2567 2.94054C16.63 2.80342 17.0569 2.9002 17.3346 3.20004C17.8328 3.73839 18.279 4.33982 18.6602 5.00005Z"
+                                fill="#292929" />
+                        </svg>
+                            
+                    </button>
+                </div>
+        </nav>
+        
+    </header>
+
+    <div class="flex flex-1 overflow-hidden">
+        <!-- Sidebar -->
+        <aside class="flex flex-col justify-between w-49 border-r border-gray-300 py-6 px-4 text-gray-700 text-sm select-none">
+            <!-- Botón para plegar/desplegar -->
+            <button id="toggle-sidebar" class="flex items-center space-x-2 mb-4 hover:text-gray-900">
+                <svg class="toggle-icon" width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19 6.19046e-06L19.1025 0.00488895C19.6067 0.0562204 20 0.482329 20 1.00001C20 1.51768 19.6067 1.94379 19.1025 1.99512L19 2.00001L1 2.00001C0.447716 2.00002 7.40875e-07 1.5523 4.7728e-07 1.00002C2.13686e-07 0.44773 0.447715 1.50451e-05 1 1.47815e-05L19 6.19046e-06Z"
+                        fill="#545F71" />
+                    <path
+                        d="M19 8.00001C19.5523 8.00001 20 8.44773 20 9.00001C20 9.5523 19.5523 10 19 10L1 10C0.447715 10 1.35705e-07 9.5523 8.74228e-08 9.00002C3.91405e-08 8.44773 0.447715 8.00002 1 8.00002L19 8.00001Z"
+                        fill="#545F71" />
+                    <path
+                        d="M19 16C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18L1 18C0.447715 18 1.35705e-07 17.5523 8.74228e-08 17C3.91405e-08 16.4477 0.447715 16 1 16L19 16Z"
+                        fill="#545F71" />
+                </svg>
+            </button>
+            <div class="sections ">
+                <div class="section-1 flex-grow space-y-4">
+                    <button button class="flex items-center justify-between w-full hover:text-gray-900" style="padding: 0.75rem 1rem;">
+                        <div class="flex items-center space-x-2">
+                            <svg class="fa-bars" width="13" height="13" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_210_7357)">
+                                    <path
+                                        d="M7 17C7 18.6569 5.65685 20 4 20C2.34315 20 1 18.6569 1 17C1 15.3431 2.34315 14 4 14C5.65685 14 7 15.3431 7 17Z"
+                                        stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M7 16V3" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M19 1L7 3" stroke="#545F71" stroke-width="2" stroke-linecap="round" />
+                                    <path
+                                        d="M19 16C19 17.6569 17.6569 19 16 19C14.3431 19 13 17.6569 13 16C13 14.3431 14.3431 13 16 13C17.6569 13 19 14.3431 19 16Z"
+                                        stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M19 15V2" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_210_7357">
+                                        <rect width="23" height="22" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span>Todo</span>
+                        </div>
+                        <svg class="arrow-left" width="9" height="10" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.16671L7.33333 7.00004L1.5 12.8334" stroke="#657184" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="flex items-center justify-between w-full hover:text-gray-900" style="padding: 0.75rem 1rem;">
+                        <div class="flex items-center space-x-2">
+                            <svg class="fa-icon" width="13" height="13" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9" cy="18" r="3" stroke="#545F71" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 18V3" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 3L18 4V8L12 7V3Z" stroke="#545F71" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Pistas</span>
+                        </div>
+                        <svg class="arrow-left" width="9" height="10" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.16671L7.33333 7.00004L1.5 12.8334" stroke="#545F71" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="flex items-center justify-between w-full hover:text-gray-900" style="padding: 0.75rem 1rem;">
+                        <div class="flex items-center space-x-2">
+                            <svg class="list-icon" width="13" height="13" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 4L2 5.73205L2 2.26795L5 4Z" stroke="#545F71" stroke-width="2" stroke-linejoin="round" />
+                                <path d="M2 10L20 10" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9 4L20 4" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2 16L20 16" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Listas</span>
+                        </div>
+                        <svg class="arrow-left" width="9" height="10" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.16671L7.33333 7.00004L1.5 12.8334" stroke="#545F71" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="flex items-center justify-between w-full hover:text-gray-900" style="padding: 0.75rem 1rem;">
+                        <div class="flex items-center space-x-2">
+                            <svg class="folder-icon" width="13" height="13" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.00024 17V5H10.0002L12.0002 7H21.0002V17C21.0002 18.1046 20.1048 19 19.0002 19H5.00024C3.89567 19 3.00024 18.1046 3.00024 17Z"
+                                    stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <circle cx="11.0002" cy="15" r="1" stroke="#545F71" stroke-width="2" />
+                                <path d="M12.0002 10V15" stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.0002 12L12.0002 10" stroke="#545F71" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Álbumes</span>
+                        </div>
+                        <svg class="arrow-left" width="9" height="10" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.16671L7.33333 7.00004L1.5 12.8334" stroke="#545F71" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        </button>
+                </div>
+            <div class="section-2 space-y-4 text-xs">
+                <button class="flex items-center justify-between w-full hover:text-gray-900" style="padding: 0.75rem 1rem;">
+                    <div class="flex items-center space-x-2">
+                        <svg class="config-icon" width="13" height="13" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.32463 2.31731C8.75103 0.560897 11.249 0.560897 11.6754 2.31731C11.9508 3.45193 13.2507 3.99038 14.2478 3.38285C15.7913 2.44239 17.5576 4.2087 16.6172 5.75218C16.0096 6.74925 16.5481 8.04918 17.6827 8.32463C19.4391 8.75103 19.4391 11.249 17.6827 11.6754C16.5481 11.9508 16.0096 13.2507 16.6172 14.2478C17.5576 15.7913 15.7913 17.5576 14.2478 16.6172C13.2507 16.0096 11.9508 16.5481 11.6754 17.6827C11.249 19.4391 8.75103 19.4391 8.32463 17.6827C8.04918 16.5481 6.74926 16.0096 5.75219 16.6172C4.2087 17.5576 2.44239 15.7913 3.38285 14.2478C3.99038 13.2507 3.45193 11.9508 2.31731 11.6754C0.560897 11.249 0.560897 8.75103 2.31731 8.32463C3.45193 8.04918 3.99037 6.74926 3.38285 5.75218C2.44239 4.2087 4.2087 2.44239 5.75219 3.38285C6.74926 3.99037 8.04918 3.45193 8.32463 2.31731Z"
+                                stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M13 10C13 11.6569 11.6569 13 10 13C8.34315 13 7 11.6569 7 10C7 8.34315 8.34315 7 10 7C11.6569 7 13 8.34315 13 10Z"
+                                stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        </svg>
+                        <span>Configuración</span>
+                    </div>
+                    
+                    <svg class="arrow-left" width="9" height="10" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 1.16671L7.33333 7.00004L1.5 12.8334" stroke="#545F71" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                
+                <button class="flex items-center justify-between w-full hover:text-gray-900" style="padding: 0.75rem 1rem;">
+                    <div class="flex items-center space-x-2">
+                        <svg class="sign-out" width="13" height="13" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9 13L5 9M5 9L9 5M5 9L19 9M14 13V14C14 15.6569 12.6569 17 11 17H4C2.34315 17 1 15.6569 1 14V4C1 2.34315 2.34315 1 4 1H11C12.6569 1 14 2.34315 14 4V5"
+                                stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Cerrar Sesión</span>
+                    </div>
+                    <svg class="arrow-left" width="9" height="10" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.16671L7.33333 7.00004L1.5 12.8334" stroke="#545F71" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                </button>
+            </div>
+            </div>
+        </aside>
+
+        <!-- Main content area -->
+        <main class="flex-1 flex flex-col overflow-hidden">
+            <!--<div class="flex flex-1 overflow-hidden border-r border-gray-300">
+                
+                <div class="w-48 bg-black"></div>
+                
+                <div class="flex-1 bg-gray-100 flex items-center justify-center">
+                    <img src="/assets/img/images/portada.png" alt="Logo de PlaYA!">
+                </div>
+                
+                <div class="w-72 border-l border-gray-300 flex flex-col overflow-y-auto">
+                    <div class="px-4 pt-2 pb-1 text-blue-600 text-xs font-light select-none">Se está reproduciendo:
+                    </div>
+                    <div class="px-4 text-blue-600 font-light text-lg select-none leading-tight">Lista de reproducción
+                    </div>
+                    <div class="flex flex-col divide-y divide-gray-300 overflow-y-auto max-h-[calc(100vh-10rem)]">
+                        
+                        <div
+                            class="flex items-center space-x-3 px-2 py-1 cursor-pointer hover:bg-blue-600 hover:text-white select-none">
+                            <div class="w-12 h-12 border border-gray-400 bg-gray-200 flex items-center justify-center">
+                                
+                                <img src="/assets/img/images/portada.png" alt="Logo de PlaYA!">
+                            </div>
+                            <div class="flex flex-col flex-1">
+                                <span class="font-bold text-base text-black">N-canción 1</span>
+                                <span class="text-blue-800 font-semibold text-sm -mt-1">N-artista</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>-->
+
+            <!-- Bottom player bar -->
+            <footer class="flex items-center justify-between border-t border-gray-300 px-4 py-3 select-none">
+                <div class="flex items-center space-x-3 w-72">
+                    <div class="w-16 h-16 border border-gray-300 bg-gray-200 flex items-center justify-center">
+    
+                        <img src="/assets/img/images/portada.png" alt="Logo de PlaYA!">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-lg leading-none">N-canción</span>
+                        <span class="text-blue-800 font-semibold text-sm -mt-1 flex items-center space-x-1">
+                            <i class="far fa-clock text-xs"></i>
+                            <span>N-Album</span>
+                            <span class="ml-2">N-artista</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="controls flex items-center space-x-4 flex-1 max-w-xl justify-center">
+                    
+                    <button class="volumen-boton" aria-label="Volume icon">
+                        <svg class="volume-icon" width="15" height="15" viewBox="0 0 20 20" fill="#292929" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.55893 0.353011C9.6641 -0.334377 11.1841 0.20565 11.5103 1.52777L11.5383 1.66241L11.6545 2.35821C11.9095 3.98809 12.0458 5.65746 12.0531 7.35653C12.0604 9.0556 11.9387 10.7261 11.6978 12.3581L11.5875 13.0549C11.3463 14.4759 9.76744 15.0901 8.6196 14.39L8.50991 14.3182L6.01697 12.5672C5.84749 12.4482 5.64516 12.3843 5.43805 12.3852L3.07479 12.3954C1.41806 12.4025 0.0691903 11.0651 0.0618559 9.40837L0.0445691 5.40841C0.0374087 3.75157 1.37474 2.40263 3.03158 2.39547L5.39484 2.38526C5.60188 2.38431 5.80374 2.31863 5.97216 2.19819L8.44987 0.425749L8.55893 0.353011ZM18.7356 2.33249C19.2503 2.27932 19.7141 2.6267 19.8171 3.12274L19.8332 3.22424L19.9254 4.2385C20.0056 5.2563 20.0485 6.2848 20.053 7.32196C20.059 8.70482 19.9966 10.0726 19.8686 11.4214C19.8163 11.9709 19.3283 12.3746 18.7787 12.3226C18.2291 12.2705 17.8256 11.7824 17.8775 11.2328C17.9993 9.94948 18.0587 8.64743 18.053 7.3306C18.0488 6.34305 18.0082 5.36404 17.932 4.39555L17.8438 3.4301L17.8385 3.32758C17.8377 2.82093 18.2207 2.38585 18.7356 2.33249ZM14.8307 3.34742C15.3464 3.30286 15.8051 3.65841 15.8997 4.15628L15.9138 4.25779L15.9718 5.02219C16.0224 5.78835 16.0497 6.56119 16.0531 7.33924C16.0575 8.37677 16.0199 9.40511 15.9404 10.4218C15.8972 10.9721 15.4156 11.3842 14.8653 11.3415C14.3149 11.2985 13.9029 10.8167 13.9456 10.2663C14.0208 9.30425 14.0573 8.33054 14.0531 7.34789C14.0499 6.61092 14.0242 5.8791 13.9762 5.15386L13.9204 4.43046L13.917 4.32794C13.9246 3.82132 14.315 3.39221 14.8307 3.34742Z" fill="#292929"/>
+                        </svg>
+                    </button>
+                    <input class="w-24 h-2 bg-blue-900 rounded" max="100" min="0" type="range" value="50" />
+                    <button class="addlist-botom" aria-label="Add to list">
+                        <svg class="addlist-icon" width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 8C19.5523 8 20 8.44771 20 9C20 9.55228 19.5523 10 19 10L1 10C0.447715 10 1.35705e-07 9.55228 8.74228e-08 9C3.91405e-08 8.44772 0.447715 8 1 8L19 8Z"
+                            fill="#292929" />
+                        <path
+                            d="M2 5L2 4L1 4C0.447716 4 8.25954e-07 3.55228 2.62268e-07 3C2.13986e-07 2.44772 0.447715 2 1 2L2 2L2 1C2 0.447716 2.44772 5.59119e-07 3 -2.62268e-07C3.55228 -3.10551e-07 4 0.447715 4 1L4 2L5 2L5.10254 2.00488C5.60667 2.05621 6 2.48232 6 3C6 3.51768 5.60667 3.94379 5.10254 3.99512L5 4L4 4L4 5C4 5.55228 3.55228 6 3 6C2.44772 6 2 5.55228 2 5ZM19 2L19.1025 2.00488C19.6067 2.05621 20 2.48232 20 3C20 3.51768 19.6067 3.94378 19.1025 3.99512L19 4L8 4C7.44772 4 7 3.55228 7 3C7 2.44772 7.44772 2 8 2L19 2Z"
+                            fill="#292929" />
+                        <path
+                            d="M19 14C19.5523 14 20 14.4477 20 15C20 15.5523 19.5523 16 19 16L1 16C0.447715 16 1.35705e-07 15.5523 8.74228e-08 15C3.91405e-08 14.4477 0.447715 14 1 14L19 14Z"
+                            fill="#292929" />
+                    </svg>
+                    </button>
+                   
+                    <button class="pause-botom" aria-label="Pause">
+                        <svg class="pause-icon" width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 0C5.65685 0 7 1.34315 7 3V13C7 14.6569 5.65685 16 4 16H3C1.39489 16 0.0842146 14.7394 0.00390625 13.1543L0 13V3C0 1.34315 1.34315 1.61064e-08 3 0H4ZM13 0C14.6569 0 16 1.34315 16 3V13C16 14.6569 14.6569 16 13 16H12C10.3949 16 9.08421 14.7394 9.00391 13.1543L9 13V3C9 1.34315 10.3431 1.61064e-08 12 0H13Z" fill="#292929"/>
+                            </svg>                            
+                    </button>
+                    
+                    <button class="play-botom" aria-label="Play">
+                        <svg class="play-icon" width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 6.76795C18.3333 7.53775 18.3333 9.46225 17 10.2321L8 15.4282C6.66667 16.198 5 15.2358 5 13.6962L5 3.30385C5 1.76425 6.66667 0.801995 8 1.5718L17 6.76795Z"
+                                fill="#292929" />
+                        </svg>
+                    </button>
+                    
+                    <button class="shuffle-botom" aria-label="Shuffle icon">
+                        <svg class="shuffle-icon" width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.6172 10.0762C16.9909 9.92144 17.421 10.007 17.707 10.293L19.707 12.293C20.0976 12.6835 20.0976 13.3166 19.707 13.7071L17.707 15.7071C17.421 15.9931 16.9909 16.0787 16.6172 15.9239C16.2436 15.7691 16 15.4045 16 15V14H14.2646C12.9817 14 11.7679 13.5081 10.8545 12.6563L10.6758 12.4815L10.6084 12.4043C10.2942 12.0068 10.3257 11.4279 10.6973 11.0674C11.0689 10.7069 11.6483 10.6933 12.0361 11.0196L12.1113 11.0889L12.3311 11.293C12.8645 11.7428 13.5465 12 14.2646 12H16V11C16 10.5956 16.2436 10.231 16.6172 10.0762ZM16.6123 0.0781693C16.9869 -0.0793517 17.4197 0.0056435 17.707 0.293013L19.707 2.29301C20.0976 2.68354 20.0976 3.31655 19.707 3.70708L17.707 5.70708C17.3165 6.09759 16.6835 6.0976 16.293 5.70708C16.0262 5.44029 15.9413 5.06027 16.0391 4.72172L16.0312 4.00004H14.2646C13.2111 4.00008 12.2346 4.55274 11.6924 5.4561L8.02246 11.5723C7.11886 13.0783 5.49162 14 3.73535 14H1C0.447715 14 6.4426e-08 13.5523 0 13C0 12.4478 0.447715 12 1 12H3.73535C4.78895 12 5.76542 11.4473 6.30762 10.544L9.97754 4.42778L10.1553 4.15239C11.085 2.8102 12.6181 2.00008 14.2646 2.00004H16.0107L16 1.01079C15.9957 0.604431 16.2377 0.235706 16.6123 0.0781693ZM3.73535 2.00004C5.01829 2.00007 6.23212 2.49198 7.14551 3.34379L7.32422 3.5186L7.3916 3.59575C7.70584 3.99333 7.67431 4.57218 7.30273 4.93266C6.93111 5.29318 6.35173 5.30678 5.96387 4.98051L5.88867 4.91118L5.66895 4.70708C5.13548 4.2573 4.45346 4.00007 3.73535 4.00004H1C0.447715 4.00004 0 3.55233 0 3.00004C0 2.44776 0.447715 2.00004 1 2.00004H3.73535Z"
+                            fill="#292929" />
+                    </svg>
+                    </button>
+                    <!--<button aria-label="Repeat icon" class="text-blue-600"><i class="fas fa-redo"></i></button>-->
+                    <button class="reapeat-botom" aria-label="Reapeat icon">
+                        <svg class="reapeat-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 7.99999C19.5523 7.99999 20 8.44771 20 8.99999C20 11.7614 17.7614 14 15 14H4V15C4 15.4044 3.75641 15.769 3.38281 15.9238C3.05575 16.0593 2.68531 16.0107 2.40625 15.8047L2.29297 15.707L0.292969 13.707C-0.0975554 13.3165 -0.0975554 12.6835 0.292969 12.293L2.29297 10.293C2.57897 10.007 3.00914 9.92138 3.38281 10.0762C3.75641 10.231 4 10.5956 4 11V12H15C16.6569 12 18 10.6568 18 8.99999C18 8.44771 18.4477 7.99999 19 7.99999ZM16.6172 0.076165C16.9443 -0.0593103 17.3147 -0.0107115 17.5938 0.195306L17.707 0.292962L19.707 2.29296C20.0976 2.68349 20.0976 3.3165 19.707 3.70702L17.707 5.70702C17.421 5.99302 16.9909 6.0786 16.6172 5.92382C16.2436 5.76901 16 5.40441 16 4.99999V3.99999H5L4.8457 4.0039C3.26055 4.08421 2 5.39489 2 6.99999C2 7.55228 1.55228 7.99999 1 7.99999C0.447715 7.99999 0 7.55228 0 6.99999C1.28855e-07 4.23857 2.23858 1.99999 5 1.99999H16V0.999993C16 0.595577 16.2436 0.230976 16.6172 0.076165Z"
+                            fill="#292929" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex items-center space-x-4 w-72 justify-end text-sm font-semibold text-gray-900">
+                    <button aria-label="Star count"
+                        class="flex items-center space-x-2 bg-gray-900 text-white rounded px-4 py-2">
+                        <i class="far fa-star"></i>
+                        <span>123</span>
+                    </button>
+                    <button aria-label="Comments count"
+                        class="flex items-center space-x-2 bg-gray-900 text-white rounded px-4 py-2">
+                        <i class="far fa-comment"></i>
+                        <span>123</span>
+                    </button>
+                    <button aria-label="List count"
+                        class="flex items-center space-x-2 border border-gray-400 rounded px-4 py-2">
+                        <i class="fas fa-list"></i>
+                        <span>400</span>
+                    </button>   
+                    <span class="text-blue-900 font-bold">1:32</span>
+                    <span class="text-gray-900 font-semibold">/5:23</span>
+                </div>
+            </footer>
+
+            <div id="image-container" class="image-container hidden">
+                <img src="/assets/img/images/portada-background.png" alt="Portada de la canción" class="cover-image">
+                <div class="song-list hidden">
+                    <h2>Se está reproduciendo: Nombre de la lista</h2>
+                    <ul>
+                        <li>Canción 1</li>
+                        <li>Canción 2</li>
+                        <li>Canción 3</li>
+                    </ul>
+                </div>
+                <div class="comment-list hidden">
+                    <h2>Número de comentarios</h2>
+                    <ul>
+                        <li>Comentario 1</li>
+                        <li>Comentario 2</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+    <script src="/assets/js/collapsed.js"></script>
+</body>
+
+</html>
