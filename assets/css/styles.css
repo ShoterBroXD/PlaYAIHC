@@ -230,3 +230,89 @@ p, span, a, li, button {
   vertical-align: middle;
 }
 
+/* PARA SUBIR.HTML */
+
+.subir-container{
+  text-align: center;
+  padding: 15rem;
+}
+
+.subir-main-text h2{
+  font-family: Raleway;
+  font-size: 48px;
+  font-weight: 800;
+  color: #0A1128;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  padding: 0rem 0rem 2rem 0rem;
+}
+
+.subir-main-text p{
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 19px;
+  letter-spacing: -2%;
+  text-align: center;
+  padding: 0rem 0rem 2rem 0rem;
+}
+
+.subir-btn-container a {
+  display:flex;
+  margin-top: 2rem;
+}
+
+.subir-btn.primary.fixed-visible {
+  background-color: #034078;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Montserrat;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.subir-btn.primary.fixed-visible:hover {
+  background-color: #06325a;
+}
+
+.search-form-subir {
+    position: relative;
+    width: 550px;
+}
+
+.search-form-subir input[type="search"] {
+    width: 100%;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    color: #777;
+    transition: border-color 0.3s ease;
+}
+
+.search-form-subir input[type="search"]::placeholder {
+    color: #aaa;
+}
+
+.search-form-subir input[type="search"]:focus {
+    outline: none;
+    border-color: #0a6e99;
+    color: #05255a;
+}
+
+.search-form-subir button {
+    position: absolute;
+    right: 6px;
+    top: 55%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #0a6e99;
+    padding: 0;
+}
