@@ -633,7 +633,7 @@ aside button#toggle-sidebar:hover svg path {
 }
 
 .comment-list{
-  display:none;
+  display:flex;
   flex-direction: column;
 }
 
