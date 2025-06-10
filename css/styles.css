@@ -22,13 +22,14 @@ html, body {
 
 .navbar-main {
     display: flex;
-    height: 50px;
+    width: 100%;
+    height: 5rem;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05);
     font-family: 'Montserrat', sans-serif;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1100;
 }
@@ -388,3 +389,109 @@ html, body {
   border-bottom: 1px solid #eee;
 }
 
+
+#navbar{
+  margin-top: 0px;
+  width: 100%;
+  height: 4rem;
+}
+
+.profile header {
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 2rem;
+  width: 100%;
+}
+
+.profile nav{
+  width: 100%;
+  display: flex;
+}
+
+.profile body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.profile aside{
+  width: 200px;
+  margin-top: 4rem;
+  background-color: #ffffff;
+  color: white;
+  padding: 20px;
+  height: 60rem;
+  position: fixed;
+}
+.profile.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-section{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem 0 0 20rem;
+  left: 240px;
+  height: 100%;
+  width: 100%;
+}
+
+.profile.nav-menu {
+  display: flex;
+  list-style: none;
+  margin-top: 0;
+}
+
+.profile.nav-menu li {
+  margin: 0 15px;
+}
+
+.profile.welcome {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile.profile-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 5rem;
+}
+
+.profile.card {
+  background: #e9ecef;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.profile.button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.abajinho{
+  display: flex;
+  flex-direction: row;
+}
