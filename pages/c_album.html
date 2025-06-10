@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
 
-    <title>Playa/Album</title>
+    <title>Playa/Listas</title>
 </head>
 <body>
     <header>
@@ -24,7 +24,7 @@
       <header>
         <div id="sidebar"></div>
 
-   <script>
+  <script>
   fetch('/pages/components/sidebar.html')
     .then(response => response.text())
     .then(data => {
@@ -43,12 +43,48 @@
     });
 </script>
     </header>
-
-    <section class="hero">
+     <section class="hero">
     <div class="hero-content">
         <div class="hero-pages-title">
         <h1 class="title_categories">Álbumes</h1>
-     </div>
+        </div>
+        <div class="subtitle_container">
+          <div class="filter-buttons">
+          <button class="filter-button active">Todos</button>
+          <button class="filter-button">Rock</button>
+          <button class="filter-button">Trap</button>
+    <button class="filter-button">Cumbia</button>
+          
+
+ </div>
+
+      </div>
+     <div class="track-list">
+  <div class="track-item">
+    <div class="track-image">
+       <img src="/assets/icons/pop.png"/>
+    </div>
+    <div class="track-info">
+      <span class="artist">Messi</span>
+      <span class="title">Mundial(track)</span>
+      <div class="actions">
+        <button><i class="icon"><img src="/assets/icons/icon_fav.svg"/></i> 123</button>
+        <button><i class="icon"><img src="/assets/icons/icon_loop.svg"/></i> 123</button>
+        <button><i class="icon"><img src="/assets/icons/icon_list_white.svg"/></i> 123</button>
+        <ul class="song_list">
+          <span>1. Nº-canción</span><span class="duration">1:23</span></li>
+          <br>
+          <span>2. Nº-canción</span><span class="duration">1:23</span></li>
+          <br>
+          <span>3. Nº-canción</span><span class="duration">1:23</span></li>
+        </ul>
+  </div>
+  
+  
+     
+      </div>
+      
+     
     </section>
 
 
