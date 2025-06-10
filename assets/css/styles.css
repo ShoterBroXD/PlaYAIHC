@@ -14,7 +14,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
 }
 
 .nav-links a:hover,.nav-links a:focus{
@@ -32,7 +32,7 @@ nav a:hover,nav a:focus {
 .nav-links{
   list-style: none;
   display: flex;
-  gap: 1.0rem;
+  gap: 0rem;
 }
 
 .nav-links a{
@@ -43,7 +43,7 @@ nav a:hover,nav a:focus {
 
 .search-form {
     position: relative;
-    width: 300px;
+    width: 450px;
     margin: 0 15px 0 15px;
 }
 
@@ -69,11 +69,13 @@ nav a:hover,nav a:focus {
 
 .search-form button {
   position: absolute;
-  right: 6px;
+  right: -10px;
   top: 55%;
   transform: translateY(-50%);
   background: none;
   border: none;
+  width: 15px;
+  height: 15px;
   font-size: 1.1rem;
   cursor: pointer;
   color: #0a6e99;
@@ -291,13 +293,6 @@ svg {
   display: block;
 }
 
-/*.reproductor.nav-links a:hover,
-.reproductor.nav-links a:focus {
-  background-color: #1282A2;
-  color: #ffffff;
-  outline: none;
-}*/
-
 .reproductor nav a:hover,
 .reproductor nav a:focus {
   background-color: #1282A2;
@@ -311,19 +306,13 @@ svg {
   gap: 0;
   padding: 0;
 }
-/*
-.reproductor.nav-links a {
-  text-decoration: none;
-  color: #545F71;
-  font-size: 1rem;
-}*/
 
 .reproductor nav a {
   display: flex;
   width: 100%;
   font-family: 'Raleway', sans-serif;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0;
   padding: 0.5rem 1rem;
   border: none;
   background: transparent;
@@ -522,23 +511,6 @@ aside button#toggle-sidebar:hover svg path {
   object-fit: cover;
 }
 
-.song-list,
-.comment-list {
-  width: 30%;
-  /* 30% del ancho */
-  position: absolute;
-  right: 0;
-  /* Pegado a la derecha */
-  top: 0;
-  /* Comienza desde la parte superior */
-  background: white;
-  /* Fondo blanco para las listas */
-  overflow-y: auto;
-  /* Permite desplazamiento si es necesario */
-  height: 100%;
-  /* Ocupa toda la altura */
-}
-
 .hidden {
   display: none;
   /* Oculta elementos */
@@ -586,9 +558,158 @@ aside button#toggle-sidebar:hover svg path {
   outline: none;
 }
 
+.songs-reaction{
+  display: none;
+  background: #ffffff;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0A1128;
+}
+
+.songs-reaction span {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.songs-reaction button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 25px;
+  background: #0A1128;
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  span{
+    font-family: "Raleway";
+    font-weight: 100;
+    font-size: 1rem;
+  }
+}
+
+.songs-reaction button:hover {
+  border: #4273C2;
+  border-style: groove;
+}
+
+.songs-reaction button:focus {
+  background-color: #D9D9D9;
+  color: #0A1128;
+  path{
+    stroke: #0A1128;
+    fill: #0A1128;
+  }
+}
 
 .flex.items-center {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.container-playlist,
+.comment-list {
+  display: auto;
+  width: 30%;
+  /* 30% del ancho */
+  position: absolute;
+  right: 0;
+  left: 100px;
+  /* Pegado a la derecha */
+  top: 0;
+  /* Comienza desde la parte superior */
+  background: white;
+  /* Fondo blanco para las listas */
+  overflow-y: auto;
+  /* Permite desplazamiento si es necesario */
+  height: 100%;
+  /* Ocupa toda la altura */
+}
+
+.comment-list{
+  display: none;
+}
+
+.playlist {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.song img{
+  width: 40px;
+  height: 40px;
+}
+
+.comentario {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+}
+
+.usuario img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.toggle-respuestas {
+  margin-top: 10px;
+}
+
+.container-playlist {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.playlist {
+  border: 1px solid #007bff;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.playlist h2 {
+  text-align: center;
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.song:last-child {
+  border-bottom: none;
+}
+
+.song img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.info {
+  flex-grow: 1;
+}
+
+.duration {
+  min-width: 50px;
+  text-align: right;
 }
