@@ -583,11 +583,14 @@ aside button#toggle-sidebar:hover svg path {
   color: #ffffff;
   border-radius: 5px;
   border: none;
+  svg {
+    width: 20px;
+  };
   span{
     font-family: "Raleway";
     font-weight: 100;
     font-size: 1rem;
-  }
+  };
 }
 
 .songs-reaction button:hover {
@@ -617,7 +620,7 @@ aside button#toggle-sidebar:hover svg path {
   /* 30% del ancho */
   position: absolute;
   right: 0;
-  left: 100px;
+  left: auto;
   /* Pegado a la derecha */
   top: 0;
   /* Comienza desde la parte superior */
@@ -630,7 +633,37 @@ aside button#toggle-sidebar:hover svg path {
 }
 
 .comment-list{
-  display: none;
+  display:flex;
+  flex-direction: column;
+}
+
+.header-list{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  flex-direction: row;
+  justify-content: space-between;
+  span{
+    font-family: 'Raleway', sans-serif;
+    font-weight:bold;
+    font-size: 1.5rem;
+    color: #000;
+  };
+  h2{
+    font-family: 'Raleway', sans-serif;
+      font-weight:bolder;
+      font-size: 1.5rem;
+      color: #000;
+  };
+  button{
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    right: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+  };
 }
 
 .playlist {
@@ -645,23 +678,76 @@ aside button#toggle-sidebar:hover svg path {
 }
 
 .comentario {
+  width: 100%;
   background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: none;
   padding: 10px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  .option-comment{
+    height: 10rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+  };
+  button{
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .like-comment{
+
+    align-items: center;
+    height: 40px;
+    flex-direction:column;
+    justify-content: space-between;
+  }
+  .like-comment-like{
+    width: 10px;
+    height: 10px;
+  }
+  .ask{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content:space-between;
+  }
+  img{
+    width: 40px;
+    height: 40px;
+    margin: 0 1rem 0 0;
+    border: #000;
+  }
 }
 
-.usuario {
+.tree-points {
+  flex-grow: 1;
+  margin-top: 0;
+  display: flex;
+  gap: 0;
+  font-size: large;
+  font-weight: 900;
+}
+
+.like-comment {
+  margin-top: 4.5rem;
+  display: flex;
+  gap: 0;
+}
+
+.ask span,.ask button{
+  color: #1282A2;
+  font-size: 1rem;
+}
+
+.user{
   display: flex;
   align-items: center;
-}
-
-.usuario img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
+  font-weight: 600;
+  font-size:1.5rem;
+  color: #000;
 }
 
 .toggle-respuestas {
@@ -669,7 +755,6 @@ aside button#toggle-sidebar:hover svg path {
 }
 
 .container-playlist {
-  width: 80%;
   margin: auto;
   padding: 20px;
 }

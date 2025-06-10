@@ -13,15 +13,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //const footer = document.querySelector('footer');
     const footer = document.getElementById('collapsed-buttom');
-    const imageContainer = document.getElementById('image-container');
-    const songList = document.querySelector('.container-playlist');
-    const commentList = document.querySelector('.comment-list');
-
+    
     footer.addEventListener('click', function(event) {
+        const imageContainer = document.getElementById('image-container');
+        const songList = document.querySelector('.container-playlist');
+        const commentList = document.querySelector('.comment-list');
+
         imageContainer.classList.toggle('hidden');
-        if (event.target.id === 'Play-list') {
+
+        const songBtn = event.target.closest('#Play-list');
+        const commentBtn = event.target.closest('#Comment-list');
+
+        if (songBtn) {
             showSongList(); // Mostrar lista de canciones
-        } else if (event.target.id === 'Comment-list') {
+        } else if (commentBtn) {
             showCommentList(); // Mostrar lista de comentarios
         }
         if (imageContainer.classList.contains('hidden')) {
