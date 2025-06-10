@@ -230,3 +230,261 @@ p, span, a, li, button {
   vertical-align: middle;
 }
 
+
+/* PARA BIBLIOTECA */
+
+.sidebar {
+  width: 170px;
+  flex-shrink: 0;
+}
+
+.sidebar-main {
+    width: 165px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85vh;
+    padding: 35px;
+    box-shadow: 0 0 0px rgba(0,0,0,0.05);
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebar-above, .sidebar-bellow {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #4a4a4a;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.sidebar-item:hover {
+  width: 165px;
+  background-color: #f0f4fa;
+}
+
+.sidebar-item.active {
+    background-color: #eef3fb;
+    color: #1d1d1d;
+    font-weight: 600;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.search-form-lib {
+    position: relative;
+    width: 550px;
+}
+
+.search-form-lib input[type="search"] {
+    width: 100%;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    color: #777;
+    transition: border-color 0.3s ease;
+}
+
+.search-form-lib input[type="search"]::placeholder {
+    color: #aaa;
+}
+
+.search-form-lib input[type="search"]:focus {
+    outline: none;
+    border-color: #0a6e99;
+    color: #05255a;
+}
+
+.search-form-lib button {
+    position: absolute;
+    right: 6px;
+    top: 55%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #0a6e99;
+    padding: 0;
+}
+
+p.subtitle-lib {
+  position: absolute; /* o relative, según convenga */
+  top: 25%;           /* ajusta según el lugar deseado */
+  left: 15%;          /* ajusta según el lugar deseado */
+  width: 0px;
+}
+
+.title-lib {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 475px;
+  font-size: 48px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  font-family: Raleway, sans-serif;
+  color: #0a1128;
+  text-align: left;
+}
+
+p.subtitle-lib {
+  width: 543px;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  line-height: 0.3;
+  display: block; /* o simplemente dejarlo por defecto */
+  font-family: Raleway, sans-serif;
+  color: #0a1128;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.volume-up-icon {
+  width: 91%;
+  top: 10%;
+  position: absolute;
+  max-width: 100%;
+  overflow: hidden;
+  height:45px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0 40px 0;
+}
+
+
+.category-icon {
+  width: 100px; /* Aumenta el tamaño */
+  height: 150px;
+  margin-right: 15px;
+  border-radius: 12px; /* Aplica curvatura */
+  object-fit: cover; /* Asegura que la imagen se recorte bien dentro del espacio */
+}
+
+.category-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.category-count {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+main.content {
+  margin-left: 200px;
+  padding: 2rem;
+}
+
+main.content section {
+  margin-bottom: 2rem;
+}
+
+main.content h2 {
+  font-size: 1.2rem;
+  color: #05255a;
+  margin-bottom: 1rem;
+}
+
+/* ======================= */
+/* TARJETAS (CARDS) */
+/* ======================= */
+
+.library-grid {
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 105px;
+  padding: 80px;
+  justify-items: center;
+}
+.card-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap;         /* ← evita que las cards pasen a la siguiente línea */
+  overflow-x: auto;          /* ← agrega scroll horizontal si hay muchas cards */
+  padding-bottom: 1rem;      /* ← espacio opcional debajo del scroll */
+}
+
+
+.card {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+}
+
+.card-img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-info {
+  margin-top: 0.5rem;
+  padding-left: 0.2rem;
+}
+
+.song-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.song-details {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.2rem;
+}
+
+/* ======================= */
+/* RESPONSIVE */
+/* ======================= */
+@media (max-width: 900px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    display: none;
+  }
+
+  .content {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .nav-extra {
+    gap: 0.5rem;
+  }
+
+  .search-form {
+    max-width: 180px;
+  }
+}
