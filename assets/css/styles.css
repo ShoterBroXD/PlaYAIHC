@@ -633,25 +633,25 @@ aside button#toggle-sidebar:hover svg path {
 }
 
 .comment-list{
-  display:flex;
+  display:none;
   flex-direction: column;
 }
 
-.header-list{
+.header-list1{
   display: flex;
   align-items: center;
   height: 40px;
   flex-direction: row;
   justify-content: space-between;
   span{
-    font-family: 'Raleway', sans-serif;
-    font-weight:bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:normal;
     font-size: 1.5rem;
     color: #000;
   };
   h2{
-    font-family: 'Raleway', sans-serif;
-      font-weight:bolder;
+    font-family: 'Raleway',  sans-serif;
+      font-weight:normal;
       font-size: 1.5rem;
       color: #000;
   };
@@ -666,12 +666,60 @@ aside button#toggle-sidebar:hover svg path {
   };
 }
 
-.playlist {
-  display: none;
+.header-list2 {
+  display: flex;
+  position: fixed;
+  background: #ffffff;
+  height: 30px;
+  width: 100%;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem;
+  margin: 0px ;
+  h2 {
+    font-family:'Montserrat',sans-serif;
+    font-weight:100;
+    margin: 0;
+    font-size: 1rem;
+    color: #4273C2;
+    
+  };
+  .name-list{
+      font-size: large;
+  };
 }
+
+.song:hover{
+  background-color: #1282A2;
+  .name-artist,.name-song,.duration{
+    color: #ffffff;
+  }
+  svg{
+    stroke: #ffffff;
+    fill: #ffffff;
+    color: #ffffff;
+  }
+}
+
+.name-song{
+  color: #000;
+  font-weight: 700;
+  font-size: large;
+}
+.name-artist{
+  color: #034078;
+  font-weight: 600;
+}
+
+.duration{
+  font-family: 'Raleway', sans-serif;
+  color: #034078;
+  font-weight: 900;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  width: auto;
+  display: flex;
+}
+
 .song img{
   width: 40px;
   height: 40px;
@@ -755,15 +803,17 @@ aside button#toggle-sidebar:hover svg path {
 }
 
 .container-playlist {
-  margin: auto;
-  padding: 20px;
+  padding: 1rem;
 }
 
 .playlist {
-  border: 1px solid #007bff;
-  padding: 10px;
-  border-radius: 5px;
   background-color: #ffffff;
+  margin-top: 30px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 0;
 }
 
 .playlist h2 {
@@ -775,8 +825,11 @@ aside button#toggle-sidebar:hover svg path {
 
 .song {
   display: flex;
+  width: 100%;
+  height: 3rem;
   align-items: center;
-  padding: 10px 0;
+  margin-top: 0;
+  padding: 0px 0;
   border-bottom: 1px solid #e9ecef;
 }
 
@@ -785,16 +838,15 @@ aside button#toggle-sidebar:hover svg path {
 }
 
 .song img {
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 2.6rem;
   margin-right: 10px;
+  border-style:inset;
+  border-color: #545F71;
 }
 
 .info {
   flex-grow: 1;
 }
 
-.duration {
-  min-width: 50px;
-  text-align: right;
-}
+

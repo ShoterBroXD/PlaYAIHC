@@ -211,52 +211,358 @@
             <div id="image-container" class="image-container hidden">
                 <img src="/assets/img/images/portada-background.png" alt="Portada de la canción" class="cover-image">
                 <div class="container-playlist">
-                    <div>
-                        <h2>Lista de reproducción</h2>
-                        <button>
-                            <span>Ordenar por</span>
-                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7 18.25V1.75C7 1.19772 7.44772 0.75 8 0.75C8.55228 0.75 9 1.19772 9 1.75V18.25C9 18.8023 8.55228 19.25 8 19.25C7.44772 19.25 7 18.8023 7 18.25Z"
-                                    fill="#111827" />
-                                <path
-                                    d="M14.1189 10.7246C14.5117 10.4043 15.0907 10.4269 15.4568 10.793C15.8229 11.1591 15.8455 11.7381 15.5252 12.1309L15.4568 12.207L8.7068 18.957C8.31627 19.3476 7.68326 19.3476 7.29273 18.957L0.542734 12.207L0.474375 12.1309C0.154025 11.7381 0.176618 11.1591 0.542734 10.793C0.90885 10.4269 1.48785 10.4043 1.88063 10.7246L1.9568 10.793L7.99977 16.8359L14.0427 10.793L14.1189 10.7246Z"
-                                    fill="#111827" />
-                            </svg>
-                                
-                        </button>
+                    <div class="header-list2">
+                        <h2>se está reproduciendo</h2>
+                        <h2 class="name-list">Lista de reproducción</h2>
                     </div>
                     <div class="playlist">
                         <div class="song">
-                            <img src="/assets/img/images/user-coment.png" alt="Portada">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
                             <div class="info">
-                                <div>N-canción 1</div>
-                                <div>N-artista</div>
+                                <div class="name-song">N-canción 1</div>
+                                <div class="name-artist">N-artista 1</div>
                             </div>
-                            <div class="duration">1:23</div>
-                        </div>                
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
                         <div class="song">
-                            <img src="/assets/img/images/user-coment.png" alt="Portada">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
                             <div class="info">
-                                <div>N-canción 2</div>
-                                <div>N-artista</div>
+                                <div class="name-song">N-canción 2</div>
+                                <div class="name-artist">N-artista 2</div>
                             </div>
-                            <div class="duration">1:23</div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
                         </div>
                         <!-- Repite el bloque anterior para cada canción -->
                         <div class="song">
-                            <img src="/assets/img/images/user-coment.png" alt="Portada">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
                             <div class="info">
-                                <div>N-canción 15</div>
-                                <div>N-artista</div>
+                                <div class="name-song">N-canción 3</div>
+                                <div class="name-artist">N-artista 3</div>
                             </div>
-                            <div class="duration">1:23</div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 4</div>
+                                <div class="name-artist">N-artista 4</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 5</div>
+                                <div class="name-artist">N-artista 5</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 6</div>
+                                <div class="name-artist">N-artista 6</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 7</div>
+                                <div class="name-artist">N-artista 7</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 8</div>
+                                <div class="name-artist">N-artista 8</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 9</div>
+                                <div class="name-artist">N-artista 9</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 10</div>
+                                <div class="name-artist">N-artista 10</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 11</div>
+                                <div class="name-artist">N-artista 11</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 12</div>
+                                <div class="name-artist">N-artista 12</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 13</div>
+                                <div class="name-artist">N-artista 13</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 14</div>
+                                <div class="name-artist">N-artista 14</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 15</div>
+                                <div class="name-artist">N-artista 15</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 16</div>
+                                <div class="name-artist">N-artista 16</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 17</div>
+                                <div class="name-artist">N-artista 17</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 18</div>
+                                <div class="name-artist">N-artista 18</div>
+                            </div>
+                            <div class="duration">
+                                <svg width="10" height="10" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10ZM20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
+                                        fill="#0A1128" />
+                                    <path
+                                        d="M13 9.99994C13 10.3572 12.8094 10.6875 12.5 10.8662L9.5 12.5976C9.1906 12.7762 8.8094 12.7762 8.5 12.5976C8.19081 12.419 8.00013 12.0894 8 11.7324L8 8.26752C8.00013 7.91047 8.19081 7.58088 8.5 7.40228C8.8094 7.22365 9.1906 7.22365 9.5 7.40228L12.5 9.13373L12.6104 9.20795C12.854 9.3957 13 9.68738 13 9.99994Z"
+                                        fill="#0A1128" />
+                                </svg>
+                                    
+                                1:23
+                            </div>
                         </div>
                     </div>    
                 </div>    
 
                 <div class="comment-list">
-                    <div class="header-list">
+                    <div class="header-list1">
                         <h2>2 comentarios</h2> 
                         <button>
                             <span>Ordenar por</span>
