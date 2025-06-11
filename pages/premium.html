@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planes | PlaYA!</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div id="navbar-container"></div>
+    <script src="/assets/js/script.js"></script>
+  </header>
+
+  <main>
+        <section class="comparison">
+          <div class="comparison-header">
+            <h2>¿Listo para subir de nivel?</h2>
+            <p>Compara las versiones</p>
+          </div>
+
+          <div class="plans-container">
+            <div class="plan-card">
+              <h3>Gratuito</h3>
+              <p class="plan-subtitle">Básico</p>
+              <ul>
+                <li>Acceso ilimitado a canciones con anuncios.</li>
+                <li>Sube un número limitado de canciones.</li>
+                <li>Recomendaciones básicas</li>
+                <li>Subir imágenes con ciertas limitaciones de tamaño.</li>
+                <li>No tiene acceso a contenido exclusivo.</li>
+                <li>Sin opción de monetizar.</li>
+                <li>Crear y compartir playlists con amigos.</li>
+              </ul>
+            </div>
+
+            <div class="plan-card premium">
+              <h3>Premium</h3>
+              <p class="plan-subtitle">S/. 9.90 al mes</p>
+              <ul>
+                <li>Acceso ilimitado sin anuncios</li>
+                <li>Sube canciones ilimitadas</li>
+                <li>Recomendaciones personalizadas, ajustadas al gusto del usuario.</li>
+                <li>Subida de imágenes de alta calidad y más opciones de personalización.</li>
+                <li>Acceso a lanzamientos exclusivos, conciertos en vivo y más.</li>
+                <li>Posibilidad de monetizar y recibir tips.</li>
+                <li>Crear playlists públicas, compartirlas con la comunidad y colaborar con otros usuarios.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="comparison-btn-container">
+            <a href="#" class="btn primary fixed-visible">Pasar a premium</a>
+          </div>
+        </section>
+
+    </main>
+</body>
+</html>
+
+<script>
+/*Cargar el navbar*/
+  window.addEventListener("DOMContentLoaded", () => {
+    fetch("/components/navbar.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("navbar-container").innerHTML = html;
+
+        const logoutBtn = document.getElementById("btnLogout");
+        if (logoutBtn) {
+          logoutBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            localStorage.removeItem("sesionActiva");
+            window.location.href = "/pages/login.html";
+          });
+        }
+      });
+  });
+  </script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlaYA! Login</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@700&display=swap" rel="stylesheet" />
+</head>
+    <body>
+        <div class="login-container">
+            <h2 class="login-title">Inicia sesión en PlaYA!</h2>
+
+            <div class="tabs">
+                <button id="usuarioBtn" class="tab-btn active" onclick="toggleTab('usuario')">Usuario</button>
+                <button id="artistaBtn" class="tab-btn" onclick="toggleTab('artista')">Artista</button>
+            </div>
+
+            <!-- Formulario usuario-->
+            <form id="usuarioForm" class="login-form">
+                <label for="usuarioEmail">Correo electrónico</label>
+                <input type="email" id="usuarioEmail" placeholder="Coloque su correo..." required>
+
+                <label for="usuarioPassword">Contraseña</label>
+                <input type="password" id="usuarioPassword" placeholder="Coloque su contraseña..."required>
+                
+                <div class="button-container">
+                    <a href="/index.html" class="btn cancel secondary">Cancelar</a>
+                    <button type="submit" class="btn go primary">Iniciar Sesión</button>
+                </div>
+            </form>
+
+            <!-- Formulario artista-->
+            <form id="artistaForm" class="login-form hidden">
+                <label for="artistaEmail">Correo electrónico</label>
+                <input type="email" id="artistaEmail" placeholder="Coloque su correo..." required>
+
+                <label for="artistaPassword">Contraseña</label>
+                <input type="password" id="artistaPassword" placeholder="Coloque su contraseña..." required>
+
+                <div class="button-container">
+                    <a href="/index.html" class="btn cancel secondary">Cancelar</a>
+                    <button type="submit" class="btn go primary">Iniciar Sesión</button>
+                </div>
+            </form>
+
+            <p>¿Aún no tienes una cuenta?<a href="/pages/register.html"> Regístrate en PlaYa!</a></p>
+        </div>
+        <script src="/assets/js/script.js"></script>
+    </body>
+</html>

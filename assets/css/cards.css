@@ -1,0 +1,50 @@
+.card {
+    background-color: var(--color-bg-light);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-md);
+}
+
+.card-image {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-body {
+    padding: var(--spacing-md);
+}
+.card-body h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+.card-body p {
+    font-size: 0.875rem;
+    color: var(--color-text-medium);
+}
+
+/* Wide card for "Trending" */
+.card-wide {
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+.card-wide .card-image {
+    height: 160px;
+}
+
+/* Square card for "Top" */
+.card-square .card-image {
+    height: 0;
+    padding-bottom: 100%; /* Aspect ratio 1:1 */
+}
+
+/* Specific Backgrounds for square cards */
+.card-grid .card:nth-child(1) { background-color: var(--color-card-bg-1); }
+.card-grid .card:nth-child(2) { background-color: var(--color-card-bg-2); }
+.card-grid .card:nth-child(3) { background-color: var(--color-card-bg-3); }
