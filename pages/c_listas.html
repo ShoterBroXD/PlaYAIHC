@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styles_categ.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+
+    <title>Playa/Listas</title>
+</head>
+<body>
+    <header>
+        <div id="navbar-container"></div>
+        <script src="/assets/js/script.js"></script>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        fetch("/components/navbar.html")
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById("navbar-container").innerHTML = html;
+
+            const logoutBtn = document.getElementById("btnLogout");
+            if (logoutBtn) {
+              logoutBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                localStorage.removeItem("sesionActiva");
+                window.location.href = "/pages/login.html";
+              });
+            }
+          });
+      })
+     </script>
+    </header>
+      <header>
+        <div id="sidebar"></div>
+        <script src="/assets/js/script.js"></script>
+
+  <script>
+  fetch('/components/sidebar.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('sidebar').innerHTML = data;
+
+    const currentPath = window.location.pathname;
+    const sidebarItems = document.querySelectorAll('.sidebar-item');
+
+    sidebarItems.forEach(item => {
+      const itemPath = item.getAttribute('href');
+      if (currentPath === itemPath) {
+        item.classList.add('active');
+      }
+    });
+
+    const logoutBtn = document.getElementById("btnLogout");
+
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", function (e) {
+        e.preventDefault(); 
+        localStorage.removeItem("sesionActiva"); 
+        window.location.href = "/pages/login.html"; 
+      });
+    }
+  });
+</script>
+    </header>
+     <section class="hero">
+    <div class="hero-content">
+        <div class="hero-pages-title">
+        <h1 class="title_categories">Listas</h1>
+        </div>
+        <div class="subtitle_container">
+          <div class="filter-buttons">
+          <button class="filter-button active">Todos</button>
+          <button class="filter-button">Rock</button>
+          <button class="filter-button">Trap</button>
+    <button class="filter-button">Cumbia</button>
+          
+
+ </div>
+
+      </div>
+     <div class="track-list">
+  <div class="track-item">
+    <div class="track-image">
+       <img src="/assets/icons/pop.png"/>
+    </div>
+    <div class="track-info">
+      <span class="artist">Messi</span>
+      <span class="title">Mundial(track)</span>
+      <div class="actions">
+        <button><i class="icon"><img src="/assets/icons/icon_fav.svg"/></i> 123</button>
+        <button><i class="icon"><img src="/assets/icons/icon_loop.svg"/></i> 123</button>
+        <button><i class="icon"><img src="/assets/icons/icon_list_white.svg"/></i> 123</button>
+        <ul class="song_list">
+          <span>1. Nº-canción</span><span class="duration">1:23</span></li>
+          <br>
+          <span>2. Nº-canción</span><span class="duration">1:23</span></li>
+          <br>
+          <span>3. Nº-canción</span><span class="duration">1:23</span></li>
+        </ul>
+  </div>
+  
+  
+     
+      </div>
+      
+     
+    </section>
+
+
+
+</html>
