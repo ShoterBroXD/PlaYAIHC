@@ -11,36 +11,58 @@
 </head>
 <body>
     <header>
-        <div id="navbar"></div>
+        <div id="navbar-container"></div>
+        <script src="/assets/js/script.js"></script>
 
     <script>
-        fetch('/pages/components/navbar.html')
-         .then(response => response.text())
-        .then(data => {
-         document.getElementById('navbar').innerHTML = data;
-         });
+      window.addEventListener("DOMContentLoaded", () => {
+        fetch("/components/navbar.html")
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById("navbar-container").innerHTML = html;
+
+            const logoutBtn = document.getElementById("btnLogout");
+            if (logoutBtn) {
+              logoutBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                localStorage.removeItem("sesionActiva");
+                window.location.href = "/pages/login.html";
+              });
+            }
+          });
+      })
      </script>
     </header>
       <header>
         <div id="sidebar"></div>
+        <script src="/assets/js/script.js"></script>
 
   <script>
-  fetch('/pages/components/sidebar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('sidebar').innerHTML = data;
+  fetch('/components/sidebar.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('sidebar').innerHTML = data;
 
-      // Espera a que el contenido se cargue y luego marca el ítem activo
-      const currentPath = window.location.pathname;
-      const sidebarItems = document.querySelectorAll('.sidebar-item');
+    const currentPath = window.location.pathname;
+    const sidebarItems = document.querySelectorAll('.sidebar-item');
 
-      sidebarItems.forEach(item => {
-        const itemPath = item.getAttribute('href');
-        if (currentPath === itemPath) {
-          item.classList.add('active');
-        }
-      });
+    sidebarItems.forEach(item => {
+      const itemPath = item.getAttribute('href');
+      if (currentPath === itemPath) {
+        item.classList.add('active');
+      }
     });
+
+    const logoutBtn = document.getElementById("btnLogout");
+
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", function (e) {
+        e.preventDefault(); 
+        localStorage.removeItem("sesionActiva"); 
+        window.location.href = "/pages/login.html"; 
+      });
+    }
+  });
 </script>
     </header>
      <section class="hero">

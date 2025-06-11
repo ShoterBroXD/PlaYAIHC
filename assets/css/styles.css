@@ -531,7 +531,7 @@ p, span, a, li, button {
 .navbar-main .navbar-right {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .navbar-main .navbar-center {
