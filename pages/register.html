@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlaYA! Register</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@700&display=swap" rel="stylesheet" />
+</head>
+    <body>
+        <div class="login-container">
+            <h2 class="login-title">Crea tu cuenta en PlaYA!</h2>
+
+            <div class="tabs">
+                <button id="usuarioBtn" class="tab-btn active" onclick="toggleTab('usuario')">Usuario</button>
+                <button id="artistaBtn" class="tab-btn" onclick="toggleTab('artista')">Artista</button>
+            </div>
+
+            <!-- Formulario usuario-->
+            <form id="usuarioForm" class="login-form">
+                <label for="usuarioApodo">Apodo</label>
+                <input type="text" id="usuarioApodo" placeholder="Ingrese un apodo..." required>
+
+                <label for="usuarioEmail">Correo electrónico</label>
+                <input type="email" id="usuarioEmail" placeholder="Coloque un correo válido..." required>
+
+                <label for="usuarioPassword">Contraseña</label>
+                <input type="password" id="usuarioPassword" placeholder="Coloque una contraseña..." required>
+                
+                <div class="button-container">
+                    <a href="/index.html" class="btn cancel secondary">Cancelar</a>
+                    <button type="submit" class="btn go primary">Registrarse</button>
+                </div>
+            </form>
+
+            <!-- Formulario artista-->
+            <form id="artistaForm" class="login-form hidden">
+                <label for="artistaApodo">Apodo</label>
+                <input type="nickname" id="artistaApodo" placeholder="Ingrese un apodo..." required>
+
+                <label for="artistaEmail">Correo electrónico</label>
+                <input type="email" id="artistaEmail" placeholder="Coloque un correo válido..." required>
+
+                <label for="artistaPassword">Contraseña</label>
+                <input type="password" id="artistaPassword" placeholder="Coloque una contraseña..." required>
+
+                <label for="artistaPais">Pais</label>
+                <input type="text" id="artistaPais" placeholder="Escriba su país de origen..." required>
+
+                <div class="button-container">
+                    <a href="/index.html" class="btn cancel secondary">Cancelar</a>
+                    <button type="submit" class="btn go primary">Registrarse</button>
+                </div>
+            </form>
+            <p>¿Ya tienes una cuenta?<a href="/pages/login.html"> Inicia sesión en PlaYa!</a></p>
+        </div>
+        <script src="/assets/js/script.js"></script>
+    </body>
+</html>
