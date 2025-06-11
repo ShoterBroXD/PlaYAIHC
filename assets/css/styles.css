@@ -276,7 +276,8 @@ p, span, a, li, button {
   font-size: 1rem;
   font-weight: 600;
   font-family: Montserrat;
-=======
+}
+
 /* PARA PLANES */
 .upgrade-section {
   background-color: #ffffff;
@@ -396,7 +397,6 @@ p, span, a, li, button {
   background-color: #06325a;
 }
 
-.search-form-subir {
 
 .btn.primary.fixed-visible:hover {
   background-color: #084f6a;
@@ -407,9 +407,6 @@ p, span, a, li, button {
     position: relative;
     width: 550px;
 }
-
-
-.search-form-subir input[type="search"] {
 
 .search-form-planes input[type="search"] {
 
@@ -427,8 +424,6 @@ p, span, a, li, button {
     color: #aaa;
 }
 
-.search-form-subir input[type="search"]:focus {
-
 .search-form-planes input[type="search"]::placeholder {
     color: #aaa;
 }
@@ -439,9 +434,6 @@ p, span, a, li, button {
     border-color: #0a6e99;
     color: #05255a;
 }
-
-
-.search-form-subir button {
 
 .search-form-planes button {
 
