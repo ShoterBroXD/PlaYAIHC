@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlaYA!</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@700&display=swap" rel="stylesheet" />
+</head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="img-logo">
+                    <img src="assets/img/images/logo-playa.png" alt="Logo de PlaYA!">
+                </div>
+                <form class="search-form" role="search" aria-label="Buscar en la plataforma">
+                    <input type="search" placeholder="Buscar.." aria-label="Buscar" />
+                    <button type="submit" aria-label="Buscar">
+                        <img src="assets/img/icons/search.png" alt="Icono de búsqueda" />
+                    </button>
+                </form>
+
+                <ul class="nav-links">
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Biblioteca</a></li>
+                    <li><a href="#">Comunidades</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="/pages/login.html" class="btn login primary">Iniciar Sesión</a>
+                    <a href="/pages/register.html" class="btn signup primary">Crear cuenta</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="hero">
+            <div class="hero-text">
+                <h1>Escucha la mejor música independiente y descubre nuevos talentos!</h1>
+                <p>Una plataforma para artistas emergentes donde compartir, descubrir y conectar</p>
+                <div class="hero-buttons">
+                    <a href="/pages/login.html" class="btn primary">Escuchar ahora</a> <!-- Cambiar link a la pag de login -->
+                    <a href="/pages/about.html" class="btn secondary">Aprender más</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/img/images/hero-dj.png" alt="Imagen de héroe">
+            </div>
+        </main>
+    </body>
+</head>
