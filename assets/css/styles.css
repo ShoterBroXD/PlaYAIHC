@@ -332,8 +332,16 @@ p, span, a, li, button {
 
 .recently-listened {
   position: absolute; /* o relative, según convenga */
+  top: 30%;           /* ajusta según el lugar deseado */
+  left: 15%;          /* ajusta según el lugar deseado */
+  margin-left: 50px;
+}
+
+.recently-listened {
+  position: absolute; /* o relative, según convenga */
   top: 15%;           /* ajusta según el lugar deseado */
   left: 15%;          /* ajusta según el lugar deseado */
+  margin-left: 50px;
 }
 
 .liked {
@@ -344,7 +352,7 @@ p, span, a, li, button {
 
 .title-lib {
   position: absolute;
-  top: 15%;
+  top: 5%;
   left: 15%;
   font-family: Raleway;
   font-weight: 700;
@@ -363,13 +371,44 @@ letter-spacing: -2%;
 color:#0A1128;
 }
 
+p.text-under-subtitle {
+  top: 15%;
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 22px;
+  letter-spacing: -2%;
+  color:#0A1128;
+}
+
 main.lib-hero {
-  margin-left: 170px;
   padding: 2rem;
 }
 
 .lib-main-container section {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.subir-btn-container a {
+  display:flex;
+  margin-top: 2rem;
+}
+
+.subir-btn.primary.fixed-visible {
+  background-color: #034078;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Raleway;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.subir-btn.primary.fixed-visible:hover {
+  background-color: #06325a;
 }
 
 /* ======================= */
