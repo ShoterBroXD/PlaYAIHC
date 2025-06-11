@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+
+    <title>Playa/Pistas</title>
+</head>
+<body>
+    <header>
+        <div id="navbar"></div>
+
+    <script>
+        fetch('/pages/components/navbar.html')
+         .then(response => response.text())
+        .then(data => {
+         document.getElementById('navbar').innerHTML = data;
+         });
+     </script>
+    </header>
+      <header>
+        <div id="sidebar"></div>
+
+    <script>
+  fetch('/pages/components/sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('sidebar').innerHTML = data;
+
+      // Espera a que el contenido se cargue y luego marca el ítem activo
+      const currentPath = window.location.pathname;
+      const sidebarItems = document.querySelectorAll('.sidebar-item');
+
+      sidebarItems.forEach(item => {
+        const itemPath = item.getAttribute('href');
+        if (currentPath === itemPath) {
+          item.classList.add('active');
+        }
+      });
+    });
+</script>
+    </header>
+     <section class="hero">
+    <div class="hero-content">
+        <div class="hero-pages-title">
+        <h1 class="title_categories">Pistas</h1>
+
+        </div>
+        <div class="subtitle_container">
+          <div class="filter-buttons">
+          <button class="filter-button active">Todos</button>
+          <button class="filter-button">Rock</button>
+          <button class="filter-button">Trap</button>
+    <button class="filter-button">Cumbia</button>
+  </div>
+      </div>
+      <div class="track-list">
+  <div class="track-item">
+    <div class="track-image">
+       <img src="/assets/icons/pop.png"/>
+    </div>
+    <div class="track-info">
+      <span class="artist">Messi</span>
+      <span class="title">Mundial(track)</span>
+      <div class="actions">
+        <button><i class="icon"><img src="/assets/icons/icon_fav.svg"/></i> 123</button>
+        <button><i class="icon"><img src="/assets/icons/icon_loop.svg"/></i> 123</button>
+        <button><i class="icon"><img src="/assets/icons/icon_list_white.svg"/></i> 123</button>
+         <div style="height: 30px;"></div>
+      </div>
+      <div class="controls">
+        <button><img src="/assets/icons/icon_pause.svg"/></button>
+        <button><img src="/assets/icons/icon_play_tracks.svg"/></button>
+      </div>
+    </div>
+    <div class="duration">1:23</div>
+  </div>
+
+  <!-- Segunda pista -->
+  <div class="track-item">
+    <div class="track-image">
+          <img src="/assets/icons/rap.jpg"/>
+    </div>
+    <div class="track-info">
+      <span class="artist">Otro-artista</span>
+      <span class="title">Otra-pista</span>
+      <div class="actions">
+       <button><i class="icon"><img src="/assets/icons/icon_fav.svg"/></i> 123</button>
+        <button><i class="icon"><img src="/assets/icons/icon_loop.svg"/></i> 123</button>
+        <button><i class="icon"><img src="/assets/icons/icon_list_white.svg"/></i> 123</button>
+      </div>
+       <div style="height: 30px;"></div>
+      <div class="controls">
+       <button><img src="/assets/icons/icon_pause.svg"/></button>
+        <button><img src="/assets/icons/icon_play_tracks.svg"/></button>
+      </div>
+    </div>
+    <div class="duration">2:34</div>
+  </div>
+
+  <!-- Tercera pista -->
+  <div class="track-item">
+    <div class="track-image">
+      <img src="/assets/icons/rock.jpeg"/>
+    </div>
+    <div class="track-info">
+      <span class="artist">Tercer-artista</span>
+      <span class="title">Tercera-pista</span>
+      <div class="actions">
+        <button><i class="icon"><img src="/assets/icons/icon_fav.svg"/></i> 123</button>
+        <button><i class="icon"><img src="/assets/icons/icon_loop.svg"/></i> 123</button>
+        <button><i class="icon"><img src="/assets/icons/icon_list_white.svg"/></i> 123</button>
+      </div>
+      <div style="height: 30px;"></div>
+      <div class="controls">
+       <button><img src="/assets/icons/icon_pause.svg"/></button>
+        <button><img src="/assets/icons/icon_play_tracks.svg"/></button>
+      </div>
+    </div>
+    <div class="duration">3:45</div>
+  </div>
+  
+     </div>
+    </section>
+
+
+
+</html>
