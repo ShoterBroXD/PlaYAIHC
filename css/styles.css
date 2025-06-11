@@ -396,7 +396,7 @@ html, body {
   height: 4rem;
 }
 
-.profile header {
+.configuration header {
   margin-top: 0px;
   display: flex;
   justify-content: space-between;
@@ -406,12 +406,12 @@ html, body {
   width: 100%;
 }
 
-.profile nav{
+.configuration nav{
   width: 100%;
   display: flex;
 }
 
-.profile body {
+.configuration body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
   color: #333;
@@ -421,8 +421,19 @@ html, body {
   align-items: center;
 }
 
+.configuration h1{
+  font-size: 5rem;
+  color: #0A1128;
+  margin-bottom: 1rem;
+}
 
-.profile aside{
+.configuration h2{
+  font-size: 3rem;
+  color: #0A1128;
+  margin-bottom: 1rem;
+}
+
+.configuration aside{
   width: 200px;
   margin-top: 4rem;
   background-color: #ffffff;
@@ -431,47 +442,66 @@ html, body {
   height: 60rem;
   position: fixed;
 }
-.profile.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.profile-section{
-  display: flex;
+.configuration section{
   flex: 1;
   flex-direction: column;
   align-items: center;
-  margin: 5rem 0 0 20rem;
-  left: 240px;
+  margin: 5rem 0 0 0;
   height: 100%;
-  width: 100%;
+  width: 1000px;
 }
 
-.profile.nav-menu {
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 50%;
+  gap: 1rem;
+}
+
+.configuration.nav-menu {
   display: flex;
   list-style: none;
   margin-top: 0;
 }
 
-.profile.nav-menu li {
+.configuration.nav-menu li {
   margin: 0 15px;
 }
 
-.profile.welcome {
-  margin-top: 20px;
-  font-size: 24px;
-  font-weight: bold;
+#configuraciconForm{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 2rem;
+  width: 600px;
 }
 
-.profile.profile-content {
+.form-group{
+  width: 600px;
+  input{
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+}
+
+
+.configuration.container {
+  width: 80%;
   background: #fff;
-  padding: 20px;
+  padding: 20rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 5rem;
 }
 
-.profile.card {
+.configuration.card {
   background: #e9ecef;
   margin: 10px 0;
   padding: 15px;
@@ -480,18 +510,23 @@ html, body {
   text-align: center;
 }
 
-.profile.button {
+.configuration button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #0A1128;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
+  font-size: 1rem;
+  margin: 0;
+  /* Elimina el margen horizontal excesivo */
 }
 
-
-.abajinho{
-  display: flex;
-  flex-direction: row;
+.option span {
+  flex: 1;
+  font-weight: bold;
+  color: #0A1128;
+  font-size: large;
+  text-align: left;
 }
