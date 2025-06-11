@@ -11,39 +11,27 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <div class="img-logo">
-          <img src="/assets/img/images/logo-playa.svg" alt="Logo de PlaYA!"/>
-        </div>
-        <ul class="nav-links">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Categorías</a></li>
-          <li><a href="b_principal.html">Biblioteca</a></li>
-          <li><a href="#">Comunidades</a></li>
-        </ul>
-        <form class="search-form-lib" role="search" aria-label="Buscar en la plataforma">
-          <input type="search" placeholder="Buscar..." aria-label="Buscar" />
-          <button type="submit" aria-label="Buscar">
-            <img src="/assets/img/icons/search.svg" alt="Icono de búsqueda" />
-          </button>
-        </form>
-        <ul class="nav-links">
-          <li class="premium-btn"><a href="premium.html">Premium</a></li>
-          <li><a href="subir.html">Subir</a></li>
-        </ul>
-        <ul class="noti-img">
-          
-          <img src="/assets/img/icons/notification.svg" alt="Icono de notis"/>
-          
-        </ul>
-        <ul class="user-img">
-          <img src="/assets/img/icons/user.svg" alt="Icono de usuario"/>
-        </ul>
-        <ul class="settings-img">
-          <img src="/assets/img/icons/settings.svg" alt="Icono de settings"/>
-        </ul>
-      </nav>
+        <div id="navbar-container"></div>
+        <script src="/assets/js/script.js"></script>
     </header>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        fetch("/components/navbar.html")
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById("navbar-container").innerHTML = html;
+
+            const logoutBtn = document.getElementById("btnLogout");
+            if (logoutBtn) {
+              logoutBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                localStorage.removeItem("sesionActiva");
+                window.location.href = "/pages/login.html";
+              });
+            }
+          });
+      })
+     </script>
     <aside class="sidebar-main">
       <div class="sidebar-above">
         <a href="b_principal.html" class="sidebar-item active">
@@ -77,7 +65,7 @@
           <span>Configuración</span>
         </a>
 
-        <a href="#" class="sidebar-item">
+        <a href="javascript:void(0)" id="btnLogout" class="sidebar-item">
           <img src="/assets/img/icons/logout.svg" alt="Logout" class="icon" />
           <span>Cerrar sesión</span>
         </a>
@@ -181,3 +169,31 @@
     </main>
   </body>
 </html>
+
+<script>
+  fetch('/components/sidebar.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('sidebar').innerHTML = data;
+
+    const currentPath = window.location.pathname;
+    const sidebarItems = document.querySelectorAll('.sidebar-item');
+
+    sidebarItems.forEach(item => {
+      const itemPath = item.getAttribute('href');
+      if (currentPath === itemPath) {
+        item.classList.add('active');
+      }
+    });
+
+    const logoutBtn = document.getElementById("btnLogout");
+
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", function (e) {
+        e.preventDefault(); 
+        localStorage.removeItem("sesionActiva"); 
+        window.location.href = "/pages/login.html"; 
+      });
+    }
+  });
+</script>

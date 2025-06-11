@@ -292,8 +292,6 @@ p, span, a, li, button {
     height: 20px;
 }
 
-.search-form-lib {
-  
 /* PARA SUBIR.HTML */
 .subir-container{
   text-align: center;
@@ -464,9 +462,6 @@ p, span, a, li, button {
     width: 550px;
 }
 
-
-.search-form-lib input[type="search"] {
-
 .search-form-planes input[type="search"] {
     width: 100%;
     padding: 0.5rem 2.5rem 0.5rem 1rem;
@@ -482,9 +477,6 @@ p, span, a, li, button {
     color: #aaa;
 }
 
-.search-form-lib input[type="search"]:focus {
-  
-
 .search-form-subir input[type="search"]::placeholder {
     color: #aaa;
 }
@@ -499,9 +491,6 @@ p, span, a, li, button {
     border-color: #0a6e99;
     color: #05255a;
 }
-
-
-.search-form-lib button {
 
 .search-form-planes button {
     position: absolute;
@@ -538,6 +527,7 @@ p, span, a, li, button {
   position: relative; /* o relative, según convenga */
   top: 15%;           /* ajusta según el lugar deseado */
   left: 15%;          /* ajusta según el lugar deseado */
+  padding-top: 3rem;
 }
 
 .title-lib {
@@ -652,7 +642,7 @@ main.lib-hero {
   color: #6b7280;
   margin-top: 0.2rem;
 }
-=======
+
 .premium-btn a {
   color:#1282A2;
 }
