@@ -24,58 +24,53 @@ toggleTab('usuario');
 
 
 // Registro de usuario
-document.getElementById("usuarioForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const nombre = document.getElementById("usuarioApodo").value;
-  const correo = document.getElementById("usuarioEmail").value;
-  const password = document.getElementById("usuarioPassword").value;
-
-  const usuario = {
-    nombre,
-    correo,
-    password,
-    rol: "usuario"
-  };
-
-  localStorage.setItem(correo, JSON.stringify(usuario));
-
-  localStorage.setItem("sesionActiva", JSON.stringify({
-    nombre: usuario.nombre,
-    correo: usuario.correo,
-    rol: usuario.rol
-  }));
-
-  window.location.href = "/pages/dashboard.html";
-});
-
+const usuarioForm = document.getElementById("usuarioForm");
+if (usuarioForm) {
+  usuarioForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const nombre = document.getElementById("usuarioApodo").value;
+    const correo = document.getElementById("usuarioEmail").value;
+    const password = document.getElementById("usuarioPassword").value;
+    const usuario = {
+      nombre,
+      correo,
+      password,
+      rol: "usuario"
+    };
+    localStorage.setItem(correo, JSON.stringify(usuario));
+    localStorage.setItem("sesionActiva", JSON.stringify({
+      nombre: usuario.nombre,
+      correo: usuario.correo,
+      rol: usuario.rol
+    }));
+    window.location.href = "/pages/dashboard.html";
+  });
+}
 // Registro de artista
-document.getElementById("artistaForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const nombre = document.getElementById("artistaApodo").value;
-  const correo = document.getElementById("artistaEmail").value;
-  const password = document.getElementById("artistaPassword").value;
-  const pais = document.getElementById("artistaPais").value;
-
-  const artista = {
-    nombre,
-    correo,
-    password,
-    pais,
-    rol: "artista"
-  };
-
-  localStorage.setItem(correo, JSON.stringify(artista));
-
-  localStorage.setItem("sesionActiva", JSON.stringify({
-    nombre: artista.nombre,
-    correo: artista.correo,
-    rol: artista.rol
-  }));
-
-  window.location.href = "/pages/dashboard.html";
-});
+const artistaForm = document.getElementById("artistaForm");
+if (artistaForm) {
+  artistaForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const nombre = document.getElementById("artistaApodo").value;
+    const correo = document.getElementById("artistaEmail").value;
+    const password = document.getElementById("artistaPassword").value;
+    const pais = document.getElementById("artistaPais").value;
+    const artista = {
+      nombre,
+      correo,
+      password,
+      pais,
+      rol: "artista"
+    };
+    localStorage.setItem(correo, JSON.stringify(artista));
+    localStorage.setItem("sesionActiva", JSON.stringify({
+      nombre: artista.nombre,
+      correo: artista.correo,
+      rol: artista.rol
+    }));
+    window.location.href = "/pages/dashboard.html";
+  });
+}
 
 
 // Cerrar sesión
