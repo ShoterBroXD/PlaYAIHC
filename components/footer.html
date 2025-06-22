@@ -1,0 +1,568 @@
+<footer class="flex items-center justify-between border-t border-gray-300 px-4 py-3 select-none">
+                <div class="flex items-center space-x-3 w-72">
+                    <div id="collapsed-buttom" class="w-16 h-16 border border-gray-300 bg-gray-200 flex items-center justify-center">
+                        <img src="/assets/img/images/portada.png" alt="Logo de PlaYA!">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-lg leading-none">N-canción</span>
+                        <span class="text-blue-800 font-semibold text-sm -mt-1 flex items-center space-x-1">
+                            <i class="far fa-clock text-xs"></i>
+                            <span>N-Album</span>
+                            <span class="ml-2">N-artista</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="controls flex items-center space-x-4 flex-1 max-w-xl justify-center">
+                    
+                    <button class="volumen-boton" aria-label="Volume icon">
+                        <svg class="volume-icon" width="15" height="15" viewBox="0 0 20 20" fill="#292929" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.55893 0.353011C9.6641 -0.334377 11.1841 0.20565 11.5103 1.52777L11.5383 1.66241L11.6545 2.35821C11.9095 3.98809 12.0458 5.65746 12.0531 7.35653C12.0604 9.0556 11.9387 10.7261 11.6978 12.3581L11.5875 13.0549C11.3463 14.4759 9.76744 15.0901 8.6196 14.39L8.50991 14.3182L6.01697 12.5672C5.84749 12.4482 5.64516 12.3843 5.43805 12.3852L3.07479 12.3954C1.41806 12.4025 0.0691903 11.0651 0.0618559 9.40837L0.0445691 5.40841C0.0374087 3.75157 1.37474 2.40263 3.03158 2.39547L5.39484 2.38526C5.60188 2.38431 5.80374 2.31863 5.97216 2.19819L8.44987 0.425749L8.55893 0.353011ZM18.7356 2.33249C19.2503 2.27932 19.7141 2.6267 19.8171 3.12274L19.8332 3.22424L19.9254 4.2385C20.0056 5.2563 20.0485 6.2848 20.053 7.32196C20.059 8.70482 19.9966 10.0726 19.8686 11.4214C19.8163 11.9709 19.3283 12.3746 18.7787 12.3226C18.2291 12.2705 17.8256 11.7824 17.8775 11.2328C17.9993 9.94948 18.0587 8.64743 18.053 7.3306C18.0488 6.34305 18.0082 5.36404 17.932 4.39555L17.8438 3.4301L17.8385 3.32758C17.8377 2.82093 18.2207 2.38585 18.7356 2.33249ZM14.8307 3.34742C15.3464 3.30286 15.8051 3.65841 15.8997 4.15628L15.9138 4.25779L15.9718 5.02219C16.0224 5.78835 16.0497 6.56119 16.0531 7.33924C16.0575 8.37677 16.0199 9.40511 15.9404 10.4218C15.8972 10.9721 15.4156 11.3842 14.8653 11.3415C14.3149 11.2985 13.9029 10.8167 13.9456 10.2663C14.0208 9.30425 14.0573 8.33054 14.0531 7.34789C14.0499 6.61092 14.0242 5.8791 13.9762 5.15386L13.9204 4.43046L13.917 4.32794C13.9246 3.82132 14.315 3.39221 14.8307 3.34742Z" fill="#292929"/>
+                        </svg>
+                    </button>
+                    <input class="w-24 h-2 bg-blue-900" max="100" min="0" type="range" value="50" />
+                    <button class="addlist-botom" aria-label="Add to list">
+                        <svg class="addlist-icon" width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 8C19.5523 8 20 8.44771 20 9C20 9.55228 19.5523 10 19 10L1 10C0.447715 10 1.35705e-07 9.55228 8.74228e-08 9C3.91405e-08 8.44772 0.447715 8 1 8L19 8Z"
+                            fill="#292929" />
+                        <path
+                            d="M2 5L2 4L1 4C0.447716 4 8.25954e-07 3.55228 2.62268e-07 3C2.13986e-07 2.44772 0.447715 2 1 2L2 2L2 1C2 0.447716 2.44772 5.59119e-07 3 -2.62268e-07C3.55228 -3.10551e-07 4 0.447715 4 1L4 2L5 2L5.10254 2.00488C5.60667 2.05621 6 2.48232 6 3C6 3.51768 5.60667 3.94379 5.10254 3.99512L5 4L4 4L4 5C4 5.55228 3.55228 6 3 6C2.44772 6 2 5.55228 2 5ZM19 2L19.1025 2.00488C19.6067 2.05621 20 2.48232 20 3C20 3.51768 19.6067 3.94378 19.1025 3.99512L19 4L8 4C7.44772 4 7 3.55228 7 3C7 2.44772 7.44772 2 8 2L19 2Z"
+                            fill="#292929" />
+                        <path
+                            d="M19 14C19.5523 14 20 14.4477 20 15C20 15.5523 19.5523 16 19 16L1 16C0.447715 16 1.35705e-07 15.5523 8.74228e-08 15C3.91405e-08 14.4477 0.447715 14 1 14L19 14Z"
+                            fill="#292929" />
+                    </svg>
+                    </button>
+                   
+                    <button class="pause-botom" aria-label="Pause">
+                        <svg class="pause-icon" width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 0C5.65685 0 7 1.34315 7 3V13C7 14.6569 5.65685 16 4 16H3C1.39489 16 0.0842146 14.7394 0.00390625 13.1543L0 13V3C0 1.34315 1.34315 1.61064e-08 3 0H4ZM13 0C14.6569 0 16 1.34315 16 3V13C16 14.6569 14.6569 16 13 16H12C10.3949 16 9.08421 14.7394 9.00391 13.1543L9 13V3C9 1.34315 10.3431 1.61064e-08 12 0H13Z" fill="#292929"/>
+                            </svg>                            
+                    </button>
+                    
+                    <button class="play-botom" aria-label="Play">
+                        <svg class="play-icon" width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 6.76795C18.3333 7.53775 18.3333 9.46225 17 10.2321L8 15.4282C6.66667 16.198 5 15.2358 5 13.6962L5 3.30385C5 1.76425 6.66667 0.801995 8 1.5718L17 6.76795Z"
+                                fill="#292929" />
+                        </svg>
+                    </button>
+                    
+                    <button class="shuffle-botom" aria-label="Shuffle icon">
+                        <svg class="shuffle-icon" width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.6172 10.0762C16.9909 9.92144 17.421 10.007 17.707 10.293L19.707 12.293C20.0976 12.6835 20.0976 13.3166 19.707 13.7071L17.707 15.7071C17.421 15.9931 16.9909 16.0787 16.6172 15.9239C16.2436 15.7691 16 15.4045 16 15V14H14.2646C12.9817 14 11.7679 13.5081 10.8545 12.6563L10.6758 12.4815L10.6084 12.4043C10.2942 12.0068 10.3257 11.4279 10.6973 11.0674C11.0689 10.7069 11.6483 10.6933 12.0361 11.0196L12.1113 11.0889L12.3311 11.293C12.8645 11.7428 13.5465 12 14.2646 12H16V11C16 10.5956 16.2436 10.231 16.6172 10.0762ZM16.6123 0.0781693C16.9869 -0.0793517 17.4197 0.0056435 17.707 0.293013L19.707 2.29301C20.0976 2.68354 20.0976 3.31655 19.707 3.70708L17.707 5.70708C17.3165 6.09759 16.6835 6.0976 16.293 5.70708C16.0262 5.44029 15.9413 5.06027 16.0391 4.72172L16.0312 4.00004H14.2646C13.2111 4.00008 12.2346 4.55274 11.6924 5.4561L8.02246 11.5723C7.11886 13.0783 5.49162 14 3.73535 14H1C0.447715 14 6.4426e-08 13.5523 0 13C0 12.4478 0.447715 12 1 12H3.73535C4.78895 12 5.76542 11.4473 6.30762 10.544L9.97754 4.42778L10.1553 4.15239C11.085 2.8102 12.6181 2.00008 14.2646 2.00004H16.0107L16 1.01079C15.9957 0.604431 16.2377 0.235706 16.6123 0.0781693ZM3.73535 2.00004C5.01829 2.00007 6.23212 2.49198 7.14551 3.34379L7.32422 3.5186L7.3916 3.59575C7.70584 3.99333 7.67431 4.57218 7.30273 4.93266C6.93111 5.29318 6.35173 5.30678 5.96387 4.98051L5.88867 4.91118L5.66895 4.70708C5.13548 4.2573 4.45346 4.00007 3.73535 4.00004H1C0.447715 4.00004 0 3.55233 0 3.00004C0 2.44776 0.447715 2.00004 1 2.00004H3.73535Z"
+                            fill="#292929" />
+                    </svg>
+                    </button>
+                    <button class="reapeat-botom" aria-label="Reapeat icon">
+                        <svg class="reapeat-icon" width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 7.99999C19.5523 7.99999 20 8.44771 20 8.99999C20 11.7614 17.7614 14 15 14H4V15C4 15.4044 3.75641 15.769 3.38281 15.9238C3.05575 16.0593 2.68531 16.0107 2.40625 15.8047L2.29297 15.707L0.292969 13.707C-0.0975554 13.3165 -0.0975554 12.6835 0.292969 12.293L2.29297 10.293C2.57897 10.007 3.00914 9.92138 3.38281 10.0762C3.75641 10.231 4 10.5956 4 11V12H15C16.6569 12 18 10.6568 18 8.99999C18 8.44771 18.4477 7.99999 19 7.99999ZM16.6172 0.076165C16.9443 -0.0593103 17.3147 -0.0107115 17.5938 0.195306L17.707 0.292962L19.707 2.29296C20.0976 2.68349 20.0976 3.3165 19.707 3.70702L17.707 5.70702C17.421 5.99302 16.9909 6.0786 16.6172 5.92382C16.2436 5.76901 16 5.40441 16 4.99999V3.99999H5L4.8457 4.0039C3.26055 4.08421 2 5.39489 2 6.99999C2 7.55228 1.55228 7.99999 1 7.99999C0.447715 7.99999 0 7.55228 0 6.99999C1.28855e-07 4.23857 2.23858 1.99999 5 1.99999H16V0.999993C16 0.595577 16.2436 0.230976 16.6172 0.076165Z"
+                            fill="#292929" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="songs-reaction flex items-center space-x-4 w-72 justify-end text-sm font-semibold text-gray-900">
+                    <button aria-label="Star count"
+                        class="flex items-center space-x-2 bg-gray-900 text-white rounded px-4 py-2">
+                        <svg class="like-icon" width="12" height="12" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 1.5L15.1035 8.22839L22.4616 9.10081L17.0215 14.1316L18.4656 21.3992L12 17.78L5.53431 21.3992L6.97837 14.1316L1.53833 9.10081L8.89645 8.22839L12 1.5Z"
+                                stroke="#FEFCFB" stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                            
+                        <span>123</span>
+                    </button>
+                    <button id="commentlist-buttom" aria-label="Comments count"
+                        class="flex items-center space-x-2 bg-gray-900 text-white rounded px-4 py-2">
+                        <svg width="12" height="12" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.5 5C0.5 4.24042 0.752077 3.12339 1.51172 2.18555C2.28854 1.22651 3.56046 0.5 5.5 0.5V1.5C3.83954 1.5 2.86127 2.10682 2.28809 2.81445C1.69779 3.54325 1.5 4.42627 1.5 5V5.7998H0.5V5Z"
+                                fill="white" />
+                            <path
+                                d="M2 6.2998H0V5C1.47832e-08 4.14754 0.278897 2.9134 1.12305 1.87109L1.29395 1.6709C2.18144 0.690691 3.55081 0 5.5 0H6V2H5.5C4.07426 2 3.2548 2.48097 2.76953 3.02051L2.67676 3.12891C2.17117 3.75313 2 4.51909 2 5V6.2998Z"
+                                fill="white" />
+                            <path
+                                d="M21.25 0.5C21.9846 0.5 23.0479 0.77745 23.9326 1.59277C24.8319 2.42171 25.5 3.76296 25.5 5.7998H24.5C24.5 3.99724 23.9178 2.93919 23.2549 2.32812C22.5771 1.70345 21.7654 1.5 21.25 1.5H20.5V0.5H21.25Z"
+                                fill="white" />
+                            <path
+                                d="M23.8789 2.25293C23.8331 2.2003 23.7857 2.15029 23.7383 2.10156L23.5938 1.95996C23.5635 1.93207 23.5317 1.90635 23.501 1.87988C23.5318 1.90642 23.5634 1.93297 23.5938 1.96094L23.7383 2.10156C23.8332 2.19918 23.9254 2.30442 24.0137 2.41797L23.8789 2.25293ZM20 2V0H21.25C22.0942 0 23.2834 0.314968 24.2715 1.22559L24.459 1.40723C25.3755 2.35084 26 3.78061 26 5.7998V6.2998H24V5.7998C24 4.21977 23.5259 3.31563 23.0176 2.79492L22.916 2.69531C22.3414 2.16593 21.6554 2 21.25 2H20Z"
+                                fill="white" />
+                            <path
+                                d="M4.75 20.7C4.01541 20.7 2.95207 20.4225 2.06738 19.6072C1.16807 18.7782 0.500043 17.437 0.5 15.4001H1.5C1.50004 17.2027 2.08219 18.2608 2.74512 18.8718C3.42293 19.4965 4.23459 19.7 4.75 19.7H5.5V20.7H4.75Z"
+                                fill="white" />
+                            <path
+                                d="M2.12109 18.947C2.16694 18.9997 2.21432 19.0497 2.26172 19.0984L2.40625 19.24C2.43652 19.2679 2.46831 19.2936 2.49902 19.3201C2.46823 19.2935 2.4366 19.267 2.40625 19.239L2.26172 19.0984C2.16676 19.0008 2.07459 18.8955 1.98633 18.782L2.12109 18.947ZM6 19.2V21.2H4.75C3.90577 21.2 2.7166 20.885 1.72852 19.9744L1.54102 19.7927C0.624536 18.8491 4.23338e-05 17.4193 0 15.4001V14.9001H2V15.4001C2.00004 16.9802 2.47414 17.8843 2.98242 18.405L3.08398 18.5046C3.65855 19.034 4.3446 19.2 4.75 19.2H6Z"
+                                fill="white" />
+                            <path
+                                d="M25.5 16.2C25.5 16.9595 25.2479 18.0766 24.4883 19.0144C23.7115 19.9734 22.4395 20.7 20.5 20.7V19.7C22.1605 19.7 23.1387 19.0931 23.7119 18.3855C24.3022 17.6567 24.5 16.7737 24.5 16.2V15.4001H25.5V16.2Z"
+                                fill="white" />
+                            <path
+                                d="M24 14.9001H26V16.2C26 17.0524 25.7211 18.2866 24.877 19.3289L24.7061 19.5291C23.8186 20.5093 22.4492 21.2 20.5 21.2H20V19.2H20.5C21.9257 19.2 22.7452 18.719 23.2305 18.1794L23.3232 18.071C23.8288 17.4468 24 16.6809 24 16.2V14.9001Z"
+                                fill="white" />
+                            <path
+                                d="M21 19.2002V21.2002H11.8301L4 26.9824V19.5H6V23.0176L11.0371 19.2988L11.1699 19.2002H21ZM2 5.2998V15.9004H0V5.2998H2ZM26 5.2998V15.9004H24V5.2998H26ZM21 0V2H5V0H21Z"
+                                fill="white" />
+                            <path
+                                d="M20 13C20.5523 13 21 13.4477 21 14C21 14.5523 20.5523 15 20 15H5C4.44772 15 4 14.5523 4 14C4 13.4477 4.44772 13 5 13H20ZM18 9C18.5523 9 19 9.44772 19 10C19 10.5523 18.5523 11 18 11H5C4.44772 11 4 10.5523 4 10C4 9.44772 4.44772 9 5 9H18ZM22 5C22.5523 5 23 5.44772 23 6C23 6.55228 22.5523 7 22 7H4C3.44772 7 3 6.55228 3 6C3 5.44772 3.44772 5 4 5H22Z"
+                                fill="white" />
+                        </svg>
+                            
+                        <span>123</span>
+                        
+                    </button>
+                    <button id="playlist-buttom" aria-label="List count"
+                        class="flex items-center space-x-2 border border-gray-400 rounded px-4 py-2">
+                        <svg class="playlist-icon" width="12" height="12" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M5 2.99994C5 3.35721 4.8094 3.68752 4.5 3.86615L1.5 5.5976C1.1906 5.77623 0.809401 5.77623 0.5 5.5976C0.190813 5.419 0.000131656 5.08942 -1.9513e-07 4.73236L-4.36768e-08 1.26752C0.000131881 0.910466 0.190813 0.58088 0.5 0.402285C0.809401 0.223652 1.1906 0.223652 1.5 0.402285L4.5 2.13373L4.61035 2.20795C4.85404 2.3957 5 2.68738 5 2.99994Z"
+                                fill="#FEFCFB" />
+                            <path
+                                d="M19 8.5C19.5523 8.5 20 8.94771 20 9.5C20 10.0523 19.5523 10.5 19 10.5L1 10.5C0.447715 10.5 1.35705e-07 10.0523 8.74228e-08 9.5C3.91405e-08 8.94772 0.447715 8.5 1 8.5L19 8.5Z"
+                                fill="#FEFCFB" />
+                            <path
+                                d="M19 2.25L19.1025 2.25488C19.6067 2.30621 20 2.73232 20 3.25C20 3.76768 19.6067 4.19378 19.1025 4.24512L19 4.25L8 4.25C7.44772 4.25 7 3.80228 7 3.25C7 2.69772 7.44772 2.25 8 2.25L19 2.25Z"
+                                fill="#FEFCFB" />
+                            <path
+                                d="M19 14.75C19.5523 14.75 20 15.1977 20 15.75C20 16.3023 19.5523 16.75 19 16.75L1 16.75C0.447715 16.75 1.35705e-07 16.3023 8.74228e-08 15.75C3.91405e-08 15.1977 0.447715 14.75 1 14.75L19 14.75Z"
+                                fill="#FEFCFB" />
+                        </svg>
+                            
+                        <span>400</span>
+                    </button>   
+                    <span class="text-blue-900 font-bold">1:32</span>
+                    <span class="text-gray-900 font-semibold">/5:23</span>
+                </div>
+            </footer>
+
+            <div id="image-container" class="image-container hidden">
+                <img src="/assets/img/images/portada-background.png" alt="Portada de la canción" class="cover-image">
+                <div class="container-playlist hidden">
+                    <div class="header-list2">
+                        <h2>se está reproduciendo</h2>
+                        <h2 class="name-list">Lista de reproducción</h2>
+                    </div>
+                    <div class="playlist">
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 1</div>
+                                <div class="name-artist">N-artista 1</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 2</div>
+                                <div class="name-artist">N-artista 2</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 3</div>
+                                <div class="name-artist">N-artista 3</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 4</div>
+                                <div class="name-artist">N-artista 4</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 5</div>
+                                <div class="name-artist">N-artista 5</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 6</div>
+                                <div class="name-artist">N-artista 6</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 7</div>
+                                <div class="name-artist">N-artista 7</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 8</div>
+                                <div class="name-artist">N-artista 8</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 9</div>
+                                <div class="name-artist">N-artista 9</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 10</div>
+                                <div class="name-artist">N-artista 10</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 11</div>
+                                <div class="name-artist">N-artista 11</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 12</div>
+                                <div class="name-artist">N-artista 12</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 13</div>
+                                <div class="name-artist">N-artista 13</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 14</div>
+                                <div class="name-artist">N-artista 14</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 15</div>
+                                <div class="name-artist">N-artista 15</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg"  alt="icon play">
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 16</div>
+                                <div class="name-artist">N-artista 16</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 17</div>
+                                <div class="name-artist">N-artista 17</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+            
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                        <div class="song">
+                            <img src="/assets/img/images/portada.png" alt="Portada">
+                            <div class="info">
+                                <div class="name-song">N-canción 18</div>
+                                <div class="name-artist">N-artista 18</div>
+                            </div>
+                            <div class="duration">
+                                <img src="/assets/img/icons/icon_play.svg" alt="icon play">
+                                <span>1:23</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-list hidden">
+                    <div class="header-list1">
+                        <h2>2 comentarios</h2>
+                        <button>
+                            <span>Ordenar por</span>
+                            <img src="/assets/img/icons/arrow-down.svg" alt="Arrow down">
+                        </button>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="comentario">
+                                <img src="/assets/img/images/user-coment.png" alt="Perfil">
+                                <div class="content-comment">
+                                    <span class="user">Usuario 1</span>
+                                    <p>Muy buena canción, me parece que transmite perfectamente el mensaje del cantante, sobre todo
+                                        la parte que
+                                        dice "Esto es pa' que te mortifique..."</p>
+                                    <div class="ask">
+                                        <a class="respuestas" href="#">
+                                            <img src="/assets/img/icons/chevron-down.svg" alt="Respuestas">
+                                            <span>1 Respuestas</span>
+                                        </a>
+                                        <button class="toggle-respuestas">Responder</button>
+                                    </div>
+                                </div>
+                                <div class="option-comment">
+                                    <button class="tree-points">
+                                        <span>...</span>
+                                    </button>
+                                    <button class="like-comment">
+                                        <img src="/assets/img/icons/icon_star.svg" alt="Like">
+                                        <span>
+                                            2
+                                        </span>
+                                    </button>
+                                </div>
+                
+                                <div class="respuestas-container" style="display: none;">
+                                    <div class="comentario-respuesta">
+                                        <div class="usuario">
+                                            <img src="/assets/img/images/user-coment.png" alt="Perfil">
+                                            <span>Comentrista 1</span>
+                                        </div>
+                                        <p>Verdades más claras jamás dichas.</p>
+                                        <a class="respuestas" href="#">1 respuestas</a>
+                                        <button class="toggle-respuestas">Responder</button>
+                                    </div>
+                                    <div class="comentario-respuesta">
+                                        <div class="usuario">
+                                            <img src="/assets/img/images/user-coment.png" alt="Perfil">
+                                            <span>SubComentrista 1</span>
+                                        </div>
+                                        <p>@Comentrista 1 XD</p>
+                                        <a class="respuestas" href="#">1 respuestas</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="comentario">
+                                <img src="/assets/img/images/user-coment.png" alt="Perfil">
+                                <div class="content-comment">
+                                    <span class="user">Usuario 1</span>
+                                    <p>Muy buena canción, me parece que transmite perfectamente el mensaje del cantante, sobre todo
+                                        la parte que
+                                        dice "Esto es pa' que te mortifique..."</p>
+                                    <div class="ask">
+                                        <a class="respuestas" href="#">
+                                            <img src="/assets/img/icons/chevron-down.svg" alt="Respuestas">
+                                            <span>1 Respuestas</span>
+                                        </a>
+                                        <button class="toggle-respuestas">Responder</button>
+                                    </div>
+                                </div>
+                                <div class="option-comment">
+                                    <button class="tree-points">
+                                        <span>...</span>
+                                    </button>
+                                    <button class="like-comment">
+                                        <img src="/assets/img/icons/icon_star.svg" alt="Like">
+                                        <span>
+                                            2
+                                        </span>
+                                    </button>
+                                </div>
+                            
+                                <div class="respuestas-container" style="display: none;">
+                                    <div class="comentario-respuesta">
+                                        <div class="usuario">
+                                            <img src="/assets/img/images/user-coment.png" alt="Perfil">
+                                            <span>Comentrista 1</span>
+                                        </div>
+                                        <p>Verdades más claras jamás dichas.</p>
+                                        <a class="respuestas" href="#">1 respuestas</a>
+                                        <button class="toggle-respuestas">Responder</button>
+                                    </div>
+                                    <div class="comentario-respuesta">
+                                        <div class="usuario">
+                                            <img src="/assets/img/images/user-coment.png" alt="Perfil">
+                                            <span>SubComentrista 1</span>
+                                        </div>
+                                        <p>@Comentrista 1 XD</p>
+                                        <a class="respuestas" href="#">1 respuestas</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="comentario">
+                                <img src="/assets/img/images/user-coment.png" alt="Perfil">
+                                <div class="content-comment">
+                                    <span class="user">Usuario 1</span>
+                                    <p>Muy buena canción, me parece que transmite perfectamente el mensaje del cantante, sobre todo
+                                        la parte que
+                                        dice "Esto es pa' que te mortifique..."</p>
+                                    <div class="ask">
+                                        <a class="respuestas" href="#">
+                                            <img src="/assets/img/icons/chevron-down.svg" alt="Respuestas">
+                                            <span>1 Respuestas</span>
+                                        </a>
+                                        <button class="toggle-respuestas">Responder</button>
+                                    </div>
+                                </div>
+                                <div class="option-comment">
+                                    <button class="tree-points">
+                                        <span>...</span>
+                                    </button>
+                                    <button class="like-comment">
+                                        <img src="/assets/img/icons/icon_star.svg" alt="Like">
+                                        <span>
+                                            2
+                                        </span>
+                                    </button>
+                                </div>
+                            
+                                <div class="respuestas-container" style="display: none;">
+                                    <div class="comentario-respuesta">
+                                        <div class="usuario">
+                                            <img src="/assets/img/images/user-coment.png" alt="Perfil">
+                                            <span>Comentrista 1</span>
+                                        </div>
+                                        <p>Verdades más claras jamás dichas.</p>
+                                        <a class="respuestas" href="#">1 respuestas</a>
+                                        <button class="toggle-respuestas">Responder</button>
+                                    </div>
+                                    <div class="comentario-respuesta">
+                                        <div class="usuario">
+                                            <img src="/assets/img/images/user-coment.png" alt="Perfil">
+                                            <span>SubComentrista 1</span>
+                                        </div>
+                                        <p>@Comentrista 1 XD</p>
+                                        <a class="respuestas" href="#">1 respuestas</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="comentario">
+                                <img src="/assets/img/images/user-coment.png" alt="Perfil">
+                                <div class="content-comment">
+                                    <span class="user">Usuario 1</span>
+                                    <p>Muy buena canción, me parece que transmite perfectamente el mensaje del cantante, sobre todo
+                                        la parte que
+                                        dice "Esto es pa' que te mortifique..."</p>
+                                    <div class="ask">
+                                        <a class="respuestas" href="#">
+                                            <img src="/assets/img/icons/chevron-down.svg" alt="Respuestas">
+                                            <span>1 Respuestas</span>
+                                        </a>
+                                        <button class="toggle-respuestas">Responder</button>
+                                    </div>
+                                </div>
+                                <div class="option-comment">
+                                    <button class="tree-points">
+                                        <span>...</span>
+                                    </button>
+                                    <button class="like-comment">
+                                        <img src="/assets/img/icons/icon_star.svg" alt="Like">
+                                        <span>
+                                            2
+                                        </span>
+                                    </button>
+                                </div>
+                            
+                                <div class="respuestas-container" style="display: none;">
+                                    <div class="comentario-respuesta">
+                                        <div class="usuario">
+                                            <img src="/assets/img/images/user-coment.png" alt="Perfil">
+                                            <span>Comentrista 1</span>
+                                        </div>
+                                        <p>Verdades más claras jamás dichas.</p>
+                                        <a class="respuestas" href="#">1 respuestas</a>
+                                        <button class="toggle-respuestas">Responder</button>
+                                    </div>
+                                    <div class="comentario-respuesta">
+                                        <div class="usuario">
+                                            <img src="/assets/img/images/user-coment.png" alt="Perfil">
+                                            <span>SubComentrista 1</span>
+                                        </div>
+                                        <p>@Comentrista 1 XD</p>
+                                        <a class="respuestas" href="#">1 respuestas</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>                   
+                    </ul>
+                </div>
+            </div>

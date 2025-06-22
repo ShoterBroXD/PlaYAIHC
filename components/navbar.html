@@ -1,22 +1,47 @@
-<nav class="navbar-main">
-  <div class="navbar-left">
-    <img src="/assets/img/images/logo-playa.png" alt="PlaYA Logo" class="logo" />
-    <a href="/pages/dashboard.html">Inicio</a>
-    <a href="/pages/c_index.html">Categorías</a>
-    <a href="/pages/b_principal.html">Biblioteca</a>
-    <a href="/pages/community.html">Comunidades</a>
+<nav class="navbar">
+  <div class="img-logo-in">
+    <img src="/assets/img/images/logo-playa.png" alt="Logo de PlaYA!">
   </div>
+  <ul class="nav-links">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Categorías</a></li>
+    <li><a href="#">Biblioteca</a></li>
+    <li><a href="#">Comunidades</a></li>
+  </ul>
+  <form class="search-form" role="search" aria-label="Buscar en la plataforma">
+    <input type="search" placeholder="Buscar..." aria-label="Buscar" />
+    <button type="submit" aria-label="Buscar">
+      <svg class="submit-icon" width="15" height="15" viewBox="0 0 20 21" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M19 19.5L13 13.5M15 8.5C15 12.366 11.866 15.5 8 15.5C4.13401 15.5 1 12.366 1 8.5C1 4.63401 4.13401 1.5 8 1.5C11.866 1.5 15 4.63401 15 8.5Z"
+          stroke="#545F71" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+  </form>
+  <ul class="nav-links">
+    <li><a class="hover:text-gray-900" href="#">Premium</a></li>
+    <li><a class="hover:text-gray-900" href="#"">Subir</a></li>
+      <li><a class=" hover:text-gray-900" href="#">Notificaciones</a></li>
+  </ul>
+  <div class="others">
+    <button class="profile ">
+      <img alt="User  avatar" class="rounded-full" height="25" src="/assets/img/images/user-img.png" />
+      <svg class="arrow-down" width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.5 1.5L7.5 7.5L13.5 1.5" stroke="#545F71" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+    <button class="navbar-config">
+      <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M11 10C11 9.44772 10.5523 9 10 9C9.44772 9 9 9.44772 9 10C9 10.5523 9.44772 11 10 11C10.5523 11 11 10.5523 11 10ZM13 10C13 11.6569 11.6569 13 10 13C8.34315 13 7 11.6569 7 10C7 8.34315 8.34315 7 10 7C11.6569 7 13 8.34315 13 10Z"
+          fill="#292929" />
+        <path
+          d="M16.9282 6.00005C16.7586 5.70639 16.5714 5.42936 16.3724 5.16625L15.5004 5.66967C13.5005 6.82434 11 5.38118 10.9999 3.07187L10.9998 2.06384C10.3395 1.98008 9.66756 1.97919 8.999 2.06318L8.99961 3.07206C8.99936 5.30894 6.65402 6.73291 4.68927 5.77038L4.50034 5.66971L3.62609 5.16523C3.21916 5.70224 2.88381 6.28458 2.62625 6.89831L3.50002 7.40195C5.49988 8.5567 5.49949 11.4437 3.49954 12.5984L2.62759 13.1018C2.75596 13.4057 2.90223 13.7064 3.07177 14C3.24134 14.2937 3.42858 14.5707 3.62759 14.8338L4.49954 14.3304C6.49954 13.1757 9.00002 14.6188 9.00002 16.9282L8.99966 17.9354C9.65975 18.0192 10.3313 18.0204 10.9996 17.9366L11.0003 16.928C11.0005 14.6188 13.4997 13.1759 15.4996 14.3304L16.3725 14.8345C16.7794 14.2977 17.1139 13.7155 17.3715 13.1019L16.4999 12.5982C14.4999 11.4434 14.5004 8.55642 16.5004 7.40172L17.3724 6.8983C17.244 6.59439 17.0977 6.29374 16.9282 6.00005ZM18.6602 5.00005C18.9937 5.57757 19.2633 6.17536 19.4709 6.78503L19.5558 7.04726C19.694 7.49325 19.5056 7.97587 19.1014 8.20945L17.5004 9.13377C16.8337 9.51867 16.8336 10.481 17.5003 10.8659L19.0993 11.7898C19.5032 12.0231 19.6922 12.5042 19.5548 12.9499C19.1184 14.3644 18.3681 15.6862 17.3341 16.8008C17.0168 17.1426 16.5058 17.2198 16.1018 16.9867L14.5001 16.0621C13.8335 15.6772 12.9998 16.1585 12.9998 16.9283L12.9997 18.7777C12.9995 19.2441 12.6772 19.6481 12.2225 19.7519C10.7403 20.0902 9.22045 20.079 7.77719 19.7497C7.3225 19.6458 7.00037 19.2416 7.00029 18.7751L6.9997 16.9284C6.9997 16.1586 6.1662 15.6776 5.49954 16.0625L3.89857 16.9868C3.49416 17.2201 2.98203 17.1419 2.66489 16.7992C2.16679 16.261 1.72081 15.6601 1.33972 15C0.958542 14.3398 0.660796 13.6527 0.443698 12.952L0.406491 12.784C0.355582 12.3898 0.544864 11.995 0.898575 11.7906L2.49954 10.8663C3.1662 10.4814 3.16637 9.51909 2.4997 9.13419L0.900681 8.21031C0.496746 7.97708 0.30783 7.49595 0.445158 7.05023C0.881597 5.63567 1.63183 4.31385 2.66587 3.19934L2.79278 3.08322C3.10878 2.84251 3.54459 2.80935 3.89813 3.01337L5.49982 3.93797L5.62691 3.9999C6.2677 4.26111 7.0001 3.7933 7.00014 3.07175L7.00026 1.22236L7.01403 1.0509C7.082 0.659495 7.37946 0.339022 7.77745 0.248171C9.25957 -0.0900599 10.7791 -0.0796771 12.2223 0.249577L12.386 0.30275C12.7002 0.434086 12.9266 0.717584 12.985 1.05302L12.9997 1.22496L13.0003 3.07169C13.0003 3.84149 13.8338 4.32252 14.5004 3.93762L16.1014 3.0133L16.2567 2.94054C16.63 2.80342 17.0569 2.9002 17.3346 3.20004C17.8328 3.73839 18.279 4.33982 18.6602 5.00005Z"
+          fill="#292929" />
+      </svg>
 
-  <div class="navbar-center">
-    <input type="text" placeholder="Buscar..." class="search-input" />
-    <img src="/assets/img/icons/search.svg" alt="Buscar" class="search-icon" /> 
-  </div>
-
-  <div class="navbar-right">
-    <a href="/pages/premium.html" class="premium-link">Premium</a>
-    <a href="/pages/subir.html" class="Subir">Subir</a>
-    <span class="icon"><img src="/assets/img/icons/boton-noti.png"></span>
-    <img src="/assets/img/icons/logo-usuario.png" alt="Perfil" class="avatar" />
-    <span class="icon"><img src="/assets/img/icons/icon-config.png"></span>
+    </button>
   </div>
 </nav>
