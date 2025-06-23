@@ -1,5 +1,5 @@
 
-.subir-music {
+/*.subir-music {
     position: absolute;
     width: 70rem;
     margin: auto;
@@ -7,7 +7,25 @@
     border-radius: 1rem;
     padding: 0.5rem 1rem 2rem 3rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 10px;
+    z-index: 1000px;
+}*/
+
+.subir-music {
+    position: fixed;
+    /* Cambia de absolute a fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70rem;
+    max-width: 95vw;
+    max-height: 95vh;
+    overflow-y: auto;
+    background: white;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem 2rem 3rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    /* Asegúrate que esté por encima de todo */
 }
 
 .subir-music header button{
@@ -103,8 +121,8 @@
 }
 
 .drop-area img{
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     margin: 0 auto;
 }
 
@@ -118,6 +136,11 @@
     font-size: 0.9rem;
     margin-top: 2.5rem;
     margin-bottom: 3rem;
+}
+
+.drop-area p{
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .btn-choose {

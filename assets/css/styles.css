@@ -585,6 +585,7 @@ main.lib-hero {
   transition: background-color 0.3s ease;
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 .subir-btn.primary.fixed-visible:hover {

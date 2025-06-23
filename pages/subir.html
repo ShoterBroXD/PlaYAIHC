@@ -23,7 +23,7 @@
             <p>Da click en el botón de abajo para comenzar!</p>
 
             <div class="subir-btn-container">
-              <button class="subir-btn primary fixed-visible">Subir música</button>
+              <button id="subir-btn" class="subir-btn primary fixed-visible">Subir música</button>
             </div>
           </div>
         </section>
@@ -42,13 +42,13 @@
 
     </main>
 
-        <section class="subir-music">
+        <section id="subir-music" class="subir-music hidden">
           <header>
             <h1>
               <img src="/assets/img/images/playita.png" alt="PlaYA! Logo">
               <span>Subir</span>
             </h1>
-            <button class="close"><img src="/assets/icons/close.svg" alt="Close"></button>
+            <button id="close-btn" class="close"><img src="/assets/icons/close.svg" alt="Close"></button>
           </header>
             <div class="progress">
               <img src="/assets/img/images/cloud-upload.png" alt="Pocent Subida">
@@ -71,7 +71,7 @@
           </div>
         </section>
     
-
+        <script src="/assets/js/mostrar-subirmusic.js"></script>
 </body>
 </html>
 <script>
@@ -93,3 +93,4 @@
       });
   });
   </script>
+
