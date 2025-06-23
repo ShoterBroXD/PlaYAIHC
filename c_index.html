@@ -10,42 +10,13 @@
     <title>Playa/Categorias</title>
 </head>
 <body>
-    <header>
-        <div id="navbar"></div>
+<header>
+    <div id="navbar"></div>
+  </header>
 
-    <script>
-        fetch('pages/components/navbar.html')
-         .then(response => response.text())
-        .then(data => {
-         document.getElementById('navbar').innerHTML = data;
-         });
-     </script>
-    </header>
-      <header>
-        <div id="sidebar"></div>
-
- <script>
-  fetch('pages/components/sidebar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('sidebar').innerHTML = data;
-
-      // Espera a que el contenido se cargue y luego marca el ítem activo
-      const currentPath = window.location.pathname;
-      const sidebarItems = document.querySelectorAll('.sidebar-item');
-
-      sidebarItems.forEach(item => {
-        const itemPath = item.getAttribute('href');
-        if (currentPath === itemPath) {
-          item.classList.add('active');
-        }
-      });
-    });
-</script>
-
-
-    </header>
-
+  <aside>
+    <div id="sidebar"></div>
+  </aside>
    <section class="hero">
     <div class="hero-content">
         <div class="hero-title">
@@ -138,6 +109,9 @@
 
      </div>
      </div>
-</section>
-  
+  <!-- Scripts al final para asegurar carga del DOM -->
+  <script src="js/navbar.js"></script>
+  <script src="js/sidebar.js"></script>
+
+</body>
 </html>
