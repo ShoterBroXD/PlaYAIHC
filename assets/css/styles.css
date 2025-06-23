@@ -577,13 +577,6 @@ p, span, a, li, button {
   flex: 1;
 }
 
-.liked {
-  position: relative; /* o relative, según convenga */
-  top: 15%;           /* ajusta según el lugar deseado */
-  left: 15%;          /* ajusta según el lugar deseado */
-  padding-top: 3rem;
-}
-
 .lib-main-container section {
   margin-bottom: 2rem;
 }
@@ -605,6 +598,31 @@ p, span, a, li, button {
   background-color: #06325a;
 }
 
+.clear-history-container {
+  display:flex;
+  justify-content: flex-end;
+  padding: 0 1.5rem;
+}
+
+.clear-history-btn {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -2%;
+  padding: 0.5rem 1.5rem;
+  color:#0A1128;
+  border: none;
+  background-color: transparent;
+  margin-left:auto;
+  border-radius: 10px;
+}
+
+.clear-history-btn:hover{
+  background-color: #f9f9f9;
+  color:#007bff;
+}
+
 /* ======================= */
 /* TARJETAS (CARDS) */
 /* ======================= */
@@ -612,7 +630,7 @@ p, span, a, li, button {
 .library-grid {
   grid-template-columns: repeat(4, minmax(200px, 1fr));
   gap: 105px;
-  padding: 80px;
+  padding: 20px 80px 20px 80px;
 }
 .card-row {
   display: flex;
