@@ -33,7 +33,7 @@ fetch('/components/footer.html')
                         }
                     });
                 });
-
+/*
 fetch('/components/navbar.html')
                 .then(res => res.text())
                 .then(html => {
@@ -61,4 +61,4 @@ fetch('/components/sidebar.html')
                     toggleButton.addEventListener('click', function() {
                         sidebar.classList.toggle('collapsed');
                     });
-                });
+                });*/

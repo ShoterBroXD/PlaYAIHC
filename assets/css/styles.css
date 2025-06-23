@@ -546,6 +546,7 @@ aside img {
 }
 
 .reproductor footer {
+  width: 100%;
   position: sticky;
   bottom: 0;
   left: 0;
@@ -554,51 +555,69 @@ aside img {
   border-top: 1px solid #e5e7eb;
   box-shadow: 0 -2px 10px rgb(0 0 0 / 0.05);
   height: 65px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0;
   user-select: none;
   flex-shrink: 0;
   bottom: 0;
   z-index: 10;
+  display: flex;
+}
+
+.footer-components{
+  position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 -2px 10px rgb(0 0 0 / 0.05);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    user-select: none;
+    flex-shrink: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .song-progress{
+  top: 0;
+  position: absolute;
   -webkit-appearance: none;
-  /* Elimina el estilo predeterminado */
   width: 100%;
-  /* Ancho completo */
   height: 5px;
-  /* Altura de la barra */
   background: #ddd;
-  /* Color de fondo */
   border-radius: none;
-  /* Bordes redondeados */
+  z-index: 10;
+}
+
+.song-progress:hover{
+  background: #F9F3F3;
 }
 
 .song-progress::-webkit-slider-thumb{
   -webkit-appearance: none;
-  /* Elimina el estilo predeterminado */
   appearance: none;
-  /* Elimina el estilo predeterminado */
   width: 5px;
-  /* Ancho del pulgar */
   height: 5px;
-  /* Altura del pulgar */
   background: #af4c4c;
-  /* Color del pulgar */
   border-radius: 0;
-  /* Bordes redondeados */
   cursor: pointer;
-  /* Cambia el cursor al pasar sobre el pulgar */
 }
 
 .song-progress::-webkit-slider-thumb:hover{
   width: 10px;
-    /* Ancho del pulgar */
   height: 10px;
   border-radius: 100%;
+}
+
+/* Estilo para la pista de progreso en navegadores WebKit (Chrome, Safari) */
+.song-progress::-webkit-slider-runnable-track {
+  background: #af4c4c;
+  /* Cambia este color al que desees para la pista */
 }
 
 .controls {
@@ -683,7 +702,7 @@ aside img {
 
 .container-playlist,
 .comment-list {
-  width: 30%;
+  width: 35%;
   position: absolute;
   right: 0;
   left: auto;
@@ -737,8 +756,6 @@ aside img {
   border-style: inset;
   border-color: #545F71;  
 }
-
-
 
 .info {
   flex-grow: 1;
@@ -802,11 +819,6 @@ aside img {
 .song:hover{
   background-color: #1282A2;
   .name-artist,.name-song,.duration{
-    color: #ffffff;
-  }
-  svg{
-    stroke: #ffffff;
-    fill: #ffffff;
     color: #ffffff;
   }
 }
