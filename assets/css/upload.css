@@ -1,0 +1,130 @@
+
+.subir-music {
+    position: absolute;
+    width: 70rem;
+    margin: auto;
+    background: white;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem 2rem 3rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10px;
+}
+
+.subir-music header button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.subir-music header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    align-items: center;
+}
+
+.subir-music header h1 {
+    padding: 0;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    span{
+        font-weight: bold;
+        margin-left: 0.5rem;
+    }
+}
+
+.subir-music header img{
+    width: 25px;
+    height: 25px;
+    
+}
+
+.progress {
+    display: flex;
+    margin: 1rem 2rem 3rem 0;
+    font-size: 0.8rem;
+    font-weight: 900;
+    background: #EEF1F4;
+    border-radius: 1rem;
+    flex-direction: row;
+    padding: 0.8rem 1.5rem 0.8rem 1rem;
+    align-items: center;
+}
+
+.progress img{
+    width: 30px;
+    height: 30px;
+}
+
+.progress span{
+    font-weight: bold;
+    margin: 0 1rem 0 1rem;
+}
+
+.progress-bar {
+    width: 20%;
+    background: #646C9B;
+    border-radius: 1rem;
+    height: 7px;
+}
+
+.progress-fill {
+    background: #4a90e2;
+    height: 100%;
+    transition: width 0.4s;
+}
+
+.btn-improve {
+    background-color: #001F54;
+    color: rgb(255, 255, 255);
+    border: 2px solid #1282A2;
+    padding: 0.5rem 3rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 20rem;
+    right: 0;
+}
+
+.subir-music h2 {
+    font-size: 2.5rem;
+}
+
+.drop-area {
+    margin-left: 4rem;
+    width: 80%;
+    border: 1px dashed #000000;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.drop-area img{
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+.upload-icon {
+    font-size: 50px;
+    /* Icon size */
+}
+
+.subir-music p{
+    font-weight: bolder;
+    font-size: 0.9rem;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.btn-choose {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

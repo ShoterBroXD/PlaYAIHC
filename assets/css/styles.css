@@ -318,7 +318,7 @@ p, span, a, li, button {
   padding: 0rem 0rem 2rem 0rem;
 }
 
-.subir-btn-container a {
+.subir-btn-container button {
   display:flex;
   margin-top: 2rem;
 }
