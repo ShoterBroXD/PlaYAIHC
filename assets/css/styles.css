@@ -505,22 +505,76 @@ p, span, a, li, button {
     padding: 0;
 }
 
-.lib-title-container {
-  position: relative;
+.lib-btn-container {
+  align-items: center;
+  justify-content: center;
+  margin-left: 45rem;
 }
 
-.recently-listened {
-  position: absolute; /* o relative, según convenga */
-  top: 30%;           /* ajusta según el lugar deseado */
-  left: 15%;          /* ajusta según el lugar deseado */
-  margin-left: 50px;
+.lib-btn.primary.fixed-visible {
+  background-color: #034078;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Raleway;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.recently-listened {
-  position: absolute; /* o relative, según convenga */
-  top: 15%;           /* ajusta según el lugar deseado */
-  left: 15%;          /* ajusta según el lugar deseado */
+.lib-btn.primary.fixed-visible:hover {
+  background-color: #06325a;
+}
+
+.text-under-subtitle p{
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 22px;
+  letter-spacing: -2%;
+  color:#0A1128;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  margin-top: 10rem 
+}
+
+.lib-title-followed h1{
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 22px;
+  letter-spacing: -2%;
+  color:#0A1128;
+  margin-bottom: 2rem;
+}
+
+.lib-subtitle-followed p {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 22px;
+  letter-spacing: -2%;
+  color:#0A1128;
+}
+
+.lib-followed-container {
+  display:flex;
+  padding: 2rem;
+  flex:1;
+}
+
+.lib-hero-container {
+  display:flex;
+}
+
+.lib-hero-text-followed { 
+  position: relative; 
   margin-left: 50px;
+  flex: 1;
 }
 
 .liked {
@@ -530,48 +584,8 @@ p, span, a, li, button {
   padding-top: 3rem;
 }
 
-.title-lib {
-  position: absolute;
-  top: 5%;
-  left: 15%;
-  font-family: Raleway;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 22px;
-  letter-spacing: -2%;
-  color:#0A1128;
-}
-
-p.subtitle-lib {
-font-family: Raleway;
-font-weight: 700;
-font-size: 32px;
-line-height: 22px;
-letter-spacing: -2%;
-color:#0A1128;
-}
-
-p.text-under-subtitle {
-  top: 15%;
-  font-family: Raleway;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 22px;
-  letter-spacing: -2%;
-  color:#0A1128;
-}
-
-main.lib-hero {
-  padding: 2rem;
-}
-
 .lib-main-container section {
   margin-bottom: 2rem;
-}
-
-.subir-btn-container a {
-  display:flex;
-  margin-top: 2rem;
 }
 
 .subir-btn.primary.fixed-visible {
@@ -609,7 +623,7 @@ main.lib-hero {
   padding-bottom: 1rem;      /* ← espacio opcional debajo del scroll */
 }
 
-.card {
+.card_library {
   width: 200px;
   display: flex;
   flex-direction: column;
