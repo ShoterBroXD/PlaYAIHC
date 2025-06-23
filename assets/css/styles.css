@@ -504,6 +504,19 @@ aside img {
   gap: 0;
 }
 
+.footer-content{
+  position: fixed;
+    top: 2rem;
+    left: 40px;
+    right: 40px;
+    bottom: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  background: #ffffff;
+}
+
 .image-container {
   position: fixed;
   top: 5rem;
@@ -549,6 +562,43 @@ aside img {
   flex-shrink: 0;
   bottom: 0;
   z-index: 10;
+}
+
+.song-progress{
+  -webkit-appearance: none;
+  /* Elimina el estilo predeterminado */
+  width: 100%;
+  /* Ancho completo */
+  height: 5px;
+  /* Altura de la barra */
+  background: #ddd;
+  /* Color de fondo */
+  border-radius: none;
+  /* Bordes redondeados */
+}
+
+.song-progress::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  /* Elimina el estilo predeterminado */
+  appearance: none;
+  /* Elimina el estilo predeterminado */
+  width: 5px;
+  /* Ancho del pulgar */
+  height: 5px;
+  /* Altura del pulgar */
+  background: #af4c4c;
+  /* Color del pulgar */
+  border-radius: 0;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Cambia el cursor al pasar sobre el pulgar */
+}
+
+.song-progress::-webkit-slider-thumb:hover{
+  width: 10px;
+    /* Ancho del pulgar */
+  height: 10px;
+  border-radius: 100%;
 }
 
 .controls {

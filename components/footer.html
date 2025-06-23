@@ -1,5 +1,6 @@
 <footer class="flex items-center justify-between border-t border-gray-300 px-4 py-3 select-none">
-                <div class="flex items-center space-x-3 w-72">
+    <input type="range" class="song-progress w-full h-2 bg-blue-900" max="100" min="0" value="50" style="margin-bottom: 10px;" />
+                <section class="flex items-center space-x-3 w-72">
                     <div id="collapsed-buttom" class="w-16 h-16 border border-gray-300 bg-gray-200 flex items-center justify-center">
                         <img src="/assets/img/images/portada.png" alt="Logo de PlaYA!">
                     </div>
@@ -11,8 +12,8 @@
                             <span class="ml-2">N-artista</span>
                         </span>
                     </div>
-                </div>
-                <div class="controls flex items-center space-x-4 flex-1 max-w-xl justify-center">
+                </section>
+                <section class="controls flex items-center space-x-4 flex-1 max-w-xl justify-center">
                     
                     <button class="volumen-boton" aria-label="Volume icon">
                         <svg class="volume-icon" width="15" height="15" viewBox="0 0 20 20" fill="#292929" xmlns="http://www.w3.org/2000/svg">
@@ -61,8 +62,8 @@
                             fill="#292929" />
                         </svg>
                     </button>
-                </div>
-                <div class="songs-reaction flex items-center space-x-4 w-72 justify-end text-sm font-semibold text-gray-900">
+                </section>
+                <section class="songs-reaction flex items-center space-x-4 w-72 justify-end text-sm font-semibold text-gray-900">
                     <button aria-label="Star count"
                         class="flex items-center space-x-2 bg-gray-900 text-white rounded px-4 py-2">
                         <svg class="like-icon" width="12" height="12" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,12 +133,13 @@
                     </button>   
                     <span class="text-blue-900 font-bold">1:32</span>
                     <span class="text-gray-900 font-semibold">/5:23</span>
-                </div>
+                </section>
             </footer>
-
-            <div id="image-container" class="image-container hidden">
-                <img src="/assets/img/images/portada-background.png" alt="Portada de la canción" class="cover-image">
-                <div class="container-playlist hidden">
+            <div id="footer-content" class="footer-content hidden">
+                <section id="image-container" class="image-container">
+                    <img src="/assets/img/images/portada-background.png" alt="Portada de la canción" class="cover-image">
+                </section>
+                <section class="container-playlist hidden">
                     <div class="header-list2">
                         <h2>se está reproduciendo</h2>
                         <h2 class="name-list">Lista de reproducción</h2>
@@ -357,8 +359,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="comment-list hidden">
+                </section>
+                <section class="comment-list hidden">
                     <div class="header-list1">
                         <h2>2 comentarios</h2>
                         <button>
@@ -395,7 +397,7 @@
                                     </button>
                                 </div>
                 
-                                <div class="respuestas-container" style="display: none;">
+                                <div class="respuestas-container" style="display: flex;">
                                     <div class="comentario-respuesta">
                                         <div class="usuario">
                                             <img src="/assets/img/images/user-coment.png" alt="Perfil">
@@ -564,5 +566,5 @@
                             </div>
                         </li>                   
                     </ul>
-                </div>
+                </section>
             </div>

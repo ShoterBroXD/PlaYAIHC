@@ -4,7 +4,7 @@ fetch('/components/footer.html')
                     document.getElementById('footer-placeholder').innerHTML = html;
             
                     const imgBtn = document.getElementById('collapsed-buttom');
-                    const seccion = document.getElementById('image-container');
+                    const seccion = document.getElementById('footer-content');
                     const commentBtn = document.getElementById('commentlist-buttom');
                     const playlistBtn = document.getElementById('playlist-buttom');
                     const commentList = document.querySelector('.comment-list');
