@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1.5rem 0rem 0rem 1.5rem;
     background-color: #ffffff;
     top: 4rem;
     right: 8rem;
@@ -18,7 +18,14 @@
     overflow-y: auto;
 }
 
+.hidden {
+    display: none; 
+}
 
+.notification-section {
+    width: 100%;
+    margin: 0;
+}
 .notification-title {
     font-size: 1.2rem;
     font-weight: bold;
@@ -40,6 +47,7 @@
 .user {
     display: flex;
     align-items: center;
+    right: 0px;
 }
 
 .user-icon {
@@ -53,11 +61,13 @@
 .user-comment {
     font-size: 0.8rem;
     font-weight: 600;
+    margin: 0 0;
 }
 
 .timestamp {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     color: #353535;
     line-height: 0px;
+    margin: 0 0;
 }
 
