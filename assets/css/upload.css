@@ -1,16 +1,4 @@
-
-/*.subir-music {
-    position: absolute;
-    width: 70rem;
-    margin: auto;
-    background: white;
-    border-radius: 1rem;
-    padding: 0.5rem 1rem 2rem 3rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000px;
-}*/
-
-.subir-music {
+.step-select, .step-details, .step-privacy, .step-review, .step-progress {
     position: fixed;
     /* Cambia de absolute a fixed */
     top: 50%;
@@ -22,19 +10,18 @@
     overflow-y: auto;
     background: white;
     border-radius: 1rem;
-    padding: 0.5rem 1rem 2rem 3rem;
+    padding: 0.5rem 1rem 0rem 3rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    /* Asegúrate que esté por encima de todo */
 }
 
-.subir-music header button{
+.step-select header button{
     background: none;
     border: none;
     cursor: pointer;
 }
 
-.subir-music header {
+.step-select header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -42,7 +29,7 @@
     align-items: center;
 }
 
-.subir-music header h1 {
+.step-select header h1 {
     padding: 0;
     align-items: center;
     flex-direction: row;
@@ -53,13 +40,13 @@
     }
 }
 
-.subir-music header img{
+.step-select header img{
     width: 25px;
     height: 25px;
     
 }
 
-.progress {
+.step-select .progress {
     display: flex;
     margin: 1rem 2rem 3rem 0;
     font-size: 0.8rem;
@@ -71,24 +58,24 @@
     align-items: center;
 }
 
-.progress img{
+.step-select .progress img{
     width: 30px;
     height: 30px;
 }
 
-.progress span{
+.step-select .progress span{
     font-weight: bold;
     margin: 0 1rem 0 1rem;
 }
 
-.progress-bar {
+.step-select .progress-bar {
     width: 20%;
     background: #646C9B;
     border-radius: 1rem;
     height: 7px;
 }
 
-.progress-fill {
+.step-select .progress-fill {
     background: #4a90e2;
     height: 100%;
     transition: width 0.4s;
@@ -106,7 +93,7 @@
     right: 0;
 }
 
-.subir-music h2 {
+.step-select h2 {
     font-size: 2.5rem;
 }
 
@@ -117,7 +104,6 @@
     border-radius: 5px;
     padding: 20px;
     text-align: center;
-    margin-bottom: 3rem;
 }
 
 .drop-area img{
@@ -131,7 +117,7 @@
     /* Icon size */
 }
 
-.subir-music p{
+.step-select p{
     font-weight: bolder;
     font-size: 0.9rem;
     margin-top: 2.5rem;
@@ -144,10 +130,127 @@
 }
 
 .btn-choose {
-    background: #4a90e2;
+    background: #1282A2;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+.instructions {
+    margin-bottom: 20px;
+}
+
+.file-preview {
+    border: 1px dashed #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-button {
+    background-color: #4CAF50;
+    /* Verde */
+    color: white;
+}
+
+.cancel-button {
+    background-color: #ccc;
+    /* Gris */
+    color: black;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 20px;
+    background-color: #76c7c0;
+    /* Color de la barra de progreso */
+    width: 0%;
+    /* Cambia el porcentaje según el progreso */
+    border-radius: 5px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1282A2;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+}
+
+.switch label {
+    margin-left: 10px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #007bff;
+    transition: width 0.4s;
+}
+
+.buttom-bellow{
+    display: flex;
+    justify-content: right;
+    margin: 1rem 0;
+    right: 0;
 }

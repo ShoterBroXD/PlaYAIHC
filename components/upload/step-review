@@ -1,0 +1,17 @@
+<section id="step-review" class="step-review hidden">
+    <!-- Paso 4: Revisión final -->
+    <h2>Revisión Final</h2>
+    <div class="card">
+        <h3>Resumen</h3>
+        <img src="" alt="Portada" id="cover-preview" style="width: 100px; height: auto;">
+        <p><strong>Nombre del Archivo:</strong> archivo.mp3</p>
+        <p><strong>Título:</strong> <span id="titulo-preview">Título</span></p>
+        <p><strong>Artista:</strong> <span id="artista-preview">Artista</span></p>
+        <p><strong>Duración:</strong> 3:45</p>
+        <p><strong>Género:</strong> <span id="genero-preview">Género</span></p>
+    </div>
+    <div class="button-bellow">
+        <button id="back-btn" class="button">Editar Información</button>
+        <button id="next-btn" class="button">Subir Ahora</button>
+    </div>
+</section>
