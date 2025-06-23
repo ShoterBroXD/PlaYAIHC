@@ -613,7 +613,6 @@ p, span, a, li, button {
   grid-template-columns: repeat(4, minmax(200px, 1fr));
   gap: 105px;
   padding: 80px;
-  justify-items: center;
 }
 .card-row {
   display: flex;
@@ -621,6 +620,7 @@ p, span, a, li, button {
   flex-wrap: nowrap;         /* ← evita que las cards pasen a la siguiente línea */
   overflow-x: auto;          /* ← agrega scroll horizontal si hay muchas cards */
   padding-bottom: 1rem;      /* ← espacio opcional debajo del scroll */
+  margin-left: -5rem;
 }
 
 .card_library {
