@@ -1,27 +1,64 @@
 <section id="step-privacy" class="step-privacy hidden">
     <!-- Paso 3: Visibilidad y configuración -->
-    <h2>Visibilidad y Configuración</h2>
-    <div class="input-group">
-        <label for="visibilidad">Selector de Visibilidad</label>
-        <select id="visibilidad">
-            <option value="publico">Público</option>
-            <option value="privado">Privado</option>
-            <option value="enlace">Solo con Enlace</option>
-        </select>
+     <header>
+        <h1>
+            <img src="/assets/img/images/playita.png" alt="PlaYA! Logo">
+            <span>Visibilidad y Configuración</span>
+        </h1>
+        <button id="close-btn" class="close"><img src="/assets/icons/close.svg" alt="Close"></button>
+     </header>
+    <div class="step-details-flex">
+        <div class="step-details-content">
+            <section>
+                <div class="bellow-container">
+                    <div class="input-group">
+                        <label for="visibilidad">Selector de Visibilidad</label>
+                        <select id="visibilidad">
+                            <option value="publico">Público</option>
+                            <option value="privado">Privado</option>
+                            <option value="enlace">Solo con Enlace</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="comment">Permitir comentarios</label>
+                        <select id="comment">
+                            <option value="todos">Todos</option>
+                            <option value="seguidores">Solo seguidores</option>
+                            <option value="nadie">Nadie</option>
+                        </select>
+                    </div>
+                    </div>
+                <div class="switch">
+                    <label class="switch-label">
+                        <input type="checkbox" id="programar-publicacion">
+                        <span class="slider">off on</span>
+                        Programar publicación
+                    </label>
+                </div>
+                <div id="programar-opciones" class="input-group">
+                    <label for="fecha-publicacion">Fecha y hora de publicación</label>
+                    <input type="datetime-local" id="fecha-publicacion">
+                </div>
+                
+                <div class="switch">
+                    <label class="switch-label">
+                        <input type="checkbox" id="descargas">
+                        <span class="slider">off on</span>
+                        Permitir Descargas
+                    </label>
+                </div>
+                <div class="switch">
+                    <label class="switch-label">
+                        <input type="checkbox" id="listas">
+                        <span class="slider">off on</span>
+                        Incluir en Listas
+                    </label>
+                    </div>
+            </section>    
+        </div>
+        <img class="wall" src="/assets/img/images/hero-dj.png" alt="img">
     </div>
-    <div class="switch">
-        <input type="checkbox" id="comentarios">
-        <label for="comentarios">Permitir Comentarios</label>
-    </div>
-    <div class="switch">
-        <input type="checkbox" id="descargas">
-        <label for="descargas">Permitir Descargas</label>
-    </div>
-    <div class="switch">
-        <input type="checkbox" id="listas">
-        <label for="listas">Incluir en Listas/Categorías</label>
-    </div>
-    <div class="button-bellow">
+    <div class="buttom-bellow">
         <button id="back-btn" class="button">Volver</button>
         <button id="next-btn" class="button">Siguiente</button>
     </div>

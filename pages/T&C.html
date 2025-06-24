@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>Términos y Condiciones | PlaYa!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            color: #333;
+            justify-content: space-between;
+        }
+
+        header {
+            background-color: #ffffff;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #1e3a8a;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            margin-top: 30px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            margin-top: 50px;
+            margin-bottom: 0;
+            text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="navbar-container"></div>
+
+        <h1>Términos y Condiciones de PlaYa!</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Términos de Uso</h2>
+            <p>Estos términos rigen el uso de nuestra plataforma. Al registrarte, aceptas cumplir con ellos.</p>
+            <ul>
+                <li>Debes ser mayor de edad para registrarte.</li>
+                <li>Toda la música subida debe ser original o contar con los derechos necesarios.</li>
+                <li>No se permite el uso de lenguaje ofensivo.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Normas de la Comunidad</h2>
+            <p>Para mantener un ambiente positivo y respetuoso, por favor sigue estas normas:</p>
+            <ul>
+                <li>Respeta a todos los usuarios y sus opiniones.</li>
+                <li>La publicación de contenido inapropiado llevará a la suspensión de tu cuenta.</li>
+                <li>Participa activamente y aporta con comentarios constructivos.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Política de Restricciones por Copyright</h2>
+            <p>Para proteger los derechos de los autores, se aplican las siguientes reglas:</p>
+            <ul>
+                <li>El contenido que infrinja derechos de autor será eliminado inmediatamente.</li>
+                <li>Los artistas son responsables de asegurar que tienen derechos sobre su música.</li>
+                <li>Las violaciones repetidas llevarán a la desactivación de la cuenta.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 PlaYa! - Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    /*Cargar el navbar*/
+    window.addEventListener("DOMContentLoaded", () => {
+        fetch("/components/navbar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("navbar-container").innerHTML = html;
+
+                const logoutBtn = document.getElementById("btnLogout");
+                if (logoutBtn) {
+                    logoutBtn.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        localStorage.removeItem("sesionActiva");
+                        window.location.href = "/pages/login.html";
+                    });
+                }
+            });
+ });
+ </script>

@@ -24,45 +24,18 @@
     <div class="drop-area">
         <img src="/assets/img/images/cloud-upload2.png" alt="Subida">
         <p>Arrastra y suelta archivos de audio para empezar</p>
-        <button class="btn-choose">Elegir archivos</button>
+        <label class="btn-choose">
+            <input type="file" id="fileInput" accept=".mp3, .wav, .flac, .aiff, .alac" multiple>
+            <span>Elegir archivos</span>
+        </label>
+    </div>
+    <div class="disclaimer">
+        <p>Al enviar tus vídeos a PlaYa!, confirmas que aceptas los <a href="#" style="color: #4285f4;">Términos del Servicio</a> y las <a href="#" style="color: #4285f4;">Normas de la Comunidad</a> de PlaYa!.
+        
+        Asegúrate de no infringir los derechos de autor ni de privacidad de otros usuarios. <a href="#" style="color: #4285f4;">Más información</a></p>
     </div>
     <div class="buttom-bellow">
         <button id="canceled-btn" class="button">Cancelar</button>
         <button id="next-btn" class="button">Continuar</button>
     </div>
 </section>
-
-
-
-
-
-<!---
-<section id="unload-step-2" class="subir-music hidden">
-    <h1>Subida de Archivos de Audio</h1>
-    <h2>Confirma tu archivo seleccionado</h2>
-    <div class="instructions">
-        <p>Revisa tu archivo y asegúrate de que sea correcto.</p>
-    </div>
-
-    <div class="file-preview">
-        <p><strong>Vista previa del archivo:</strong></p>
-        <p>Nombre del archivo: nombre_del_archivo.mp3</p>
-        <p>Tamaño del archivo: 5 MB</p>
-    </div>
-
-    <div class="buttons">
-        <button class="button upload-button">Subir</button>
-        <button class="button cancel-button">Cancelar</button>
-    </div>
-</section>
-
-<section id="unload-step-3" class="subir-music hidden">
-    <h2>Subiendo tu canción...</h2>
-    <div class="progress-bar">
-        <div class="progress-fill" style="width: 0%;">
-        </div>
-    </div>
-    <p>Por favor, espera mientras se completa la subida.</p>
-</section>
-
--->

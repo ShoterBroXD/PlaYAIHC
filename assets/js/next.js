@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
 
         // Mostrar solo el primer paso al inicio
-        showStep(0);
+        //showStep(0);
 
         // Delegación de eventos para next y back
         document.getElementById('upload-step-container').addEventListener('click', (e) => {
@@ -42,6 +42,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         const closeBtn = document.getElementById('close-btn');
         const cancelBtn = document.getElementById('canceled-btn');
+        const backdrop = document.getElementById('modal-backdrop');
         const subirBtn = document.getElementById('subir-btn');
         const subirMusic = document.getElementById('step-select');
 
@@ -49,16 +50,19 @@ window.addEventListener("DOMContentLoaded", () => {
             subirBtn.addEventListener('click', () => {
                 showStep(0);
                 subirMusic.classList.remove('hidden');
+                backdrop.classList.remove('hidden');
             });
         }
         if (closeBtn && subirMusic) {
             closeBtn.addEventListener('click', () => {
                 subirMusic.classList.add('hidden');
+                backdrop.classList.add('hidden');
             });
         }
         if (cancelBtn && subirMusic) {
             cancelBtn.addEventListener('click', () => {
                 subirMusic.classList.add('hidden');
+                backdrop.classList.add('hidden');
             });
         }
     });
