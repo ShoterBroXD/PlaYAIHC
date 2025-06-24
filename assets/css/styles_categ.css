@@ -201,21 +201,6 @@ html, body {
   padding: 80px;
   justify-items: center;
 }
-
-.category-card {
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  height: 140px;
-  padding: 30px;
-  overflow: hidden;
-  color: white;
-  font-family: 'Raleway', sans-serif;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 300px;
-}
-
 .azure-dragon {
   background-color: #034078; /* Azure Dragon */
 }
@@ -282,25 +267,6 @@ html, body {
   margin: 0px 0 0px 0;
 }
 
-.filter-button {
-  background-color: #001F54;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.filter-button:hover {
-  background-color: #034078;
-}
-
-.filter-button.active {
-  background-color: #034078;
-  font-weight: 600;
-}
 
 
 .track-list {

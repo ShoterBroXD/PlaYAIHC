@@ -1025,3 +1025,126 @@ main.lib-hero {
   margin: 0 auto;
   height: auto;  
 }
+
+.community-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif; /* Corregida la sintaxis */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background-color: #f3f4f6;
+  min-height: 120px;
+}
+
+.gray {
+  background-color: rgb(231, 231, 231); 
+}
+
+.filter-button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  background-color: #001F54; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.filter-button:hover {
+  background-color: #034078; 
+}
+
+.filter-button.active {
+  background-color: #034078;
+  font-weight: 600;
+}
+
+.conteiner section {
+  margin-bottom: 2rem;
+}
+
+.library-moon {
+  padding: 2rem;
+}
+
+
+.ca {
+
+}
+
+.ca-info { 
+  text-align: center;
+}
+
+.ca-info-text {
+
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espacio entre el ícono y el bloque de texto */
+}
+
+.c-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.community-tittle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.community-details {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.community-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.community-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Circular */
+    background-color: #001F54; /* Color azul oscuro para TODOS los íconos */
+    flex-shrink: 0; /* Evita que se deforme */
+}
+
+.community-description {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+.page-container {
+    display: flex;
+}
+
+.main-content {
+    flex-grow: 1; /* ¡CRÍTICO! Hace que ocupe todo el espacio sobrante */
+    padding: 2.5rem; /* Espaciado interno generoso */
+    width: 100%;
+}
+
+.content-section {
+    margin-bottom: 3rem; /* Espacio entre "Comunidades" y "Top en PlaYA!" */
+}
+
+.lib-subtitle-container {
+    margin-bottom: 1.5rem; /* Espacio entre el título y las tarjetas */
+}

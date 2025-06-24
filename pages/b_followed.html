@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+    <title>Comunidades</title>
+</head>
+<body>
 
-    <title>Biblioteca</title>
-  </head>
-  <body>
     <header>
         <div id="navbar-container"></div>
         <script src="/assets/js/script.js"></script>
     </header>
     <script>
+      /* Navbar */
       window.addEventListener("DOMContentLoaded", () => {
         fetch("/components/navbar.html")
           .then(res => res.text())
@@ -32,60 +33,159 @@
           });
       })
      </script>
-    <aside class="sidebar-main">
-      <div class="sidebar-above">
-        <a href="b_principal.html" class="sidebar-item">
-          <img src="/assets/img/icons/collection.svg" alt="Pagina principal" class="icon" />
-          <ul>Página principal   </ul>
-          <span><img src="/assets/img/icons/chevron-right.svg" alt="Biblioteca" class="chevron-right-icon" /></span>
-        </a>
 
-        <a href="b_liked.html" class="sidebar-item">
-          <img src="/assets/img/icons/liked.svg" alt="Me gusta" class="icon" />
-          <span>Me gusta    </span>
-          <span><img src="/assets/img/icons/chevron-right.svg" alt="Biblioteca" class="chevron-right-icon" /></span>
-        </a>
+    <div class="page-container">
 
-        <a href="b_followed.html" class="sidebar-item active">
-          <img src="/assets/img/icons/following.svg" alt="Siguiendo" class="icon" />
-          <span>Siguiendo   </span>
-          <span><img src="/assets/img/icons/chevron-right.svg" alt="Biblioteca" class="chevron-right-icon" /></span>
-        </a>
+        <aside class="sidebar-main">
+            <div class="sidebar-above">
+                <a href="/pages/community.html" class="sidebar-item">
+                    <img src="/assets/img/icons/collection.svg" alt="Pagina principal" class="icon" />
+                    <span>Página principal</span>
+                    <span class="chevron-right-icon"><img src="/assets/img/icons/chevron-right.svg" alt="Flecha" /></span>
+                </a>
+                <a href="/pages/b_liked.html" class="sidebar-item">
+                    <img src="/assets/img/icons/liked.svg" alt="Me gusta" class="icon" />
+                    <span>Tus Comunidades</span>
+                    <span class="chevron-right-icon"><img src="/assets/img/icons/chevron-right.svg" alt="Flecha" /></span>
+                </a>
+                <a href="/pages/b_followed.html" class="sidebar-item active">
+                    <img src="/assets/img/icons/following.svg" alt="Siguiendo" class="icon" />
+                    <span>Recomendados</span>
+                    <span class="chevron-right-icon"><img src="/assets/img/icons/chevron-right.svg" alt="Flecha" /></span>
+                </a>
+                <a href="/pages/b_historial.html" class="sidebar-item">
+                    <img src="/assets/img/icons/history.svg" alt="Historial" class="icon" />
+                    <span>Explorar</span>
+                    <span class="chevron-right-icon"><img src="/assets/img/icons/chevron-right.svg" alt="Flecha" /></span>
+                </a>
+            </div>
+            <div class="sidebar-bellow">
+                <a href="#" class="sidebar-item">
+                    <img src="/assets/img/icons/cog.svg" alt="Settings" class="icon" />
+                    <span>Configuración</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <img src="/assets/img/icons/logout.svg" alt="Logout" class="icon" />
+                    <span>Cerrar sesión</span>
+                </a>
+            </div>
+        </aside>
 
-        <a href="b_historial.html" class="sidebar-item">
-          <img src="/assets/img/icons/history.svg" alt="Historial" class="icon" />
-          <span>Historial      </span>
-          <span class="chevron-right-icon"><img src="/assets/img/icons/chevron-right.svg" alt="Biblioteca" /></span>
-        </a>
-      </div>
+        <main class="main-content">
 
-      <div class="sidebar-bellow">
-        <a href="#" class="sidebar-item">
-          <img src="/assets/img/icons/cog.svg" alt="Settings" class="icon" />
-          <span>Configuración</span>
-        </a>
+            <section class="content-section">
+                <div class="lib-subtitle-container">
+                    <p class="subtitle-lib">Según tus preferencias</p>
+                </div>
+                <div class="c-row">
+                    <div class="ca">
+                        <div class="community-card">
+                            <div class="card-content">
+                                <img src="/assets//img/images/perfil-comunidades.png" alt="Icono de comunidad" class="community-icon">
+                                <div class="community-text">
+                                    <p class="community-tittle">Michael Jackson</p>
+                                    <p class="community-details">75B seguidores</p>
+                                    <p class="community-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <button class="filter-button">Unirse</button>
+                        </div>
+                    </div>
+                    <div class="ca">
+                        <div class="community-card">
+                            <div class="card-content">
+                                <img src="/assets//img/images/perfil-comunidades.png" alt="Icono de comunidad" class="community-icon">
+                                <div class="community-text">
+                                    <p class="community-tittle">Michael Jackson</p>
+                                    <p class="community-details">75B seguidores</p>
+                                    <p class="community-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <button class="filter-button">Unirse</button>
+                        </div>
+                    </div>
+                    <div class="ca">
+                        <div class="community-card">
+                            <div class="card-content">
+                                <img src="/assets//img/images/perfil-comunidades.png" alt="Icono de comunidad" class="community-icon">
+                                <div class="community-text">
+                                    <p class="community-tittle">Michael Jackson</p>
+                                    <p class="community-details">75B seguidores</p>
+                                    <p class="community-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <button class="filter-button">Unirse</button>
+                        </div>
+                    </div>
+                    <div class="ca">
+                        <div class="community-card">
+                            <div class="card-content">
+                                <img src="/assets//img/images/perfil-comunidades.png" alt="Icono de comunidad" class="community-icon">
+                                <div class="community-text">
+                                    <p class="community-tittle">Michael Jackson</p>
+                                    <p class="community-details">75B seguidores</p>
+                                    <p class="community-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <button class="filter-button">Unirse</button>
+                        </div>
+                    </div>
+                    <div class="ca">
+                        <div class="community-card">
+                            <div class="card-content">
+                                <img src="/assets//img/images/perfil-comunidades.png" alt="Icono de comunidad" class="community-icon">
+                                <div class="community-text">
+                                    <p class="community-tittle">Michael Jackson</p>
+                                    <p class="community-details">75B seguidores</p>
+                                    <p class="community-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <button class="filter-button">Unirse</button>
+                        </div>
+                    </div>
+                    <div class="ca">
+                        <div class="community-card">
+                            <div class="card-content">
+                                <img src="/assets//img/images/perfil-comunidades.png" alt="Icono de comunidad" class="community-icon">
+                                <div class="community-text">
+                                    <p class="community-tittle">Michael Jackson</p>
+                                    <p class="community-details">75B seguidores</p>
+                                    <p class="community-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <button class="filter-button">Unirse</button>
+                        </div>
+                    </div>
+                    <div class="ca">
+                        <div class="community-card">
+                            <div class="card-content">
+                                <img src="/assets//img/images/perfil-comunidades.png" alt="Icono de comunidad" class="community-icon">
+                                <div class="community-text">
+                                    <p class="community-tittle">Michael Jackson</p>
+                                    <p class="community-details">75B seguidores</p>
+                                    <p class="community-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <button class="filter-button">Unirse</button>
+                        </div>
+                    </div>
+                    <div class="ca">
+                        <div class="community-card">
+                            <div class="card-content">
+                                <img src="/assets//img/images/perfil-comunidades.png" alt="Icono de comunidad" class="community-icon">
+                                <div class="community-text">
+                                    <p class="community-tittle">Michael Jackson</p>
+                                    <p class="community-details">75B seguidores</p>
+                                    <p class="community-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <button class="filter-button">Unirse</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                </div>
+            </section>
 
-        <a href="#" class="sidebar-item">
-          <img src="/assets/img/icons/logout.svg" alt="Logout" class="icon" />
-          <span>Cerrar sesión</span>
-        </a>
-      </div>
-    </aside>
-
-    <main class="lib-hero">
-      <div class="lib-title-container">
-        <h1 class="title-lib">Tu Biblioteca</h1>
-      </div>
-      <section class="recently-listened">
-        <div class="subtitle-container">
-          <p class="subtitle-lib">Siguiendo</p>
-          <p class="text-under-subtitle">Aún no sigues a ningun artista!</p>
-        </div>
-        <div class="subir-btn-container">
-            <a href="#" class="subir-btn primary fixed-visible">Explorar artistas</a>
-          </div>
-      </section>
-    </div>
-    </main>
-  </body>
+        </main> </div> </body>
 </html>
