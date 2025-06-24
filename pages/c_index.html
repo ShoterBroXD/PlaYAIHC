@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles_categ.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
 
@@ -11,36 +11,59 @@
 </head>
 <body>
     <header>
-        <div id="navbar"></div>
-
+        <div id="navbar-container"></div>
+        <script src="/assets/js/script.js"></script>
+    </header>
     <script>
-        fetch('pages/components/navbar.html')
-         .then(response => response.text())
-        .then(data => {
-         document.getElementById('navbar').innerHTML = data;
-         });
+      /* Navbar */
+      window.addEventListener("DOMContentLoaded", () => {
+        fetch("/pages/components/navbar.html")
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById("navbar-container").innerHTML = html;
+
+            const logoutBtn = document.getElementById("btnLogout");
+            if (logoutBtn) {
+              logoutBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                localStorage.removeItem("sesionActiva");
+                window.location.href = "/pages/login.html";
+              });
+            }
+          });
+      })
      </script>
     </header>
       <header>
         <div id="sidebar"></div>
+        <script src="/assets/js/script.js"></script>
 
  <script>
-  fetch('pages/components/sidebar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('sidebar').innerHTML = data;
+  fetch('/pages/components/sidebar.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('sidebar').innerHTML = data;
 
-      // Espera a que el contenido se cargue y luego marca el ítem activo
-      const currentPath = window.location.pathname;
-      const sidebarItems = document.querySelectorAll('.sidebar-item');
+    const currentPath = window.location.pathname;
+    const sidebarItems = document.querySelectorAll('.sidebar-item');
 
-      sidebarItems.forEach(item => {
-        const itemPath = item.getAttribute('href');
-        if (currentPath === itemPath) {
-          item.classList.add('active');
-        }
-      });
+    sidebarItems.forEach(item => {
+      const itemPath = item.getAttribute('href');
+      if (currentPath === itemPath) {
+        item.classList.add('active');
+      }
     });
+
+    const logoutBtn = document.getElementById("btnLogout");
+
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", function (e) {
+        e.preventDefault(); 
+        localStorage.removeItem("sesionActiva"); 
+        window.location.href = "/pages/login.html"; 
+      });
+    }
+  });
 </script>
 
 
@@ -91,7 +114,7 @@
 
  <!-- Ejemplo con color Clarinet -->
  <div class="category-card clarinet">
- <img src="/assets/icons/sample-icon.svg" alt="Icono categoría" class="category-icon">
+ <img src="/assets/icons/rap.jpg" alt="Icono categoría" class="category-icon">
  <div class="category-info">
  <h3 class="category-title">Hip Hop</h3>
  <p class="category-count">312 canciones</p>
@@ -100,7 +123,7 @@
 
  <!-- Ejemplo con color Clarinet -->
  <div class="category-card azure-dragon">
- <img src="/assets/icons/sample-icon.svg" alt="Icono categoría" class="category-icon">
+ <img src="/assets/icons/rock.jpeg" alt="Icono categoría" class="category-icon">
  <div class="category-info">
  <h3 class="category-title">Pop</h3>
  <p class="category-count">312 canciones</p>
@@ -109,7 +132,7 @@
 
  <!-- Ejemplo con color Clarinet -->
  <div class="category-card clarinet">
- <img src="/assets/icons/sample-icon.svg" alt="Icono categoría" class="category-icon">
+ <img src="/assets/icons/rap.jpg" alt="Icono categoría" class="category-icon">
  <div class="category-info">
  <h3 class="category-title">Jazz</h3>
  <p class="category-count">312 canciones</p>
@@ -118,7 +141,7 @@
 
  <!-- Ejemplo con color Clarinet -->
  <div class="category-card azure-dragon">
-  <img src="/assets/icons/sample-icon.svg" alt="Icono categoría" class="category-icon">
+  <img src="/assets/icons/rock.jpeg" alt="Icono categoría" class="category-icon">
  <div class="category-info">
  <h3 class="category-title">Cumbia</h3>
  <p class="category-count">312 canciones</p>
@@ -127,7 +150,7 @@
 
  <!-- Ejemplo con color Clarinet -->
  <div class="category-card clarinet">
- <img src="/assets/icons/sample-icon.svg" alt="Icono categoría" class="category-icon">
+ <img src="/assets/icons/rap.jpg" alt="Icono categoría" class="category-icon">
  <div class="category-info">
  <h3 class="category-title">Trap</h3>
  <p class="category-count">312 canciones</p>

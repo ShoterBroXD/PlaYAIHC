@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlaYA! Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/notificaciones.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!--Para el navbar xdd-->
+    <div id="navbar-container"></div>
+    <script src="/assets/js/script.js"></script>
+
+    <!--Contenido usuario-->
+    <div id="contenido-usuario" class="dashboard-usuario">
+        <div class="dashboard-left">
+            <h1 class="bienvenida" id="bienvenida">Bienvenido, <span id="nombre-usuario"></span>!</h1>
+            <p>Listo para descubrir nuevos gustos?</p>
+
+            <section class="seccion-generos">
+                <h2>Géneros en tendencia</h2>
+                <div class="contenedor-generos">
+                    <div class="genero">
+                        <img src="/assets/img/images/genero-pop.jpg" alt="pop" />
+                        <span>POP</span>
+                    </div>
+                    <div class="genero">
+                        <img src="/assets/img/images/genero-hiphop.jpg" alt="hip-hop" />
+                        <span>HIP-HOP</span>
+                    </div>
+                    <div class="genero">
+                        <img src="/assets/img/images/genero-rock.jpg" alt="rock" />
+                        <span>ROCK</span>
+                    </div>
+                    <div class="genero">
+                        <img src="/assets/img/images/genero-electro.jpg" alt="electro" />
+                        <span>ELECTRONICA</span>
+                    </div>
+                </div>
+            </section>
+            <div class="contenedor-con-imagen">
+                <section class="seccion-comunidades">
+                <h2>Comunidades en tendencia</h2>
+                <div class="comunidad">
+                    <strong>Michael Jackson</strong>
+                    <h4>Escucharon la nueva musica que salio?</h4>
+                    <p>Me parece muy buena, aunque el volumen de los instrumentos puede ser menor, ustedes que opinan?</p>
+                </div>
+                <div class="comunidad">
+                    <strong>Artista tendencia</strong>
+                    <h4>Cual de los artista en tendencia actual te parecen mas geniales?</h4>
+                    <p>Quisiera saber que opinan sobre este tema, ustedes que artistas siguen?</p>
+                </div>
+                <div class="comunidad">
+                    <strong>Chris Morris</strong>
+                    <h4>Este artista emergente es muy genial!!!</h4>
+                    <p>Compartan sus opiniones, no tengan miedo jaja</p>
+                </div>
+                </section>
+                <img src="/assets/img/images/sing-girl.png" alt="Chica cantando" class="img-deco-externa" />
+            </div>
+        </div>
+    </div>
+
+    <!--Contenido artista-->
+    <div id="contenido-artista" class="dashboard-artista">
+        <div class="dashboard-artist-container">
+
+          <!--Sidebar-->
+          <aside class="sidebar">
+            <div class="sidebar-top">
+              <ul>
+                <li><a href="#"> Perfil principal</a></li>
+                <li><a href="#"> Eventos</a></li>
+                <li><a href="#"> Comunidades</a></li>
+                <li><a href="#"> Estadisticas</a></li>
+              </ul>
+            </div>
+            
+            <div class="sidebar-bottom">
+              <ul>
+                <li><a href="#"> Configuracion</a></li>
+                <li><a href="#" id="btnLogout" class="btn logout"> Cerrar Sesion</a></li>
+              </ul>
+          </aside>
+
+          <!--Main-->
+          <main class="artist-content">
+            <div class="bienvenida-container">
+              <div class="bienvenida-info">
+                <img src="/assets/img/images/perfil-artista.png" alt="Logo de usuario" class="avatar" />
+
+                <div class="texto-bienvenida">
+                  <h2>Bienvenido, <span id="nombre-artista"></span>!</h2>
+                  <p><strong>Veo que aún no tienes ninguna canción subida.<br>¿Qué esperas? Sube una canción y enséñale a las personas tus melodías!</strong></p>
+                  <p class="subtexto">
+                    Una de las mejores maneras de aumentar tus reproducciones es conectar con tus fans.
+                    Empieza enviándoles mensajes, compartiendo enlaces a tus nuevas canciones o respondiendo a los comentarios.
+                  </p>
+                </div>
+            </div>
+            <hr class="linea-bienvenida">
+            <section class="seccion">
+              <h2>Canciones subidas</h2>
+              <div class="card">
+                <p><strong>Aun no tienes canciones subidas.</strong></p>
+                <p>Dale click al botón de aqui para subir tu primera melodía.</p>
+                <button class="btn upload primary">Comienza subiendo tu música!</button>
+              </div>
+            </section>
+
+            <section class="secciones-dobles">
+              <div class="card">
+                <h3>Ganancias</h3>
+                <p><strong>Comienza a hacer dinero con PlaYA!</strong></p>
+                <img src="/assets/img/images/currency-dollar.png" alt="Icono de ganancias" class="icon-ganancias" />
+                <p>Sube tu música para conseguir reproducciones y poder ganar dinero con ellas.</p>
+                <button class="btn earnings primary">Comienza aquí!</button>
+              </div>
+
+              <div class="card">
+                <h3>Músicas más escuchadas</h3>
+                <p><strong>Descubre qué canciones están atrayendo a más oyentes.</strong></p>
+                <img src="/assets/img/images/view-list.png" alt="Lista de tendencias" class="icon-trending" />
+                <p>Realiza un seguimiento del rendimiento y las tendencias de sus pistas en PlaYA!.</p>
+                <button class="btn trending primary">Comienza aquí!</button>
+              </div>
+            </section>
+          </main>
+
+        </div>
+    </div>
+    
+</body>
+
+
+
+<script>
+/*Cargar el navbar*/
+  window.addEventListener("DOMContentLoaded", () => {
+    fetch("/pages/components/navbar.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("navbar-container").innerHTML = html;
+
+        const logoutBtn = document.getElementById("btnLogout");
+        if (logoutBtn) {
+          logoutBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            localStorage.removeItem("sesionActiva");
+            window.location.href = "/pages/login.html";
+          });
+        }
+      });
+  });
+
+/*Mostrar contenido según el rol del usuario*/
+  window.addEventListener("DOMContentLoaded", () => {
+    const sesion = JSON.parse(localStorage.getItem("sesionActiva"));
+    if (!sesion) return window.location.href = "/pages/login.html";
+
+    if (sesion.rol === "usuario") {
+      const nombreSpan = document.getElementById("nombre-usuario");
+      if (nombreSpan) {
+      nombreSpan.textContent = sesion.nombre;
+      }
+      document.getElementById("contenido-usuario").style.display = "block";
+
+    } else if (sesion.rol === "artista") {
+      const nombreSpan = document.getElementById("nombre-artista");
+      if (nombreSpan) {
+      nombreSpan.textContent = sesion.nombre;
+      }
+      document.getElementById("contenido-artista").style.display = "block";
+    }
+});
+
+</script>
+
+<script src="/assets/js/notificaciones-collapsed.js"></script>
