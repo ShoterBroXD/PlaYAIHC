@@ -37,7 +37,7 @@ html, body {
 .navbar-main .navbar-right {
     display: flex;
     align-items: center;
-    gap: 3.0rem;
+    gap: 2.0rem;
 }
 
 .navbar-main .navbar-center {
@@ -88,6 +88,8 @@ html, body {
 .navbar-main .icon {
     font-size: 1.1rem;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 
 .navbar-main .premium-link {
@@ -102,7 +104,7 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
     height: 85vh;
-    padding: 35px;
+    padding: 20px;
     box-shadow: 0 0 0px rgba(0,0,0,0.05);
     position: relative;
     left: 0;
@@ -182,16 +184,41 @@ html, body {
 .volume-up-icon {
   	width: 91%;
     top: 10%;
+    left: 4%;
   	position: absolute;
   	max-width: 100%;
   	overflow: hidden;
   	height:45px;
 }
 
-.filter-buttons {
+.filter-buttons 
+{
+  max-width: 600px;
+  margin: auto;
+  margin-top: -860px;
   display: flex;
   gap: 15px;
-  margin: 20px 0 40px 0;
+  margin: 0px 0 0px 0;
+}
+
+.filter-button {
+  background-color: #001F54;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #034078;
+}
+
+.filter-button.active {
+  background-color: #034078;
+  font-weight: 600;
 }
 
 .categories-grid {
@@ -203,16 +230,16 @@ html, body {
 }
 .azure-dragon {
   background-color: #034078; /* Azure Dragon */
+  border-radius: 12px; 
 }
 
 .clarinet {
   background-color: #001F54; /* Clarinet */
+  border-radius: 12px;
 }
 
 .category-icon {
-  width: 100px; /* Aumenta el tamaño */
   height: 150px;
-  margin-right: 15px;
   border-radius: 12px; /* Aplica curvatura */
   object-fit: cover; /* Asegura que la imagen se recorte bien dentro del espacio */
 }
@@ -251,14 +278,14 @@ html, body {
   color: #0a1128;
   text-align: left;
 }
-------------------
+
 .hero-pages-title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.filter-buttons 
-{
+
+.filter-buttons {
   max-width: 600px;
   margin: auto;
   margin-top: -860px;
@@ -268,10 +295,9 @@ html, body {
 }
 
 
-
 .track-list {
   width: 50%;
-  margin-top: -1180px; /* o el valor que necesites */
+  margin-top: -1100px; /* o el valor que necesites */
   padding: 500px; /* opcional: para que no quede pegado a los bordes */
 }
 
