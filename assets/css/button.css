@@ -1,0 +1,45 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.25rem;
+    height: 40px;
+    border: none;
+    border-radius: var(--border-radius-full);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+    background-color: var(--color-bg-medium);
+    color: var(--color-text-dark);
+}
+.btn-secondary:hover {
+    filter: brightness(0.95);
+}
+
+.btn-icon {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+}
+.btn-icon svg {
+    width: 20px;
+    height: 20px;
+    color: var(--color-text-medium);
+}
+.btn-icon:hover {
+    background-color: var(--color-bg-medium);
+}
