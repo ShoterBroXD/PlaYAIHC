@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Planes | PlaYA!</title>
   <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/upload.css">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@700&display=swap" rel="stylesheet" />
 </head>
@@ -22,12 +23,30 @@
             <p>Da click en el botón de abajo para comenzar!</p>
 
             <div class="subir-btn-container">
-              <a href="#" class="subir-btn primary fixed-visible">Subir música</a>
+              <button id="subir-btn" class="subir-btn primary fixed-visible">Subir música</button>
             </div>
           </div>
         </section>
 
+        <!--<section class="subir-info">
+          <h2>¿Cómo funciona?</h2>
+          <p>Sube tu música y compártela con el mundo. Con PlaYA!, puedes:</p>
+          <ul>
+            <li>Subir canciones en formatos populares.</li>
+            <li>Agregar descripciones y etiquetas para que otros te encuentren fácilmente.</li>
+            <li>Interactuar con tus oyentes a través de comentarios y reacciones.</li>
+          </ul>
+          <p>¡Empieza tu viaje musical hoy mismo!</p>
+        
+          </section>-->
+
     </main>
+
+    <div id="modal-backdrop" class="modal-backdrop hidden"></div>
+
+    <div id="upload-step-container"></div>
+    
+    <script src="/assets/js/next.js"></script>
 </body>
 </html>
 <script>
@@ -49,3 +68,4 @@
       });
   });
   </script>
+

@@ -1,0 +1,83 @@
+<section id="step-details" class="step-details hidden">
+    <header>
+        <h1>
+            <img src="/assets/img/images/playita.png" alt="PlaYA! Logo">
+            <span>Información de la Canción</span>
+        </h1>
+        <button id="close-btn" class="close"><img src="/assets/img/icons/close.svg" alt="Close"></button>
+    </header>
+    <div class="step-details-flex">
+        <div class="step-details-content">
+            <section>
+                <div class="input-group">
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo" placeholder="Titulo de la canción">
+            
+                </div>
+                <div class="bellow-container">
+                    <div class="input-group">
+                        <label for="artista">Artista</label>
+                        <input type="text" id="artista" placeholder="Nombre artista">
+                    </div>
+                    <div class="input-group">
+                        <label for="album">Álbum</label>
+                        <input type="text" id="album" placeholder="Nombre álbum">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="input-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" rows="4" placeholder="Aquí escribe la descripción de la canción"></textarea>
+                </div>
+                <div class="bellow-container">
+                    <div class="input-group">
+                        <label for="tags">Etiquetas</label>
+                        <input type="text" id="tags" placeholder="Agrega etiquetas">
+                    </div>
+                    <div class="input-group">
+                        <label for="genero">Género</label>
+                        <select id="genero">
+                            <option value="rock">Rock</option>
+                            <option value="pop">Pop</option>
+                            <option value="hip-hop">Hip-Hop</option>
+                            <option value="jazz">Jazz</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section class="drop-area">
+                <p>Arrastra y suelta archivos de audio para empezar</p>
+                <div class="btn-choose">
+                    <label for="cover">Portada</label>
+                    <input type="file" id="cover" accept="image/*">
+                </div>
+            </section>
+        </div>
+        <img class="wall" src="/assets/img/images/man-singing.png" alt="">
+    </div>
+    <div class="buttom-bellow">
+        <button id="back-btn" class="button">Volver</button>
+        <button id="next-btn" class="button">Siguiente</button>
+    </div>
+    
+</section>
+
+<!--<section id="unload-step-2" class="subir-music hidden">
+    <h1>Subida de Archivos de Audio</h1>
+    <h2>Confirma tu archivo seleccionado</h2>
+    <div class="instructions">
+        <p>Revisa tu archivo y asegúrate de que sea correcto.</p>
+    </div>
+
+    <div class="file-preview">
+        <p><strong>Vista previa del archivo:</strong></p>
+        <p>Nombre del archivo: nombre_del_archivo.mp3</p>
+        <p>Tamaño del archivo: 5 MB</p>
+    </div>
+
+    <div class="buttons">
+        <button class="button upload-button">Subir</button>
+        <button class="button cancel-button">Cancelar</button>
+    </div>
+</section>-->
