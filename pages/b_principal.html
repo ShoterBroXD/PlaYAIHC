@@ -13,6 +13,7 @@
     <header>
         <div id="navbar-container"></div>
         <script src="/assets/js/script.js"></script>
+        
     </header>
     <script>
       window.addEventListener("DOMContentLoaded", () => {
@@ -31,142 +32,139 @@
             }
           });
       })
-     </script>
-    <aside class="sidebar-main">
-      <div class="sidebar-above">
-        <a href="b_principal.html" class="sidebar-item active">
-          <img src="/assets/img/icons/collection.svg" alt="Pagina principal" class="icon" />
-          <ul>Página principal   </ul>
-          <span><img src="/assets/img/icons/chevron-right.svg" alt="Biblioteca" class="chevron-right-icon" /></span>
-        </a>
+    </script>
+    <div class="lib-hero-container">
+      <aside class="sidebar-main">
+        <div class="sidebar-above">
+          <a href="b_principal.html" class="sidebar-item active">
+            <img src="/assets/img/icons/collection.svg" alt="Pagina principal" class="icon" />
+            <ul>Página principal   </ul>
+            <span><img src="/assets/img/icons/chevron-right.svg" alt="Biblioteca" class="chevron-right-icon" /></span>
+          </a>
 
-        <a href="b_liked.html" class="sidebar-item">
-          <img src="/assets/img/icons/liked.svg" alt="Me gusta" class="icon" />
-          <span>Me gusta    </span>
-          <span><img src="/assets/img/icons/chevron-right.svg" alt="Biblioteca" class="chevron-right-icon" /></span>
-        </a>
+          <a href="b_liked.html" class="sidebar-item">
+            <img src="/assets/img/icons/liked.svg" alt="Me gusta" class="icon" />
+            <span>Me gusta    </span>
+            <span><img src="/assets/img/icons/chevron-right.svg" alt="Biblioteca" class="chevron-right-icon" /></span>
+          </a>
 
-        <a href="b_followed.html" class="sidebar-item">
-          <img src="/assets/img/icons/following.svg" alt="Siguiendo" class="icon" />
-          <span>Siguiendo   </span>
-          <span><img src="/assets/img/icons/chevron-right.svg" alt="Biblioteca" class="chevron-right-icon" /></span>
-        </a>
+          <a href="b_followed.html" class="sidebar-item">
+            <img src="/assets/img/icons/following.svg" alt="Siguiendo" class="icon" />
+            <span>Siguiendo   </span>
+            <span><img src="/assets/img/icons/chevron-right.svg" alt="Biblioteca" class="chevron-right-icon" /></span>
+          </a>
 
-        <a href="b_historial.html" class="sidebar-item">
-          <img src="/assets/img/icons/history.svg" alt="Historial" class="icon" />
-          <span>Historial      </span>
-          <span class="chevron-right-icon"><img src="/assets/img/icons/chevron-right.svg" alt="Biblioteca" /></span>
-        </a>
-      </div>
-
-      <div class="sidebar-bellow">
-        <a href="#" class="sidebar-item">
-          <img src="/assets/img/icons/cog.svg" alt="Settings" class="icon" />
-          <span>Configuración</span>
-        </a>
-
-        <a href="javascript:void(0)" id="btnLogout" class="sidebar-item">
-          <img src="/assets/img/icons/logout.svg" alt="Logout" class="icon" />
-          <span>Cerrar sesión</span>
-        </a>
-      </div>
-    </aside>
-
-    <main class="lib-hero">
-      <div class="lib-title-container">
-        <h1 class="title-lib">Tu Biblioteca</h1>
-      </div>
-      <section class="recently-listened">
-        <div class="lib-subtitle-container">
-          <p class="subtitle-lib">Escuchado recientemente</p>
+          <a href="b_historial.html" class="sidebar-item">
+            <img src="/assets/img/icons/history.svg" alt="Historial" class="icon" />
+            <span>Historial      </span>
+            <span class="chevron-right-icon"><img src="/assets/img/icons/chevron-right.svg" alt="Biblioteca" /></span>
+          </a>
         </div>
-        <div class="lib-main-container">
+
+        <div class="sidebar-bellow">
+          <a href="#" class="sidebar-item">
+            <img src="/assets/img/icons/cog.svg" alt="Settings" class="icon" />
+            <span>Configuración</span>
+          </a>
+
+          <a href="javascript:void(0)" id="btnLogout" class="sidebar-item">
+            <img src="/assets/img/icons/logout.svg" alt="Logout" class="icon" />
+            <span>Cerrar sesión</span>
+          </a>
+        </div>
+      </aside>
+      <main class="lib-followed-container"> 
+        <section class="lib-hero-text-followed">
+          <div class="lib-title-followed">
+            <h1>Tu Biblioteca</h1>
+          </div>
+          <div class="lib-subtitle-followed">
+            <p>Escuchado recientemente</p>
+          </div>
           <section class="library-grid">
             <div class="card-row">
-              <div class="card">
+              <div class="card_library">
                 <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
                 <div class="card-info">
-                  <p class="song-title">Nombre de la Canción</p>
+                  <p class="song-title">Música 01</p>
                   <p class="song-details">Artista · Año</p>
                 </div>
               </div>
-              <div class="card">
+              <div class="card_library">
                 <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
                 <div class="card-info">
-                  <p class="song-title">Otra Canción</p>
-                  <p class="song-details">Otro Artista · 2024</p>
+                  <p class="song-title">Música 02</p>
+                  <p class="song-details">Artista · Año</p>
                 </div>
               </div>
-              <div class="card">
+              <div class="card_library">
                 <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
                 <div class="card-info">
-                  <p class="song-title">Tercer Tema</p>
-                  <p class="song-details">Tercer Artista · 2023</p>
+                  <p class="song-title">Música 03</p>
+                  <p class="song-details">Artista · Año</p>
                 </div>
               </div>
-              <div class="card">
+              <div class="card_library">
                 <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
                 <div class="card-info">
-                  <p class="song-title">Otra Canción</p>
-                  <p class="song-details">Otro Artista · 2024</p>
+                  <p class="song-title">Música 04</p>
+                  <p class="song-details">Artista · Año</p>
                 </div>
               </div>
-              <div class="card">
+              <div class="card_library">
                 <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
                 <div class="card-info">
-                  <p class="song-title">Otra Canción</p>
-                  <p class="song-details">Otro Artista · 2024</p>
+                  <p class="song-title">Música 05</p>
+                  <p class="song-details">Artista · Año</p>
                 </div>
               </div>
             </div>
           </section>
-      </section>
-      <section class="liked">
-        <div class="lib-subtitle-container">
-          <p class="subtitle-lib">Me gusta</p>
-        </div>
-        <section class="library-grid">
-          <div class="card-row">
-            <div class="card">
-              <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
-              <div class="card-info">
-                <p class="song-title">Nombre de la Canción</p>
-                <p class="song-details">Artista · Año</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
-              <div class="card-info">
-                <p class="song-title">Otra Canción</p>
-                <p class="song-details">Otro Artista · 2024</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
-              <div class="card-info">
-                <p class="song-title">Tercer Tema</p>
-                <p class="song-details">Tercer Artista · 2023</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
-              <div class="card-info">
-                <p class="song-title">Otra Canción</p>
-                <p class="song-details">Otro Artista · 2024</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
-              <div class="card-info">
-                <p class="song-title">Otra Canción</p>
-                <p class="song-details">Otro Artista · 2024</p>
-              </div>
-            </div>
+          <div class="lib-subtitle-followed">
+            <p>Me gusta</p>
           </div>
+          <section class="library-grid">
+            <div class="card-row">
+              <div class="card_library">
+                <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
+                <div class="card-info">
+                  <p class="song-title">Música 01</p>
+                  <p class="song-details">Artista · Año</p>
+                </div>
+              </div>
+              <div class="card_library">
+                <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
+                <div class="card-info">
+                  <p class="song-title">Música 02</p>
+                  <p class="song-details">Artista · Año</p>
+                </div>
+              </div>
+              <div class="card_library">
+                <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
+                <div class="card-info">
+                  <p class="song-title">Música 03</p>
+                  <p class="song-details">Artista · Año</p>
+                </div>
+              </div>
+              <div class="card_library">
+                <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
+                <div class="card-info">
+                  <p class="song-title">Música 04</p>
+                  <p class="song-details">Artista · Año</p>
+                </div>
+              </div>
+              <div class="card_library">
+                <img src="/assets/img/images/img-placeholder.svg" alt="Portada canción" class="card-img">
+                <div class="card-info">
+                  <p class="song-title">Música 05</p>
+                  <p class="song-details">Artista · Año</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </section>
-      </section>
-      </div>  
-    </main>
+      </main>
+    </div>
   </body>
 </html>
 
@@ -197,3 +195,4 @@
     }
   });
 </script>
+<script src="/assets/js/notificaciones-collapsed.js"></script>
