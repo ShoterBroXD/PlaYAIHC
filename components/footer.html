@@ -1,0 +1,66 @@
+<footer class="flex items-center justify-between border-t border-gray-300 px-4 py-3 select-none">
+    <input type="range" class="song-progress w-full h-2 bg-blue-900" max="100" min="0" value="50" style="margin-bottom: 10px;" />
+    <div class="footer-components flex items-center justify-between mt-2">
+        <section class="flex items-center space-x-3 w-72">
+            <div id="collapsed-buttom" class="w-16 h-16 border border-gray-300 bg-gray-200 flex items-center justify-center">
+                <img src="/assets/img/images/portada_1.png" alt="Logo de PlaYA!">
+            </div>
+            <div class="flex flex-col">
+                <span class="font-extrabold text-lg leading-none">N-canción</span>
+                <span class="text-blue-800 font-semibold text-sm -mt-1 flex items-center space-x-1">
+                    <i class="far fa-clock text-xs"></i>
+                    <span>N-Album</span>
+                    <span class="ml-2">N-artista</span>
+                </span>
+            </div>
+        </section>
+        <section class="controls flex items-center space-x-4 flex-1 max-w-xl justify-center">
+        
+            <button class="volumen-boton" aria-label="Volume icon">
+                <img src="/assets/img/icons/vol-icon.svg" alt="Volume">
+            </button>
+            <input class="w-24 h-2 bg-blue-900" max="100" min="0" type="range" value="50" />
+            <button class="addlist-botom" aria-label="Add to list">
+                <img src="/assets/img/icons/add-list.svg" alt="Add List">
+            </button>
+        
+            <!---<button class="pause-botom" aria-label="Pause">
+                <img src="/assets/icons/icon_pause.svg" alt="Pause">
+            </button>--->
+            <button class="previus-botom" aria-label="Previus">
+                <img src="/assets/img/icons/previus-song-icon.svg" alt="Previus">
+            </button>
+            <button class="play-botom" aria-label="Play">
+                <img src="/assets/img/icons/icon_play_tracks.svg" alt="PLay">
+            </button>
+            <button class="next-botom" aria-label="Next">
+                <img src="/assets/img/icons/next-song-icon.svg" alt="Next">
+            </button>
+            <button class="shuffle-botom" aria-label="Shuffle icon">
+                <img src="/assets/img/icons/suffle-icon.svg" alt="Suffle">
+            </button>
+            <button class="reapeat-botom" aria-label="Reapeat icon">
+                <img src="/assets/img/icons/reapeat-icon.svg" alt="Reapeat">
+            </button>
+        </section>
+        <section class="songs-reaction flex items-center space-x-4 w-72 justify-end text-sm font-semibold text-gray-900">
+            <button aria-label="Star count" class="flex items-center space-x-2 bg-gray-900 text-white rounded px-4 py-2">
+                <img src="/assets/img/icons/icon_fav.svg" alt="Like Comment">
+                <span>123</span>
+            </button>
+            <button id="commentlist-buttom" aria-label="Comments count"
+                class="flex items-center space-x-2 bg-gray-900 text-white rounded px-4 py-2">
+                <img src="/assets/img/icons/comment-icon.svg" alt="Comment">        
+                <span>123</span>
+        
+            </button>
+            <button id="playlist-buttom" aria-label="List count"
+                class="flex items-center space-x-2 border border-gray-400 rounded px-4 py-2">
+                <img src="/assets/img/icons/icon_list_white.svg" alt="PLaylist">
+                <span>400</span>
+            </button>
+            <span class="text-blue-900 font-bold">1:32</span>
+            <span class="text-gray-900 font-semibold">/5:23</span>
+            </section>
+    </div>
+</footer>
