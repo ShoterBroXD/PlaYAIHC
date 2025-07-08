@@ -36,6 +36,10 @@ footer {
     display: flex;
 }
 
+#footer-placeholder{
+    display: none;
+}
+
 .footer-components {
     position: relative;
     top: 5px;
@@ -222,7 +226,7 @@ ul{
 .container-playlist,
 .comment-list {
     width: 35%;
-    position: absolute;
+    position: fixed;
     right: 0;
     left: auto;
     top: 5rem;

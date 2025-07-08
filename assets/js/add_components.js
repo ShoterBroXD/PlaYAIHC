@@ -53,6 +53,23 @@ function loadComponent(id, path, callback) {
   });
   
 
+  // ...existing code...
+
+document.addEventListener("DOMContentLoaded", function () {
+  const trackItems = document.querySelectorAll('.track-item');
+  const footer = document.getElementById('footer-placeholder');
+
+  trackItems.forEach(item => {
+    item.addEventListener('click', function () {
+      if (footer) {
+        footer.style.display = 'block';
+      }
+    });
+  });
+});
+
+// ...existing code...
+
 /*fetch('/components/footer.html')
                 .then(res => res.text())
                 .then(html => {
