@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styles_categ.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+
+    <title>Playa/Categorias</title>
+</head>
+<body>
+    <header>
+        <div id="navbar-container"></div>
+    </header>
+    
+    <div class="layout">
+        <div id="sidebar"></div>
+        
+        <main class="main-content">
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="hero-title">
+                        <img class="volume-up-icon" src="/assets/icons/volume-up.svg" alt="Ícono de volumen">
+                        <h1 class="title_categories">Categorías musicales</h1>
+                    </div>
+                    <div class="subtitle_container">
+                        <p class="subtitle_categories">Explora música por géneros y estilos.</p>
+                        <p class="subtitle_categories">Encuentra lo que te inspira.</p>
+                        <div class="filter-buttons">
+                            <button class="filter-button active">Todos</button>
+                            <button class="filter-button" onclick="window.location.href='/pages/c_pistas.html'">Pistas</button>
+                            <button class="filter-button" onclick="window.location.href='/pages/c_listas.html'">Listas</button>
+                            <button class="filter-button" onclick="window.location.href='/pages/c_album.html'">Álbumes</button>
+                        </div>
+                    </div>
+                    
+                    <section class="categories-grid">
+                        <div class="category-card azure-dragon">
+                            <img src="/assets/img/icons/rock.jpeg" alt="Icono categoría" class="category-icon">
+                            <div class="category-info">
+                                <h3 class="category-title">Rock</h3>
+                                <p class="category-count">423 canciones</p>
+                            </div>
+                        </div>
+
+                        <div class="category-card clarinet">
+                            <img src="/assets/img/icons/rap.jpg" alt="Icono categoría" class="category-icon">
+                            <div class="category-info">
+                                <h3 class="category-title">Hip Hop</h3>
+                                <p class="category-count">312 canciones</p>
+                            </div>
+                        </div>
+
+                        <div class="category-card azure-dragon">
+                            <img src="/assets/img/icons/pop.png" alt="Icono categoría" class="category-icon">
+                            <div class="category-info">
+                                <h3 class="category-title">Pop</h3>
+                                <p class="category-count">289 canciones</p>
+                            </div>
+                        </div>
+
+                        <div class="category-card clarinet">
+                            <img src="/assets/img/icons/pop.png" alt="Icono categoría" class="category-icon">
+                            <div class="category-info">
+                                <h3 class="category-title">Clásica</h3>
+                                <p class="category-count">156 canciones</p>
+                            </div>
+                        </div>
+
+                        <div class="category-card azure-dragon">
+                            <img src="/assets/img/icons/rock.jpeg" alt="Icono categoría" class="category-icon">
+                            <div class="category-info">
+                                <h3 class="category-title">Jazz</h3>
+                                <p class="category-count">198 canciones</p>
+                            </div>
+                        </div>
+
+                        <div class="category-card clarinet">
+                            <img src="/assets/img/icons/rap.jpg" alt="Icono categoría" class="category-icon">
+                            <div class="category-info">
+                                <h3 class="category-title">Cumbia</h3>
+                                <p class="category-count">245 canciones</p>
+                            </div>
+                        </div>
+
+                        <div class="category-card azure-dragon">
+                            <img src="/assets/img/icons/rock.jpeg" alt="Icono categoría" class="category-icon">
+                            <div class="category-info">
+                                <h3 class="category-title">Electrónica</h3>
+                                <p class="category-count">187 canciones</p>
+                            </div>
+                        </div>
+
+                        <div class="category-card clarinet">
+                            <img src="/assets/img/icons/rap.jpg" alt="Icono categoría" class="category-icon">
+                            <div class="category-info">
+                                <h3 class="category-title">Trap</h3>
+                                <p class="category-count">167 canciones</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/notificaciones-collapsed.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            // Load navbar
+            fetch("/components/navbar.html")
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById("navbar-container").innerHTML = html;
+
+                    const logoutBtn = document.getElementById("btnLogout");
+                    if (logoutBtn) {
+                        logoutBtn.addEventListener("click", function (e) {
+                            e.preventDefault();
+                            localStorage.removeItem("sesionActiva");
+                            window.location.href = "/pages/login.html";
+                        });
+                    }
+                });
+
+            // Load sidebar
+            fetch('/components/sidebar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sidebar').innerHTML = data;
+
+                    const currentPath = window.location.pathname;
+                    const sidebarItems = document.querySelectorAll('.sidebar-item');
+
+                    sidebarItems.forEach(item => {
+                        const itemPath = item.getAttribute('href');
+                        if (currentPath === itemPath) {
+                            item.classList.add('active');
+                        }
+                    });
+
+                    const logoutBtn = document.getElementById("btnLogout");
+                    if (logoutBtn) {
+                        logoutBtn.addEventListener("click", function (e) {
+                            e.preventDefault(); 
+                            localStorage.removeItem("sesionActiva"); 
+                            window.location.href = "/pages/login.html"; 
+                        });
+                    }
+                });
+        });
+    </script>
+</body>
+</html>
