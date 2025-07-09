@@ -79,7 +79,7 @@
                 </div>
                 <div class="c-row">
                     <div class="ca">
-                        <div class="community-card">
+                        <div class="community-card" onclick="goToCommunityDetail('1', 'Michael Jackson', '75B', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')">
                             <div class="card-content">
                                 <img src="/assets//img/images/perfil-comunidades.png" alt="Icono de comunidad" class="community-icon">
                                 <div class="community-text">
@@ -88,46 +88,46 @@
                                     <p class="community-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 </div>
                             </div>
-                            <button class="filter-button">Unirse</button>
+                            <button class="filter-button" onclick="event.stopPropagation(); toggleJoinCommunity(this, '1')">Unirse</button>
                         </div>
                     </div>
                     <div class="ca">
-                        <div class="community-card">
+                        <div class="community-card" onclick="goToCommunityDetail('2', 'Madonna', '62B', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')">
                             <div class="card-content">
                                 <img src="/assets//img/images/perfil-comunidades.png" alt="Icono de comunidad" class="community-icon">
                                 <div class="community-text">
-                                    <p class="community-tittle">Michael Jackson</p>
-                                    <p class="community-details">75B seguidores</p>
+                                    <p class="community-tittle">Madonna</p>
+                                    <p class="community-details">62B seguidores</p>
                                     <p class="community-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 </div>
                             </div>
-                            <button class="filter-button">Unirse</button>
+                            <button class="filter-button" onclick="event.stopPropagation(); toggleJoinCommunity(this, '2')">Unirse</button>
                         </div>
                     </div>
                     <div class="ca">
-                        <div class="community-card">
+                        <div class="community-card" onclick="goToCommunityDetail('3', 'The Beatles', '89B', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')">
                             <div class="card-content">
                                 <img src="/assets//img/images/perfil-comunidades.png" alt="Icono de comunidad" class="community-icon">
                                 <div class="community-text">
-                                    <p class="community-tittle">Michael Jackson</p>
-                                    <p class="community-details">75B seguidores</p>
+                                    <p class="community-tittle">The Beatles</p>
+                                    <p class="community-details">89B seguidores</p>
                                     <p class="community-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 </div>
                             </div>
-                            <button class="filter-button">Unirse</button>
+                            <button class="filter-button" onclick="event.stopPropagation(); toggleJoinCommunity(this, '3')">Unirse</button>
                         </div>
                     </div>
                     <div class="ca">
-                        <div class="community-card">
+                        <div class="community-card" onclick="goToCommunityDetail('4', 'Queen', '71B', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')">
                             <div class="card-content">
                                 <img src="/assets//img/images/perfil-comunidades.png" alt="Icono de comunidad" class="community-icon">
                                 <div class="community-text">
-                                    <p class="community-tittle">Michael Jackson</p>
-                                    <p class="community-details">75B seguidores</p>
+                                    <p class="community-tittle">Queen</p>
+                                    <p class="community-details">71B seguidores</p>
                                     <p class="community-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 </div>
                             </div>
-                            <button class="filter-button">Unirse</button>
+                            <button class="filter-button" onclick="event.stopPropagation(); toggleJoinCommunity(this, '4')">Unirse</button>
                         </div>
                     </div>
                     <div class="ca">
@@ -300,3 +300,4 @@
         </main> </div> </body>
 </html>
 <script src="/assets/js/notificaciones-collapsed.js"></script>
+<script src="/assets/js/community.js"></script>

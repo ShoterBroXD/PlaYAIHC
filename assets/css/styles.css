@@ -8,6 +8,8 @@ body {
     font-family: 'Inter', sans-serif;
     color: #05255a;
     background-color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 .hidden {
@@ -243,18 +245,19 @@ p, span, a, li, button {
 }
 
 .sidebar-main {
-  width: 180px;
+  width: 250px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 85vh;
+  height: calc(100vh - 70px);
   padding: 35px;
   box-shadow: 0 0 0px rgba(0,0,0,0.05);
   position: relative;
   left: 0;
   top: 0;
   z-index: 1000;
+  flex-shrink: 0;
 }
 
 .sidebar-above, .sidebar-bellow {
@@ -282,9 +285,9 @@ p, span, a, li, button {
 
 .sidebar-item.active {
   width: 180px;
-    background-color: #eef3fb;
-    color: #1d1d1d;
-    font-weight: 600;
+  background-color: #eef3fb;
+  color: #1d1d1d;
+  font-weight: 600;
 }
 
 .icon {
@@ -749,7 +752,8 @@ p, span, a, li, button {
 .login-form input[type="email"], 
 .login-form input[type="password"],
 .login-form input[type="nickname"],
-.login-form input[type="country"] {
+.login-form input[type="country"],
+.login-form select {
     width: 100%;
     padding: 0.5rem 2.5rem 0.5rem 1rem;
     border: 1px solid #ccc;
@@ -770,7 +774,8 @@ p, span, a, li, button {
 .login-form input[type="email"]:focus, 
 .login-form input[type="password"]:focus,
 .login-form input[type="nickname"]:focus,
-.login-form input[type="country"]:focus {
+.login-form input[type="country"]:focus,
+.login-form select:focus {
     outline: none;
     border-color: #0a6e99;
     color: #05255a;
@@ -1072,10 +1077,35 @@ p, span, a, li, button {
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif; /* Corregida la sintaxis */
+  font-family: 'Raleway', sans-serif;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   background-color: #f3f4f6;
   min-height: 120px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.community-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.community-card:active {
+  transform: translateY(0);
+}
+
+.community-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.community-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.community-card:active {
+    transform: translateY(0);
 }
 
 .gray {
@@ -1126,6 +1156,7 @@ p, span, a, li, button {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .community-tittle {
@@ -1160,20 +1191,420 @@ p, span, a, li, button {
     margin-top: 0.25rem;
 }
 
+/* Community Detail Page Styles */
+.community-header {
+    margin-bottom: 2rem;
+}
+
+.community-hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.community-hero-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #001F54;
+}
+
+.community-hero-info {
+    flex: 1;
+}
+
+.community-hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #001F54;
+    margin-bottom: 0.5rem;
+}
+
+.community-hero-followers {
+    font-size: 1.1rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+.community-hero-description {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.community-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.secondary-button {
+    border: 2px solid #001F54;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #001F54;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: #001F54;
+    color: white;
+}
+
+.filter-button.joined {
+    background-color: #dc2626;
+    color: white;
+}
+
+.filter-button.joined:hover {
+    background-color: #b91c1c;
+}
+
+/* Community Navigation */
+.community-nav {
+    margin-bottom: 2rem;
+}
+
+.community-tabs {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.tab-button {
+    padding: 1rem 2rem;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    color: #001F54;
+    border-bottom-color: #001F54;
+}
+
+.tab-button:hover {
+    color: #001F54;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Posts Styles */
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.post-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post-author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-author-name {
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+.post-time {
+    color: #6b7280;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.post-content {
+    margin-bottom: 1rem;
+}
+
+.post-content p {
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.post-media {
+    margin-top: 1rem;
+}
+
+.song-preview {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.song-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.song-info {
+    flex: 1;
+}
+
+.song-title {
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+.song-artist {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.play-btn {
+    background: #001F54;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+    background: #034078;
+    transform: scale(1.1);
+}
+
+.post-actions {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.post-action-btn {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.post-action-btn:hover {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.post-action-btn.liked {
+    color: #dc2626;
+}
+
+/* Members Styles */
+.members-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.member-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+}
+
+.member-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member-info {
+    flex: 1;
+}
+
+.member-name {
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+.member-role {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* About Styles */
+.about-container {
+    max-width: 800px;
+}
+
+.about-container h3 {
+    color: #001F54;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.about-container p {
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.community-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 15px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h4 {
+    color: #001F54;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.community-rules {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+}
+
+.community-rules h4 {
+    color: #001F54;
+    margin-bottom: 1rem;
+}
+
+.community-rules ul {
+    list-style: none;
+    padding: 0;
+}
+
+.community-rules li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f3f4f6;
+    color: #374151;
+}
+
+.community-rules li:last-child {
+    border-bottom: none;
+}
+
+.community-rules li::before {
+    content: "✓";
+    color: #10b981;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* Layout styles for communities pages */
 .page-container {
     display: flex;
+    min-height: calc(100vh - 70px); /* Adjust based on navbar height */
 }
 
 .main-content {
-    flex-grow: 1; 
-    padding: 2.5rem; 
-    width: 100%;
+    flex: 1;
+    padding: 2rem 2rem 2rem 1rem;
+    overflow-y: auto;
+    max-width: calc(100vw - 250px);
+    box-sizing: border-box;
 }
 
 .content-section {
-    margin-bottom: 3rem; 
+    margin-bottom: 3rem;
 }
 
 .lib-subtitle-container {
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.5rem;
+}
+
+.subtitle-lib {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #001F54;
+    margin: 0;
+}
+
+/* Ensure proper spacing */
+
+.ca {
+    width: 100%;
+}
+
+/* Styling for select dropdown placeholder */
+.login-form select option[value=""] {
+    color: #aaa;
+}
+
+.login-form select:invalid {
+    color: #aaa;
+}
+
+.login-form select:valid {
+    color: #777;
 }
