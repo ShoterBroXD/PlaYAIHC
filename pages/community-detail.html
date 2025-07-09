@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+    <title>Detalle de Comunidad</title>
+</head>
+<body>
+
+    <header>
+        <div id="navbar-container"></div>
+        <script src="/assets/js/script.js"></script>
+    </header>
+    <script>
+      /* Navbar */
+      window.addEventListener("DOMContentLoaded", () => {
+        fetch("/components/navbar.html")
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById("navbar-container").innerHTML = html;
+
+            const logoutBtn = document.getElementById("btnLogout");
+            if (logoutBtn) {
+              logoutBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                localStorage.removeItem("sesionActiva");
+                window.location.href = "/pages/login.html";
+              });
+            }
+          });
+      })
+     </script>
+
+    <div class="page-container">
+
+        <aside class="sidebar-main">
+            <div class="sidebar-above">
+                <a href="/pages/community.html" class="sidebar-item">
+                    <img src="/assets/img/icons/collection.svg" alt="Pagina principal" class="icon" />
+                    <span>Página principal</span>
+                    <span class="chevron-right-icon"><img src="/assets/img/icons/chevron-right.svg" alt="Flecha" /></span>
+                </a>
+                <a href="/pages/com_liked.html" class="sidebar-item">
+                    <img src="/assets/img/icons/liked.svg" alt="Me gusta" class="icon" />
+                    <span>Tus Comunidades</span>
+                    <span class="chevron-right-icon"><img src="/assets/img/icons/chevron-right.svg" alt="Flecha" /></span>
+                </a>
+                <a href="/pages/com_followed.html" class="sidebar-item">
+                    <img src="/assets/img/icons/following.svg" alt="Siguiendo" class="icon" />
+                    <span>Recomendados</span>
+                    <span class="chevron-right-icon"><img src="/assets/img/icons/chevron-right.svg" alt="Flecha" /></span>
+                </a>
+                <a href="/pages/com_historial.html" class="sidebar-item">
+                    <img src="/assets/img/icons/history.svg" alt="Historial" class="icon" />
+                    <span>Explorar</span>
+                    <span class="chevron-right-icon"><img src="/assets/img/icons/chevron-right.svg" alt="Flecha" /></span>
+                </a>
+            </div>
+            <div class="sidebar-bellow">
+                <a href="#" class="sidebar-item">
+                    <img src="/assets/img/icons/cog.svg" alt="Settings" class="icon" />
+                    <span>Configuración</span>
+                </a>
+                <a href="#" class="sidebar-item">
+                    <img src="/assets/img/icons/logout.svg" alt="Logout" class="icon" />
+                    <span>Cerrar sesión</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <!-- Community Header -->
+            <section class="community-header">
+                <div class="community-hero">
+                    <img id="community-image" src="/assets/img/images/perfil-comunidades.png" alt="Icono de comunidad" class="community-hero-image">
+                    <div class="community-hero-info">
+                        <h1 id="community-name" class="community-hero-title">Michael Jackson</h1>
+                        <p id="community-followers" class="community-hero-followers">75B seguidores</p>
+                        <p id="community-description" class="community-hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="community-actions">
+                            <button id="join-btn" class="filter-button">Unirse</button>
+                            <button class="secondary-button">Seguir</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Community Navigation -->
+            <section class="community-nav">
+                <div class="community-tabs">
+                    <button class="tab-button active" data-tab="posts">Publicaciones</button>
+                    <button class="tab-button" data-tab="members">Miembros</button>
+                    <button class="tab-button" data-tab="about">Acerca de</button>
+                </div>
+            </section>
+
+            <!-- Community Content -->
+            <section class="community-content">
+                <!-- Posts Tab -->
+                <div id="posts-tab" class="tab-content active">
+                    <div class="posts-container">
+                        <div class="post-card">
+                            <div class="post-header">
+                                <img src="/assets/img/icons/user.png" alt="Usuario" class="post-author-image">
+                                <div class="post-author-info">
+                                    <p class="post-author-name">Usuario123</p>
+                                    <p class="post-time">Hace 2 horas</p>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <p>¡Qué gran concierto fue el de ayer! Michael Jackson sigue siendo el rey del pop.</p>
+                            </div>
+                            <div class="post-actions">
+                                <button class="post-action-btn">❤️ 24</button>
+                                <button class="post-action-btn">💬 5</button>
+                                <button class="post-action-btn">📤 Compartir</button>
+                            </div>
+                        </div>
+
+                        <div class="post-card">
+                            <div class="post-header">
+                                <img src="/assets/img/icons/user.png" alt="Usuario" class="post-author-image">
+                                <div class="post-author-info">
+                                    <p class="post-author-name">FanMJ2024</p>
+                                    <p class="post-time">Hace 5 horas</p>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <p>Compartiendo mi canción favorita de MJ: "Billie Jean" 🎵</p>
+                                <div class="post-media">
+                                    <div class="song-preview">
+                                        <img src="/assets/img/images/perfil-comunidades.png" alt="Canción" class="song-image">
+                                        <div class="song-info">
+                                            <p class="song-title">Billie Jean</p>
+                                            <p class="song-artist">Michael Jackson</p>
+                                        </div>
+                                        <button class="play-btn">
+                                          <img src="/assets/img/icons/icon_play.svg" alt="like_btn">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-actions">
+                                <button class="post-action-btn">
+                                  <img src="/assets/img/icons/icon_fav.svg"> 56
+                                </button>
+                                <button class="post-action-btn">💬 12</button>
+                                <button class="post-action-btn">📤 Compartir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Members Tab -->
+                <div id="members-tab" class="tab-content">
+                    <div class="members-container">
+                        <div class="member-card">
+                            <img src="/assets/img/icons/user.png" alt="Miembro" class="member-image">
+                            <div class="member-info">
+                                <p class="member-name">Usuario123</p>
+                                <p class="member-role">Administrador</p>
+                            </div>
+                            <button class="secondary-button">Seguir</button>
+                        </div>
+
+                        <div class="member-card">
+                            <img src="/assets/img/icons/user.png" alt="Miembro" class="member-image">
+                            <div class="member-info">
+                                <p class="member-name">FanMJ2024</p>
+                                <p class="member-role">Miembro activo</p>
+                            </div>
+                            <button class="secondary-button">Seguir</button>
+                        </div>
+
+                        <div class="member-card">
+                            <img src="/assets/img/icons/user.png" alt="Miembro" class="member-image">
+                            <div class="member-info">
+                                <p class="member-name">MusicLover99</p>
+                                <p class="member-role">Miembro</p>
+                            </div>
+                            <button class="secondary-button">Seguir</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Tab -->
+                <div id="about-tab" class="tab-content">
+                    <div class="about-container">
+                        <h3>Acerca de esta comunidad</h3>
+                        <p>Esta es una comunidad dedicada a los fans de Michael Jackson, el Rey del Pop. Aquí puedes compartir tus canciones favoritas, discutir sobre su música, y conectar con otros fans alrededor del mundo.</p>
+                        
+                        <div class="community-stats">
+                            <div class="stat-item">
+                                <h4>75B</h4>
+                                <p>Seguidores</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>1.2K</h4>
+                                <p>Publicaciones</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>2019</h4>
+                                <p>Creada en</p>
+                            </div>
+                        </div>
+
+                        <div class="community-rules">
+                            <h4>Reglas de la comunidad</h4>
+                            <ul>
+                                <li>Mantén el respeto hacia todos los miembros</li>
+                                <li>Solo contenido relacionado con Michael Jackson</li>
+                                <li>No spam o contenido promocional</li>
+                                <li>Reporta contenido inapropiado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="/assets/js/notificaciones-collapsed.js"></script>
+    <script src="/assets/js/community-detail.js"></script>
+</body>
+</html>
