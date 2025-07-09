@@ -752,7 +752,8 @@ p, span, a, li, button {
 .login-form input[type="email"], 
 .login-form input[type="password"],
 .login-form input[type="nickname"],
-.login-form input[type="country"] {
+.login-form input[type="country"],
+.login-form select {
     width: 100%;
     padding: 0.5rem 2.5rem 0.5rem 1rem;
     border: 1px solid #ccc;
@@ -773,7 +774,8 @@ p, span, a, li, button {
 .login-form input[type="email"]:focus, 
 .login-form input[type="password"]:focus,
 .login-form input[type="nickname"]:focus,
-.login-form input[type="country"]:focus {
+.login-form input[type="country"]:focus,
+.login-form select:focus {
     outline: none;
     border-color: #0a6e99;
     color: #05255a;
@@ -1592,4 +1594,17 @@ p, span, a, li, button {
 
 .ca {
     width: 100%;
+}
+
+/* Styling for select dropdown placeholder */
+.login-form select option[value=""] {
+    color: #aaa;
+}
+
+.login-form select:invalid {
+    color: #aaa;
+}
+
+.login-form select:valid {
+    color: #777;
 }
