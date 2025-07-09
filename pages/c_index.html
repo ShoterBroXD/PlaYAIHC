@@ -15,58 +15,11 @@
         <div id="navbar-container"></div>
         <script src="/assets/js/script.js"></script>
     </header>
-    <script>
-      /* Navbar */
-      window.addEventListener("DOMContentLoaded", () => {
-        fetch("/components/navbar.html")
-          .then(res => res.text())
-          .then(html => {
-            document.getElementById("navbar-container").innerHTML = html;
-
-            const logoutBtn = document.getElementById("btnLogout");
-            if (logoutBtn) {
-              logoutBtn.addEventListener("click", function (e) {
-                e.preventDefault();
-                localStorage.removeItem("sesionActiva");
-                window.location.href = "/pages/login.html";
-              });
-            }
-          });
-      })
-     </script>
-    </header>
+    
       <header>
         <div id="sidebar"></div>
         <script src="/assets/js/script.js"></script>
-
- <script>
-  fetch('/components/sidebar.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('sidebar').innerHTML = data;
-
-    const currentPath = window.location.pathname;
-    const sidebarItems = document.querySelectorAll('.sidebar-item');
-
-    sidebarItems.forEach(item => {
-      const itemPath = item.getAttribute('href');
-      if (currentPath === itemPath) {
-        item.classList.add('active');
-      }
-    });
-
-    const logoutBtn = document.getElementById("btnLogout");
-
-    if (logoutBtn) {
-      logoutBtn.addEventListener("click", function (e) {
-        e.preventDefault(); 
-        localStorage.removeItem("sesionActiva"); 
-        window.location.href = "/pages/login.html"; 
-      });
-    }
-  });
-</script>
-
+      </header>
 
     </header>
 
@@ -169,4 +122,50 @@
 <script src="/assets/js/add_components.js"></script>
 </body>
 </html>
+<script>
+      /* Navbar */
+      window.addEventListener("DOMContentLoaded", () => {
+        fetch("/components/navbar.html")
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById("navbar-container").innerHTML = html;
+
+            const logoutBtn = document.getElementById("btnLogout");
+            if (logoutBtn) {
+              logoutBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                localStorage.removeItem("sesionActiva");
+                window.location.href = "/pages/login.html";
+              });
+            }
+          });
+      })
+</script>
+<script>
+  fetch('/components/sidebar.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('sidebar').innerHTML = data;
+
+    const currentPath = window.location.pathname;
+    const sidebarItems = document.querySelectorAll('.sidebar-item');
+
+    sidebarItems.forEach(item => {
+      const itemPath = item.getAttribute('href');
+      if (currentPath === itemPath) {
+        item.classList.add('active');
+      }
+    });
+
+    const logoutBtn = document.getElementById("btnLogout");
+
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", function (e) {
+        e.preventDefault(); 
+        localStorage.removeItem("sesionActiva"); 
+        window.location.href = "/pages/login.html"; 
+      });
+    }
+  });
+</script>
 <script src="/assets/js/notificaciones-collapsed.js"></script>
