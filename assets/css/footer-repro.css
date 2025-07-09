@@ -1,0 +1,529 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+p,
+span,
+a,
+li,
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; }
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0 -2px 10px rgb(0 0 0 / 0.05);
+    height: 65px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    user-select: none;
+    flex-shrink: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+}
+
+#footer-placeholder{
+    display: none;
+}
+
+.footer-components {
+    position: relative;
+    top: 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 -2px 10px rgb(0 0 0 / 0.05);
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    user-select: none;
+    flex-shrink: 0;
+    width: 96%;
+}
+
+.footer-content {
+    position: fixed;
+    top: 3.5rem;
+    left: 40px;
+    right: 40px;
+    bottom: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+ul{
+    list-style-type: none ;
+}
+
+.image-container {
+    position: fixed;
+    top: 5rem;
+    left: 40px;
+    right: 40px;
+    bottom: 65px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+.song-progress {
+    margin: 0;
+    top: 0;
+    position: absolute;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    border-radius: none;
+    z-index: 10;
+}
+
+.song-progress:hover {
+    background: #F9F3F3;
+}
+
+.song-progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5px;
+    height: 5px;
+    background: #af4c4c;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.song-progress::-webkit-slider-thumb:hover {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.song-progress::-webkit-slider-runnable-track {
+    background: #af4c4c;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    background: none;
+    width: auto;
+    height: 20px;
+}
+
+.controls button {
+    display: flex;
+    align-items: center;
+    background: none;
+    margin: 0px 5px;
+    border: none;
+}
+
+.controls button:hover,
+.controls button:focus {
+    background: none;
+    color: #212121;
+    stroke: #212121;
+    outline: none;
+}
+
+.songs-reaction {
+    display: none;
+    background: #ffffff;
+    align-items: center;
+    gap: 0.5rem;
+    color: #0A1128;
+    img{
+        width: 15px;
+    }
+}
+
+.songs-reaction span {
+    font-family: "Raleway";
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.songs-reaction button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 25px;
+    background: #0A1128;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+
+    svg {
+        width: 20px;
+    }
+
+    ;
+
+    span {
+        font-family: "Raleway";
+        font-weight: 100;
+        font-size: 1rem;
+    }
+
+    ;
+}
+
+.songs-reaction button:hover {
+    border: #4273C2;
+    border-style: groove;
+}
+
+.songs-reaction button:focus {
+    background-color: #D9D9D9;
+    color: #0A1128;
+
+    path {
+        stroke: #0A1128;
+        fill: #0A1128;
+    }
+}
+
+.flex.items-center {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.container-playlist,
+.comment-list {
+    width: 35%;
+    position: fixed;
+    right: 0;
+    left: auto;
+    top: 5rem;
+    background: white;
+    overflow-y: auto;
+    height: 100%;
+    margin: 0;
+}
+
+.container-playlist {
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.playlist {
+    background-color: #ffffff;
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0rem 0;
+}
+
+.playlist h2 {
+    text-align: center;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.song {
+    display: flex;
+    width: 100%;
+    height: 3.5rem;
+    align-items: center;
+    margin-top: 0;
+    padding: 0px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.song:last-child {
+    border-bottom: none;
+}
+
+.song img {
+    width: 3rem;
+    height: 2.6rem;
+    margin-right: 10px;
+    border-style: inset;
+    border-color: #545F71;
+}
+
+.info {
+    flex-grow: 1;
+}
+
+.comment-list {
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 1rem;
+    ul{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.header-list1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    span {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: normal;
+        font-size: 1.5rem;
+        color: #000;
+    }
+
+    ;
+
+    h2 {
+        font-family: 'Raleway', sans-serif;
+        font-weight: normal;
+        font-size: 1.5rem;
+        color: #000;
+    }
+
+    ;
+
+    button {
+        gap: 0.75rem;
+        padding: 0.5rem 1rem;
+        right: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+    }
+
+    ;
+}
+
+.header-list2 {
+    display: flex;
+    position: fixed;
+    background: #ffffff;
+    height: 3rem;
+    width: 100%;
+    flex-direction: column;
+    margin: 0px;
+    margin-top: -1rem;
+
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 100;
+        margin: 0;
+        font-size: 1rem;
+        color: #4273C2;
+
+    }
+
+    ;
+
+    .name-list {
+        font-size: large;
+    }
+
+    ;
+}
+
+.song:hover {
+    background-color: #1282A2;
+
+    .name-artist,
+    .name-song,
+    .duration {
+        color: #ffffff;
+    }
+}
+
+.name-song {
+    color: #000;
+    font-weight: 700;
+    font-size: large;
+}
+
+.name-artist {
+    color: #034078;
+    font-weight: 600;
+}
+
+.duration {
+    font-family: 'Raleway', sans-serif;
+    color: #034078;
+    font-weight: 900;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    width: auto;
+    height: 1.5rem;
+    display: flex;
+}
+
+.song img {
+    width: 40px;
+    height: 40px;
+}
+
+.duration img {
+    border: none;
+    width: 15px;
+}
+
+.comentario {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .option-comment {
+        height: 10rem;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ;
+
+    button {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .like-comment {
+
+        align-items: center;
+        height: 40px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .like-comment-like {
+        width: 10px;
+        height: 10px;
+    }
+
+    .ask {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.photo-profile {
+    width: 40px;
+    height: 40px;
+    margin: 0 1rem 0 0;
+    border: #000;
+}
+
+.option-comment img{
+    width: 20px;
+    height: 20px;
+    
+    border: #000;
+}
+
+.comment-input {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.comment-input textarea {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    resize: none;
+}
+
+.comment-input button {
+    margin-top: 0.5rem;
+    padding: 0.4rem 1rem;
+    background-color: #0a6e99;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; }
+
+.tree-points {
+    flex-grow: 1;
+    margin-top: 0;
+    display: flex;
+    gap: 0;
+    font-size: large;
+    font-weight: 900;
+}
+
+.like-comment {
+    margin-top: 4.5rem;
+    display: flex;
+    gap: 0;
+}
+
+.ask span,
+.ask button {
+    color: #1282A2;
+    font-size: 1rem;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.toggle-respuestas {
+    margin-top: 10px;
+}
+
+
+.respuestas {
+    height: 5rem;
+}
+
+.respuestas img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
